@@ -1,0 +1,160 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap");
+
+body {
+    font-family: "Open Sans", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-weight: 800;
+    font-size: 60px;
+}
+
+h2 {
+    font-weight: 800;
+    font-size: 44px;
+
+    color: #ffffff;
+}
+
+h3 {
+    font-weight: 600;
+    font-size: 39px;
+}
+
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    background-color: #f8c360;
+    height: 20vh;
+}
+header img{
+    height: 20vh;
+}
+header nav {
+    flex-grow: 0.6;
+}
+
+header nav ul {
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+    gap: 15px;
+
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 33px;
+
+    color: #777777;
+    gap: 20px;
+}
+
+header nav ul li {
+    padding: 6px;
+
+}
+
+.lista-nav li:hover{
+    color: #ffffff;
+
+}
+
+section{
+    background-color: #daff21;
+    margin-top: 50px;
+    height: 150px;
+    margin-left: 250px;
+}
+
+.Live{
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 5px;
+    text-align: center;
+}
+
+.dogs img{
+    display: flex;
+
+    justify-content: center;
+    height: 89%;
+}
+
+
+.Live > ul {
+    display: flex;
+    list-style: none;
+    width: 500px;
+    height: 150px;
+    position: relative;
+    bottom: 58px
+}
+.Live li {
+    position: relative;
+    animation: slide 15s infinite ease-out;
+}
+
+@keyframes slide {
+    0%{left: 0px}
+    25%{left: -960px}
+    50%{left: -1920px}
+    75%{left: -2880px}
+    100%{left: 0px;}
+}
+
+footer {
+    margin-top: 25px;
+    background-color: #f8bb60;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+}
+
+.centralizar{
+    display: flex;
+    align-items: center;
+}
+
+.alinhar{
+    padding: 0;
+}
+
+footer .logoFooter{
+    width: 150px;
+    display: flex;
+    align-items: center;
+}
+.redeSocial{
+    display: flex;
+    align-items: center;
+    padding: 0;
+}
+.redeSocial img{
+    width: 40px;
+
+}
+
+footer p {
+    max-width: 255px;
+    color: #ffffff;
+    margin: 0;
+    font-size: 16px;
+}
+
+footer ul {
+    list-style: none;
+    color: #fff;
+    font-size: 20px;
+}
+
+footer ul li.FAQ {
+    font-weight: bold;
+    font-size: 20px;
+    align-items: flex-start;
+
+}
+
