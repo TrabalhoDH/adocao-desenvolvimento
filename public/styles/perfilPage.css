@@ -1,0 +1,10 @@
+/* header */
+header{
+    background-color: #9BA657;
+    display: flex;
+}
+
+header nav{
+    display: flex;
+    list-style-type: none;
+}
