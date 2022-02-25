@@ -1,10 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+
+
+body{
+    font-family: 'Poppins', sans-serif;
+    
+}
+
 /* header */
 header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    
     background-color: #9BA657;
+}
+h1{
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 10px;
+}
+
+#buttonsHeader{
+    display: flex;
+    list-style-type: none;
+    padding-right:10px ;
+    gap:20px;
+    
+    font-size: 21px;
+
+}
+#buttonsHeader li{
+    border: solid 1px black;
+    border-radius: 4px;
+    box-shadow: 0px 3px   rgb(0, 0, 0,0.25) ;
+    font-weight: 700;
+    
+    padding: 5px 15px 5px 15px;
+
+    background-color: beige;
+
+}
+
+
+/*main*/
+
+/*tema*/
+
+#tema{
+    position: relative;
+    text-align: center;
+    margin: 2vw;
+    border-radius: 10px;
+    z-index: -2;
+    padding: 7vh;
+    
+    font-size: 41px;
+    
+    background-color: gray ;
+    
+}
+
+/*perfil e opções*/
+
+#content{
     display: flex;
 }
 
-header nav{
+.perfil{
+    position: relative;
+    bottom: 120px;
+    right: 7px;
+
+    height:73vh;
+    width: 19vw;
+    padding-left: 4vw;
+    padding-right: 2vw;
+
+}
+.perfil img{
+    border: solid 5px #A68C69;
+    border-radius: 50%;
+    
+    width:100%;
+    max-height:30%;
+    height: auto;
+}
+
+.perfil ul{
     display: flex;
-    list-style-type: none;
+    justify-items: center;
+    flex-direction: column;
+
+}
+
+.perfil ul li{
+    line-height: 40px;
+    border-top: solid 2px black;
+    list-style-type:none;
 }
