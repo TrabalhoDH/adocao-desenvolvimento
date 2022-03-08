@@ -1,9 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap");
 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     font-family: "Open Sans", sans-serif;
     margin: 0;
     padding: 0;
+    background: linear-gradient(#59429d, #cccc)
 }
 
 header {
@@ -11,11 +18,12 @@ header {
     justify-content: space-around;
     align-items: center;
 
-    background-color: #f8c360;
+
     height: 20vh;
 }
 header img{
     height: 20vh;
+    margin-right: 50px;
 }
 header nav {
     flex-grow: 0.6;
@@ -31,7 +39,7 @@ header nav ul {
     font-size: 20px;
     line-height: 33px;
 
-    color: #777777;
+    color: #ffff;
     gap: 20px;
 }
 
@@ -41,14 +49,13 @@ header nav ul li {
 }
 
 .lista-nav li:hover{
-    color: #ffffff;
+    color: #fdfd96;
 
 }
 
 footer {
-    margin-top: 15px;
+    margin-top: 5rem;
 
-    background-color: #f8c360;
     display: flex;
     justify-content: space-between;
     padding: 15px;
@@ -65,6 +72,10 @@ footer {
 
 .alinhar{
     padding: 0;
+    color: #000;
+}
+.alinhar:hover{
+    color: #59429d
 }
 
 footer .logoFooter{
@@ -79,7 +90,6 @@ footer .logoFooter{
 }
 .redeSocial img{
     width: 40px;
-
 }
 
 footer p {
@@ -91,7 +101,7 @@ footer p {
 
 footer ul {
     list-style: none;
-    color: #fff;
+    color: #59429d;
     font-size: 20px;
 }
 
