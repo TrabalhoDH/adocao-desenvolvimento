@@ -10,7 +10,7 @@ body {
     font-family: "Open Sans", sans-serif;
     margin: 0;
     padding: 0;
-    background: linear-gradient(#59429d, #cccc)
+    
 }
 
 header {
@@ -18,11 +18,12 @@ header {
     justify-content: space-around;
     align-items: center;
 
-
+    background-color: #7861be   ;
+    /* background: linear-gradient(#59429d, #fff); */
     height: 20vh;
 }
 header img{
-    height: 20vh;
+    height: 16vh;
     margin-right: 50px;
 }
 header nav {
@@ -41,6 +42,7 @@ header nav ul {
 
     color: #ffff;
     gap: 20px;
+    cursor: pointer;
 }
 
 header nav ul li {
@@ -49,7 +51,7 @@ header nav ul li {
 }
 
 .lista-nav li:hover{
-    color: #fdfd96;
+    color: #f5f565;
 
 }
 
