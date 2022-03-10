@@ -1,17 +1,17 @@
 .adotepets img {
-  width: 550px;
-  height: 300px;
+  width: 100vw;
+  height: 60vh;
 }
 
 .adotepets {
-  width: 550px;
-  height: 300px;
+  width: auto;
+  height: auto;
 
-  outline: 5px solid black;
+  /* outline: 5px solid black; */
   overflow: hidden;
-  box-shadow: 10px 10px 15px rgba(89, 66, 157, 0.7);
+  /* box-shadow: 10px 10px 15px rgba(89, 66, 157, 0.7); */
 
-  margin: 50px;
+  margin-bottom: 35px;
   position: relative;
   left: 0;
 }
@@ -19,26 +19,34 @@
   display: flex;
   list-style: none;
   width: 1500px;
-  height: 300px;
+  height: 400px;
 }
 .adotepets li {
   position: relative;
-  animation: slide 15s infinite ease-out;
+  animation: slide 20s infinite ease-out;
 }
 
 @keyframes slide {
   0% {
     left: 0px;
   }
-  25% {
-    left: -570px;
+  20% {
+    left: -1485px;
   }
-  50% {
-    left: -1100px;
+  40% {
+    left: -2970px;
+  }
+  60% {
+    left: -4455px;
+  }
+  80% {
+    left: -5940px;
   }
   100% {
-    left: 0px;
+    left: -7425px;
   }
+
+
 }
 #title-faq {
   display: flex;
@@ -59,7 +67,7 @@
   grid-template-columns: repeat(2, 1fr);
   column-gap: 20px;
   row-gap: 20px;
-  margin: 80px;
+  margin: 35px 80px;
   text-align: center;
 }
 .faq-mini {

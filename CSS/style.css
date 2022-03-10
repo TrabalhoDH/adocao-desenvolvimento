@@ -10,7 +10,6 @@ body {
     font-family: "Open Sans", sans-serif;
     margin: 0;
     padding: 0;
-    
 }
 
 header {
@@ -19,11 +18,11 @@ header {
     align-items: center;
 
     background-color: #7861be   ;
-    /* background: linear-gradient(#59429d, #fff); */
-    height: 20vh;
+    height: 18vh;
+
 }
 header img{
-    height: 16vh;
+    height: 12vh;
     margin-right: 50px;
 }
 header nav {
