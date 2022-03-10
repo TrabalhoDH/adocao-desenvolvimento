@@ -1,0 +1,116 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap");
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Open Sans", sans-serif;
+    margin: 0;
+    padding: 0;
+    
+}
+
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    background-color: #7861be   ;
+    /* background: linear-gradient(#59429d, #fff); */
+    height: 20vh;
+}
+header img{
+    height: 16vh;
+    margin-right: 50px;
+}
+header nav {
+    flex-grow: 0.6;
+}
+
+header nav ul {
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+    gap: 15px;
+
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 33px;
+
+    color: #ffff;
+    gap: 20px;
+    cursor: pointer;
+}
+
+header nav ul li {
+    padding: 6px;
+
+}
+
+.lista-nav li:hover{
+    color: #f5f565;
+
+}
+
+footer {
+    margin-top: 5rem;
+
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+
+    position: relative;
+    top: 0;
+
+}
+
+.centralizar{
+    display: flex;
+    align-items: center;
+}
+
+.alinhar{
+    padding: 0;
+    color: #000;
+}
+.alinhar:hover{
+    color: #59429d
+}
+
+footer .logoFooter{
+    width: 150px;
+    display: flex;
+    align-items: center;
+}
+.redeSocial{
+    display: flex;
+    align-items: center;
+    padding: 0;
+}
+.redeSocial img{
+    width: 40px;
+}
+
+footer p {
+    max-width: 255px;
+    color: #ffffff;
+    margin: 0;
+    font-size: 16px;
+}
+
+footer ul {
+    list-style: none;
+    color: #59429d;
+    font-size: 20px;
+}
+
+footer ul li.FAQ {
+    font-weight: bold;
+    font-size: 20px;
+    align-items: flex-start;
+
+}
+
