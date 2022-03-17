@@ -11,19 +11,23 @@
 </head>
  
 <body>
-
+    
     <header>
-
+        <img src="Adote.png" alt="" />
+        <nav>
+          <ul class="lista-nav">
+            <li>Home</li>
+            <li>Quem Somos</li>
+            <li>Adote seu Pet</li>
+            <li>Ajude Nossa Causa</li>
+            <li>Fale Conosco</li>
+          </ul>
+        </nav>
     </header>
 
     <main>
 
-    </main>
-    
-    <footer>
-
-    </footer>
-       <br>
+    </main> <br>
         
         <div class="row">
         
@@ -43,7 +47,7 @@
 
                 <label for="nome">Endereço de E-mail: </label>
                 <br>
-                    <input type="text" id="email" name="email" placeholder="Digite o seu email">
+                    <input type="email" id="email" name="email" placeholder="Digite o seu email">
                     <br><br>    
                 
                 <label for="telefone">Telefone</label> 
@@ -94,15 +98,42 @@
                 <br>
                     <input type="text" id="cidade" name="cidade" placeholder="Digite a sua cidade">
                     <br><br>
+               
+                <div>
                 <label> Genero : </label>   
-                    <input type="radio" id="homem" name="genero" value="homem"><label for="homem">Homem</label>
-                    <input type="radio" id="mulher" name="genero" value="mulher"><label for="mulher">Mulher</label>
-                        
-        </form> 
-        
-        <button type="reset"> Upload de fotos</button>
-        <button type="submit"> Enviar </button>
+                    <label>
+                    <input type="radio" name="genero" value="homem"><label for="homem">Homem</label>
+
+                    <label>
+                    <input type="radio" name="genero" value="mulher"><label for="mulher">Mulher</label>
+                </div>
+                
+            </form> 
+                
+                <button type="reset"> Upload de foto</button> 
+                <button type="submit"> Enviar </button> 
+                
     </div>
+    
+    <footer>
+        <div class="centralizar">
+            <img class="logoFooter" src="./img/adoteFooter.png" alt="Logo" />
+          </div>
+          <div>
+            <ul class="alinhar">
+              <li class="FAQ">Sobre Nós</li>
+              <li>Perguntas Frequentes</li>
+              <li>Politica de Privacidade</li>
+              <li>Contatos</li>
+            </ul>
+    
+            <ul class="redeSocial">
+              <li><img src="img/face.png" alt="facebookLogo" /></li>
+              <li><img src="img/insta.png" alt="instagramLogo" /></li>
+              <li><img src="img/whats.png" alt="whatsAppLogo" /></li>
+            </ul>
+          </div>
+    </footer>
  </body>
 
-</html>
+ </html>
