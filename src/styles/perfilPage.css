@@ -12,17 +12,38 @@ body {
 /* header */
 header {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
-  width: 100%;
-  height: 5rem;
 
-  background-color: #9ba657;
+  background-color: #7861be;
+  /* background: linear-gradient(#59429d, #fff); */
+  height: 20vh;
 }
-h1 {
+header img {
+  height: 16vh;
+  margin-right: 50px;
+}
+header nav {
+  flex-grow: 0.6;
+}
+
+header nav ul {
   display: flex;
-  justify-content: flex-start;
-  padding-left: 10px;
+  justify-content: flex-end;
+  list-style: none;
+  gap: 15px;
+
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 33px;
+
+  color: #ffff;
+  gap: 20px;
+  cursor: pointer;
+}
+
+header nav ul li {
+  padding: 6px;
 }
 
 #buttonsHeader {
@@ -55,14 +76,18 @@ h1 {
 #tema {
   position: relative;
   text-align: center;
-  margin: 2vw;
+  margin: 2vw 4vw;
   border-radius: 10px;
   z-index: -2;
-  padding: 7vh;
 
   font-size: 41px;
 
   background-color: gray;
+}
+.capa {
+  width: 100%;
+  border-radius: 3rem;
+  height: 50%;
 }
 
 /*perfil e opções*/
@@ -85,7 +110,8 @@ h1 {
 
 #content {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
+  gap: 5rem;
 }
 
 .perfil {
@@ -102,11 +128,22 @@ h1 {
   margin-bottom: 3rem;
   width: 100%;
 }
+.perfil img ~ p {
+  font-size: 25px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  font-weight: 800;
+  border: 1px solid black;
+}
 
 .perfil ul {
   display: flex;
   justify-items: center;
   flex-direction: column;
+  border-radius: 5px;
+ 
+  align-items: center;
 }
 .perfil-img {
   width: 5rem;
@@ -116,12 +153,29 @@ h1 {
 
 .perfil ul li {
   line-height: 40px;
-  border-top: solid 2px black;
+
   list-style-type: none;
+}
+.perfil ul li button {
+  border-radius: 10px;
+  border: none;
+  background-color: #7861be;
+  font-size: 18px;
+  width: 300px;
+  height: 40px;
+  box-shadow: #000;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  color: rgb(255, 255, 255);
+  box-shadow: 5px 5px 32px 2px rgba(0, 0, 0, 0.25);
+}
+.perfil ul li button:hover {
+  cursor: pointer;
+  background-color: #8871d4;
 }
 .infoPerfil {
   display: flex;
-  gap: 5rem;
+  gap: 4rem;
   width: 653px;
   height: 300px;
 }
@@ -130,6 +184,12 @@ h1 {
   list-style-type: none;
   display: flex;
   flex-direction: column;
+}
+.allCards {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  gap: 5rem;
 }
 aside {
   margin-left: 1rem;
@@ -145,4 +205,60 @@ aside {
   line-height: 40px;
   border-top: solid 2px black;
   list-style-type: none;
+}
+footer {
+  margin-top: 5rem;
+
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+
+  position: relative;
+  top: 0;
+}
+
+.centralizar {
+  display: flex;
+  align-items: center;
+}
+
+.alinhar {
+  padding: 0;
+  color: #000;
+}
+.alinhar:hover {
+  color: #59429d;
+}
+
+footer .logoFooter {
+  width: 150px;
+  display: flex;
+  align-items: center;
+}
+.redeSocial {
+  display: flex;
+  align-items: center;
+  padding: 0;
+}
+.redeSocial img {
+  width: 40px;
+}
+
+footer p {
+  max-width: 255px;
+  color: #ffffff;
+  margin: 0;
+  font-size: 16px;
+}
+
+footer ul {
+  list-style: none;
+  color: #59429d;
+  font-size: 20px;
+}
+
+footer ul li.FAQ {
+  font-weight: bold;
+  font-size: 20px;
+  align-items: flex-start;
 }
