@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    
+    <title> Cadastro de Pessoas </title>
+    <link rel="stylesheet" href="cadastro-pessoa.css">
+</head>
+ 
+<body>
+    
+    <header>
+        <img src="Adote.png" alt="" />
+        <nav>
+          <ul class="lista-nav">
+            <li>Home</li>
+            <li>Quem Somos</li>
+            <li>Adote seu Pet</li>
+            <li>Ajude Nossa Causa</li>
+            <li>Fale Conosco</li>
+          </ul>
+        </nav>
+    </header>
+
+    <main>
+
+    </main> <br>
+        
+        <div class="row">
+        
+        <p id="titulo">Informações  do usuário</p>
+        
+        <form>  
+
+                <label for="nome"> Nome: </label>
+                <br>
+                    <input type="text" id="nome" name="nome" placeholder="Digite o seu nome">
+                    <br><br>
+
+                <label for="cpf"> CPF: </label>
+                <br>    
+                    <input type="text" id="cpf" name="cpf" placeholder= "Digite o seu CPF">
+                    <br><br>
+
+                <label for="nome">Endereço de E-mail: </label>
+                <br>
+                    <input type="email" id="email" name="email" placeholder="Digite o seu email">
+                    <br><br>    
+                
+                <label for="telefone">Telefone</label> 
+                <br>
+                    <input type="tel" id="telefone" class="input-padrao" required placeholder="(xx) xxxxx-xxxx">
+                <br><br>
+
+                <label for="data"> Data de Nascimento: </label>
+                <br>
+                    <input type="date" name="date">
+                    <br><br>
+                   
+                <label for="estado"> Estado: </label>     
+                <br>
+                    <select id =" estado " name =" estado " >
+                        <option  value =" AC " > Acre </option >
+                        <option  value =" AL " > Alagoas </option >
+                        <option  value =" AP " > Amapá </option >
+                        <option  value =" AM " > Amazonas </option >
+                        <option  value =" BA " > Bahia </option >
+                        <option  value =" CE " > Ceará </option >
+                        <option  value =" DF " > Distrito Federal </option >
+                        <option  value =" ES " > Espírito Santo </option >
+                        <option  value =" GO " > Goiás </option >
+                        <option  value =" MA " > Maranhão </option >
+                        <option  value =" MT " > Mato Grosso </option >
+                        <option  value =" MS " > Mato Grosso do Sul </option >
+                        <option  value =" MG " > Minas Gerais </option >
+                        <option  value =" PA " > Pará </option >
+                        <option  value =" PB " > Paraíba </option >
+                        <option  value =" PR " > Paraná </option >
+                        <option  value =" PE " > Pernambuco </option >
+                        <option  value =" PI " > Piauí </option >
+                        <option  value =" RJ " > Rio de Janeiro </option >
+                        <option  value =" RN " > Rio Grande do Norte </option >
+                        <option  value =" RS " > Rio Grande do Sul </option >
+                        <option  value =" RO " > Rondônia </option >
+                        <option  value =" RR " > Roraima </option >
+                        <option  value =" SC " > Santa Catarina </option >
+                        <option  value =" SP " > São Paulo </option >
+                        <option  value =" SE " > Sergipe </option >
+                        <option  value =" TO " > Tocantins </option >
+                        <option  value =" EX " > Estrangeiro </option >
+                    </select >
+                 <br><br>
+                
+                <label for="cidade"> Cidade: </label>
+                <br>
+                    <input type="text" id="cidade" name="cidade" placeholder="Digite a sua cidade">
+                    <br><br>
+               
+                <div>
+                <label> Genero : </label>   
+                    <label>
+                    <input type="radio" name="genero" value="homem"><label for="homem">Homem</label>
+
+                    <label>
+                    <input type="radio" name="genero" value="mulher"><label for="mulher">Mulher</label>
+                </div>
+                
+            </form> 
+                
+                <button type="reset"> Upload de foto</button> 
+                <button type="submit"> Enviar </button> 
+                
+    </div>
+    
+    <footer>
+        <div class="centralizar">
+            <img class="logoFooter" src="./img/adoteFooter.png" alt="Logo" />
+          </div>
+          <div>
+            <ul class="alinhar">
+              <li class="FAQ">Sobre Nós</li>
+              <li>Perguntas Frequentes</li>
+              <li>Politica de Privacidade</li>
+              <li>Contatos</li>
+            </ul>
+    
+            <ul class="redeSocial">
+              <li><img src="img/face.png" alt="facebookLogo" /></li>
+              <li><img src="img/insta.png" alt="instagramLogo" /></li>
+              <li><img src="img/whats.png" alt="whatsAppLogo" /></li>
+            </ul>
+          </div>
+    </footer>
+ </body>
+
+ </html>
