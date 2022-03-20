@@ -15,7 +15,22 @@
  
 <body>
     
+<<<<<<<< HEAD:src/views/cadastro-pessoas.ejs
     <%- include('./partials/header') %>
+========
+    <header>
+        <img src="img/Adote.png" alt="Logo" />
+        <nav>
+          <ul class="lista-nav">
+            <li>Home</li>
+            <li>Quem Somos</li>
+            <li>Adote seu Pet</li>
+            <li>Ajude Nossa Causa</li>
+            <li>Fale Conosco</li>
+          </ul>
+        </nav>
+    </header>
+>>>>>>>> cadastro-users:cadastro-pessoa.html
 
     <main>
 
@@ -23,7 +38,7 @@
         
         <div class="row">
         
-        <p id="titulo">Informações  do usuário</p>
+        <p id="titulo">Cadastre-se</p>
         
         <form>  
 
@@ -94,16 +109,16 @@
                 <div>
                 <label> Genero : </label>   
                     <label>
-                    <input type="radio" name="genero" value="homem"><label for="homem">Homem</label>
+                    <input type="radio" name="genero" value="homem"><label for="homem">Masculino</label>
 
                     <label>
-                    <input type="radio" name="genero" value="mulher"><label for="mulher">Mulher</label>
+                    <input type="radio" name="genero" value="mulher"><label for="mulher">Feminino</label>
                 </div>
                 
             </form> 
                 
                 <button type="reset"> Upload de foto</button> 
-                <button type="submit"> Enviar </button> 
+                <button type="submit"> Finalizar </button> 
                 
     </div>
     
