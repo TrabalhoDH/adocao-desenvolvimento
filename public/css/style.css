@@ -58,14 +58,15 @@ header nav ul li a {
 }
 
 footer {
-    margin-top: 5rem;
-
     display: flex;
     justify-content: space-between;
-    padding: 15px;
 
-    position: relative;
-    top: 800px;
+    margin-top: 6.2rem;
+    padding: 15px;
+    width:100%;
+
+    position: absolute;
+    top: 100%;
 
 }
 
