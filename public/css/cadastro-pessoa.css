@@ -11,41 +11,6 @@ body {
     
 }
 
-header {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    background-color: #7861be   ;
-    height: 18vh;
-
-}
-
-header img{
-    height: 12vh;
-    margin-right: 50px;
-}
-
-header nav {
-    flex-grow: 0.6;
-}
-
-header nav ul {
-    display: flex;
-    justify-content: flex-end;
-    list-style: none;
-    gap: 15px;
-    font-weight: 600;
-    font-size: 20px;
-    line-height: 33px;
-    color: #ffff;
-    gap: 20px;
-    cursor: pointer;
-}
-
-header nav ul li {
-    padding: 6px;
-
-}
 
 div.row{
     box-sizing: border-box ;
@@ -57,7 +22,7 @@ div.row{
     bottom: 10%;
     left: 35%;
     width: 30%;
-    height:75%;
+    height:80%;
     display: table;
     box-shadow: 2px 2px 2px #380b61;
 }
@@ -127,6 +92,7 @@ button{
   margin: 0% 10%;   
   transition-property:all;
   font-size: 0.9em;
+  margin-top: 1rem;
   
 }
 
@@ -138,62 +104,5 @@ button:hover{
 }
 
 
-footer {
-    box-sizing: border-box ;
-    margin-top: 5rem;
-    display: flex;
-    justify-content: space-between;
-    padding: 15px;
-    position: relative;
-    top: 800px;
-}
 
-.centralizar{
-    display: flex;
-    align-items: center;
-}
 
-.alinhar{
-    padding: 0;
-    color: #000;
-}
-.alinhar:hover{
-    color: #59429d
-}
-
-footer .logoFooter{
-    width: 150px;
-    display: flex;
-    align-items: center;
-}
-.redeSocial{
-    display: flex;
-    align-items: center;
-    padding: 0;
-    position: relative;
-    right: 25px;
-    cursor: pointer;
-}
-.redeSocial img{
-    width: 100px;
-}
-
-footer p {
-    max-width: 255px;
-    color: #ffffff;
-    margin: 0;
-    font-size: 16px;
-}
-
-footer ul {
-    list-style: none;
-    color: #59429d;
-    font-size: 20px;
-}
-
-footer ul li.FAQ {
-    font-weight: bold;
-    font-size: 20px;
-    align-items: flex-start;
-
-}

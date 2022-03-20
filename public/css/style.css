@@ -44,12 +44,15 @@ header nav ul {
     cursor: pointer;
 }
 
-header nav ul li {
+header nav ul li a {
     padding: 6px;
+    text-decoration: none;
+    font-size: 2rem;
+    color: #f4f4f4;
 
 }
 
-.lista-nav li:hover{
+.lista-nav li a:hover{
     color: #f5f565;
 
 }
@@ -85,12 +88,13 @@ footer .logoFooter{
     align-items: center;
 }
 .redeSocial{
-    display: flex;
+    display:flex;
     align-items: center;
-    padding: 0;
+    position: relative;
+    right: 1.5em;
 }
 .redeSocial img{
-    width: 40px;
+    width: 6rem;
 }
 
 footer p {
