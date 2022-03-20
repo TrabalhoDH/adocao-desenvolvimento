@@ -7,23 +7,15 @@
     <meta name="description" content="">
     
     <title> Cadastro de Pessoas </title>
-    <link rel="stylesheet" href="cadastro-pessoa.css">
+    <link rel="stylesheet" href="../css/cadastro-pessoa.css">
+    <link rel="stylesheet" href="../css/style.css"/>
+
+
 </head>
  
 <body>
     
-    <header>
-        <img src="Adote.png" alt="" />
-        <nav>
-          <ul class="lista-nav">
-            <li>Home</li>
-            <li>Quem Somos</li>
-            <li>Adote seu Pet</li>
-            <li>Ajude Nossa Causa</li>
-            <li>Fale Conosco</li>
-          </ul>
-        </nav>
-    </header>
+    <%- include('./partials/header') %>
 
     <main>
 
@@ -115,25 +107,7 @@
                 
     </div>
     
-    <footer>
-        <div class="centralizar">
-            <img class="logoFooter" src="./img/adoteFooter.png" alt="Logo" />
-          </div>
-          <div>
-            <ul class="alinhar">
-              <li class="FAQ">Sobre Nós</li>
-              <li>Perguntas Frequentes</li>
-              <li>Politica de Privacidade</li>
-              <li>Contatos</li>
-            </ul>
-    
-            <ul class="redeSocial">
-              <li><img src="img/face.png" alt="facebookLogo" /></li>
-              <li><img src="img/insta.png" alt="instagramLogo" /></li>
-              <li><img src="img/whats.png" alt="whatsAppLogo" /></li>
-            </ul>
-          </div>
-    </footer>
+    <%- include('./partials/footer') %>
  </body>
 
  </html>
