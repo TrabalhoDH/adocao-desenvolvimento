@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SitePet</title>
+    <link rel="stylesheet" href="cadastro-pet.css">
+</head>
+
+
+<body>
+    <header>
+
+
+    </header>
+
+    <main>
+ 
+
+        <div class="cadastropet">
+            <form>
+                <div class="titulo">
+                    <h1>Cadastro de PETs</h1>
+                </div>
+                
+                <div class="linha"></div>
+
+                <div class="formulario">                    
+                    <label>Pet :</label>            
+                    <input type="radio" id="cao" name="pet" value="cao" checked><label for="cao">Cão</label>            
+                    <input type="radio" id="gato" name="pet" value="gato"><label for="gato">Gato</label>
+                    <br><br>                    
+                </div>
+
+                <div class="linha"></div>
+
+                <div class="formulario">                    
+                    <label for="raca">Raça :</label>
+                    <input type="text" id="raca" name="raca" placeholder="Pastor Alemão, Buldog, Persa, indefinidas ">
+                    <br><br>
+                </div>
+
+                <div class="linha"></div>
+
+                <div class="formulario">
+                    <label>Porte :</label>
+                    <input type="radio" id="pequeno" name="porte" value="pequeno" checked><label for="pequeno">Pequeno</label>
+                    <input type="radio" id="medio" name="porte" value="medio"><label for="medio">Médio</label>
+                    <input type="radio" id="grande" name="porte" value="grande"><label for="grande">Grande</label>
+                    <br><br>
+                </div>
+                
+                <div class="linha"></div>
+
+                <div class="formulario">                    
+                    <label>Genero :</label>
+                    <input type="radio" id="femea" name="genero" value="femea" checked><label for="femea">Femea</label>
+                    <input type="radio" id="macho" name="genero" value="macho"><label for="macho">Macho</label>
+                    <br><br>
+                </div>
+
+                <div class="linha"></div>
+
+                <div class="formulario">                    
+                    <label for="idade">Idade (anos) :</label>
+                    <input type="number" id="idade" name="idade" placeholder="1">
+                    <br><br>
+                </div>
+
+                <div class="linha"></div>
+
+                <div class="formulario">
+                    <label for="cor">Cor predominante :</label>
+                    <input type="text" id="cor" name="cor" placeholder="branco, preto, caramelo, etc ..">
+                    <br><br>
+                </div>
+
+                <div class="linha"></div>
+                    
+                <div class="formulario">
+                    <label>Pelo :</label>
+                    <input type="radio" id="curto" name="pelo" value="curto" checked><label for="curto">Curto</label>
+                    <input type="radio" id="longo" name="pelo" value="longo"><label for="longo">Longo</label>
+                    <br><br>
+                </div>
+                
+                <div class="linha"></div>
+                 
+                <div class="formulario">
+                    <label for="maisInformacoes">Mais Informações</label>
+                    <br>
+                    <input type="checkbox" name="maisInformacoes" id="castrado" value="castrado"><label for="castrado">Castrado</label>
+                    <br>
+                    <input type="checkbox" name="maisInformacoes" id="vacinado" value="vacinado"><label for="vacinado">Vacinado</label>
+                    <br>
+                    <input type="checkbox" name="maisInformacoes" id="filhote" value="filhote"><label for="filhote">Filhote</label>
+                    <br>            
+                    <input type="checkbox" name="maisInformacoes" id="chipado" value="chipado"><label for="chipado">Possui Chipe</label>
+                    <br>            
+                    <input type="checkbox" name="maisInformacoes" id="outras" value="outras"><label for="outras">Outras observações:</label>
+                    <br>
+                    <textarea name="mensagem" id="mensagem" cols="60" rows="5"></textarea>
+                    <br> <br>
+                </div>
+                
+                <div class="linha"></div>
+                 
+                <div class="formulario">
+                    <label for="foto">Inserir fotos :</label>
+                    <input type="file" name="foto">
+                    <br><br>
+                </div>
+
+                <div class="linha"></div>
+
+                <div class="botoes">
+                    <br>                    
+                    <button class="btFeito" type="submit">Feito! </button>    
+                    <button class="btFotos" type="button">Upload fotos</button>
+                    <br><br>
+                </div>
+
+            </form>
+        </div>
+        
+
+    </main>
+
+    <footer>
+
+
+    </footer>
+</body>
+
+
+</html>
