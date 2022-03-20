@@ -1,62 +1,111 @@
-.titulo{
-    display: flex;
-    justify-content: center;
+#titulo{
+    color: #380b61;
+    text-align: center;
+    font-size: 25px ;
+    position: relative;
+    top: 15px;
+}
+
+body {
+    font-family: "Open Sans", sans-serif;
+    margin: 0;
+    padding: 0;
     
 }
 
 .cadastropet{
-    background-color: #F0E5C9;
-    width: 33%;
-    margin: 5%;
-    border: 5px solid;
-    border-color: #A68C69;
-    border-radius: 5%;
-    padding-top: 15px;
+
+    box-sizing: border-box ;
+    border-radius: 25px;
+    background-color: #e2e2f7;
+    border:1px solid #522180 ;
+    position: absolute;
+    top:24%;
+    bottom: 10%;
+    left: 35%;
+    width: 30%;
+    height:90%;
+    display: table;
+    box-shadow: 2px 2px 2px #380b61;
     
 }
 
-
-.linha{
-    height: 10px;
-    background-color: #F4F4F4;
+form{
+    
+    width: 100%;
+    padding: 5px 0px;
+    position: absolute;
+    top: 10%; 
 }
 
-.formulario{
-    background-color: #E3E3E3;
+label{
+    position: relative;
+    left: 15px;
+    color: #380b61;
 }
 
-.btFeito{
-    padding:16px 30px;
-    background-color: #EB7B59;
-    border:1px solid;
-    color: white;
-    font-size: 25px;
-    cursor:pointer;
-    font-family:Verdana;
-    border-radius: 8%;
-    margin-left: 15%;
+
+
+input[type="text"], input[type="tel"], input[type="number"], select{
+    
+    width: 95%;
+    padding: 8px ;
+    border-radius: 5px;
+    box-sizing: border-box ;
+    position: relative;
+    left: 15px;
+    border: 1px solid #59429d;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    color: #380b61;
+    font-size: 1.0em;
+}
+
+input[type="radio"], input[type="checkbox"],select{
+    cursor: pointer;
     
 }
 
-.btFotos{
-    padding:16px 30px;
-    background-color: #EB7B59;
-    border:1px solid;
-    color: white;
-    font-size: 25px;
-    cursor:pointer;
-    font-family:Verdana;
-    border-radius: 8%;
-    margin-left: 15%;
-    
-}
-
-.imagem{
-    width: 15%;
-    display: flex;
-    align-items: flex-end;
-}
-
-.div{
+input[type="checkbox"]{
     display: inline-block;
+    position: relative;
+    left: 15px;
+    margin-right: 5px ;
 }
+
+button{
+  
+    border: none;
+    border-radius: 10px;
+    background-color: #9b75d8;
+    color: #f4f4f4;
+    box-sizing: border-box ;
+    position:relative;
+    top: 85%;
+    left: 10px;
+    width: 150px;
+    height: 35px;
+    margin: 0% 11%;   
+    transition-property:all;
+    font-size: 0.9em;
+    margin-top: 2rem;
+    
+  }
+
+button:hover{
+    background-color:#8754d9;
+    transition-duration: 0.5s;
+    cursor: pointer;
+    
+}
+
+textarea{
+    position: relative;
+    left: 10%;
+    position: absolute;
+    bottom: 2%;
+    margin-bottom: 2px;
+}
+ input[type="radio"]{
+     position: relative;
+     left: 14px;
+ }

@@ -96,6 +96,7 @@ footer .logoFooter{
 }
 .redeSocial img{
     width: 6rem;
+    cursor: pointer;
 }
 
 footer p {

@@ -54,13 +54,11 @@ label{
     top: 15px;
 }
     
-input[type="radio"]{
+input[type="radio"],input[type="date"], select{
     cursor: pointer;
 }
 
-input[type="date"], select{
-    cursor: pointer;
-}
+
 
 input[type="text"], input[type="email"], input[type="tel"], input[type="date"], select{
     
