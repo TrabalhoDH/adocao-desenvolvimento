@@ -52,10 +52,10 @@ div.row{
     border-radius: 25px;
     background-color: #e2e2f7;
     border:1px solid #522180 ;
-    position: fixed;
-    top:10%;
-    bottom: 20%;
-    left: 20%;
+    position: absolute;
+    top:30%;
+    bottom: 10%;
+    left: 35%;
     width: 30%;
     height:75%;
     display: table;
@@ -120,7 +120,7 @@ button{
   color: #f4f4f4;
   box-sizing: border-box ;
   position:relative;
-  top: 90%;
+  top: 85%;
   left: 10px;
   width: 150px;
   height: 35px;
