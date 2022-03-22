@@ -1,14 +1,11 @@
 const express = require('express');
+const cadastroController = require('../controllers/cadastroController');
 
 const router =express.Router();
 
-router.get('/usuario',(req , res)=>{
-    res.render('../views/cadastro-pessoas')
-});
+router.get('/usuario',cadastroController.usuario);
 
-router.get('/pet',(req , res)=>{
-    res.render('../views/cadastro-pet')
-});
+router.get('/pet',cadastroController.pet);
 
 
 module.exports= router;
