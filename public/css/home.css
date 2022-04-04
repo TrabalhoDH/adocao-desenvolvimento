@@ -97,3 +97,9 @@
   width: 20px;
   align-items: center;
 }
+
+@media only screen and (max-width: 850px) {
+  .faq-container{
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

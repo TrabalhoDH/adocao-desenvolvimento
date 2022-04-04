@@ -1,0 +1,96 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Roboto, "Open Sans", "Helvetica Neue", sans-serif;
+    color: #323232;
+    border: none;
+  }
+  body {
+    background-image: url(../img/fundo2.png);
+  }
+  textarea:focus, input:focus {
+    outline: none;
+  }
+  a, label {
+    font-size: 0.8rem;
+  }
+  a:hover {
+    color: #59429d;
+  }
+  #redes-login {
+    width: 40px;
+    height: 30px;
+  }
+  
+  #login-container {
+    border-radius: 10px;
+    background-color: #e2e2f7;
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20vh;
+    padding: 20px 30px;
+    text-align: center;
+  }
+  #login-container, h1{
+    text-transform: uppercase;
+    color: #59429d;
+  }
+  
+  form {
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  
+  label, input {
+    display: block;
+    width: 100%;
+    text-align: left;
+  }
+  label {
+    font-weight: bold;
+  }
+  input {
+    border-bottom: 2px solid #615f5f;
+    padding: 10px;
+    font-size: 1rem;
+    margin-bottom: 20px;
+    border-radius: 10px;
+  }
+
+  input:focus {
+    border-bottom: 2px solid #59429d;
+  }
+  #esqueciSenha {
+    text-align: right;
+    display: block;
+  }
+  
+  input[type="submit"] {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    border: none;
+    height: 40px;
+    border-radius: 20px;
+    margin-top: 10px;
+    color: #59429d;
+    cursor: pointer;
+  }
+  input[type="submit"]:hover {
+    background-color: #3b2777;
+    color: #fff;
+    transition: 0.5s;
+  }
+  #rede-container {
+    margin-bottom: 20px;
+    font-weight: bold;
+  }
+  #rede-container, img{
+    margin-top: 15px;
+  }
+  #registro-container, p{
+    font-weight: bold;
+  }
+  
