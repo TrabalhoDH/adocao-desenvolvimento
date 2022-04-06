@@ -24,7 +24,7 @@ body {
     bottom: 10%;
     left: 35%;
     width: 30%;
-    height:90%;
+    height:85%;
     display: table;
     box-shadow: 2px 2px 2px #380b61;
     
@@ -42,6 +42,14 @@ label{
     position: relative;
     left: 15px;
     color: #380b61;
+}
+
+input{
+    margin-bottom: 20px;
+}
+
+select{
+    margin-bottom: 20px;    
 }
 
 
@@ -62,7 +70,6 @@ input[type="text"], input[type="tel"], input[type="number"], select{
 
 input[type="radio"], input[type="checkbox"],select{
     cursor: pointer;
-    
 }
 
 input[type="checkbox"]{
@@ -80,31 +87,26 @@ button{
     color: #f4f4f4;
     box-sizing: border-box ;
     position:relative;
-    top: 85%;
+    top: 25px;
     left: 10px;
     width: 150px;
     height: 35px;
-    margin: 0% 11%;   
+    margin: 0% 10%;   
     transition-property:all;
     font-size: 0.9em;
-    margin-top: 2rem;
-    
   }
 
 button:hover{
     background-color:#8754d9;
     transition-duration: 0.5s;
     cursor: pointer;
-    
 }
 
 textarea{
     position: relative;
     left: 10%;
-    position: absolute;
-    bottom: 2%;
-    margin-bottom: 2px;
     color: #380b61;
+    margin-top: 20px;
 }
  input[type="radio"]{
      position: relative;

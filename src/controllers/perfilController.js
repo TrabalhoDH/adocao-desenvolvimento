@@ -3,10 +3,9 @@ const router = express.Router();
 
 
 
-const perfilController = 
- router.get('/',(request, response)=>{
+const perfilController = (request, response)=>{
     response.render('perfil')
-});
+};
 
 
 module.exports = perfilController;
