@@ -7,8 +7,6 @@
 
       <link rel="stylesheet" href="../css/perfilPage.css"/>
       <link rel="stylesheet" href="../css/style.css"/>
-
-
       <title>Adoção Legal</title>
     </head>
 
@@ -19,16 +17,19 @@
         <section id="Tema">Tema</section>
         <!--imagem do pefil e opções(coluna esquerda)-->
         <section id="content">
+          <% usuario.forEach((usuario) => { %>
           <section class="perfil">
-            <img src="../img/user-profile.jpg" alt="perfil-pet" />
+            <img src="../uploads/<%= usuario.fileName %>" alt="perfil-pet" />
             <ul>
-              <li>opçõesDoPerfil1</li>
-              <li>opçõesDoPerfil2</li>
-              <li>opçõesDoPerfil3</li>
-              <li>opçõesDoPerfil4</li>
-              <li>opçõesDoPerfil5</li>
+              <li><%= usuario.nome %></li>
+              <li><%= usuario.email %></li>
+              <li><%= usuario.telefone %></li>
+              <li><p><%= usuario.estado %></p></li>
+              <li><p><%= usuario.cidade %></p></li>
               <li>opçõesDoPerfil6</li>
+              <% }) %>
             </ul>
+
           </section>
 
           <div id="card">
