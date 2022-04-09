@@ -1,10 +1,17 @@
 const express = require("express");
 const router = express.Router();
+const fs = require('fs');
 
 
 
 const perfilController = (request, response)=>{
-    response.render('perfil')
+
+    const novoArquivoUsuario = 'usuario.json';
+
+    const usuarioArquivo = fs.readFileSync(novoArquivoUsuario);
+    const usuario = JSON.parse(usuarioArquivo);
+
+    response.render('perfil',{usuario})
 };
 
 

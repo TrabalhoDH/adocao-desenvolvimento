@@ -1,5 +1,3 @@
-const express = require('express');
-const router = express.Router;
 const fs = require('fs');
 const { v4: uuid} = require('uuid');
 
@@ -7,9 +5,6 @@ const { v4: uuid} = require('uuid');
 const cadastroController ={
     usuario: (request, response)=>{
     response.render('cadastro-pessoas')},
- 
-    pet : (request, response)=>{
-    response.render('cadastro-pet')},
 
     novoUsuarios: (request,response)=>{
         const novoArquivoUsuario = 'usuario.json';
@@ -19,20 +14,20 @@ const cadastroController ={
 
         const novoUsuario = {
             id: uuid(),
-            ...request.body
+            ...request.body,
+            fileName: request.file.filename
         }
-
+        
         usuarioJSON.push(novoUsuario);
-
-        console.log(request.body);
-        console.log(novoUsuario);
-
+        
         fs.writeFileSync(novoArquivoUsuario, JSON.stringify(usuarioJSON));
         
-        response.render('perfil',{
-            title: 'Express',
-        });
+        response.redirect('/perfil');
     },
+
+    pet : (request, response)=>{
+    response.render('cadastro-pet')},
+
     novoAnimais:(request,response)=>{
         const novoArquivoAnimal = 'animais.json';
 
@@ -41,19 +36,15 @@ const cadastroController ={
 
         const novoAnimal = {
             id: uuid(),
-            ...request.body
+            ...request.body,
+        
         }
 
         animalJSON.push(novoAnimal);
 
-        console.log(request.body);
-        console.log(novoAnimal);
-
         fs.writeFileSync(novoArquivoAnimal, JSON.stringify(animalJSON));
         
-        response.render('perfil',{
-            title: 'Express',
-        });
+        response.redirect('/perfil');
     }
 };
 
