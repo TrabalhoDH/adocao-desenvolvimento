@@ -88,15 +88,11 @@
   justify-content: space-between;
   align-items: center;
 }
+summary{
+  font-size: 20px;
+  font-weight: bold;
+}
 
-.faq-p {
-  background-color: #cccc;
-  margin: 3px;
-}
-.arrow-faq {
-  width: 20px;
-  align-items: center;
-}
 
 @media only screen and (max-width: 850px) {
   .faq-container{
