@@ -23,28 +23,6 @@ const cadastroController ={
         fs.writeFileSync(novoArquivoUsuario, JSON.stringify(usuarioJSON));
         
         response.redirect('/perfil');
-    },
-
-    pet : (request, response)=>{
-    response.render('cadastro-pet')},
-
-    novoAnimais:(request,response)=>{
-        const novoArquivoAnimal = 'animais.json';
-
-        const animalArquivo = fs.readFileSync(novoArquivoAnimal);
-        const animalJSON = JSON.parse(animalArquivo);
-
-        const novoAnimal = {
-            id: uuid(),
-            ...request.body,
-        
-        }
-
-        animalJSON.push(novoAnimal);
-
-        fs.writeFileSync(novoArquivoAnimal, JSON.stringify(animalJSON));
-        
-        response.redirect('/perfil');
     }
 };
 
