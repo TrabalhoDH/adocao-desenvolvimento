@@ -31,26 +31,38 @@
             </ul>
 
           </section>
-
+          <% animal.forEach((animal) => { %>
+          <% usuario.find((usuario)=> { %>
           <div id="card">
-            <h2>Nome do usuario</h2>
+            <h2><%=usuario.nome%></h2>
             <div class="infoPerfil">
               <aside>
                 <img
                   class="perfil-img"
-                  src="../img/pet.jpeg "
+                  src="../uploads/<%= usuario.fileName %> "
                   alt="perfil-pet"
                 />
+                <% }) %>
                 <ul class="infoPerfil-pet">
-                  <li>Nome</li>
-                  <li>Numero</li>
-                  <li>email</li>
+                  <li><%= animal.pet %></li>
+                  <li><%= animal.raca %></li>
+                  <li><%= animal.pet %></li>
+                  <li><%= animal.tamanho %></li>
+                  <li><%= animal.genero %></li>
+                  <li><%= animal.idade %></li>
+                  
                 </ul>
               </aside>
-              <div class="photo-card"></div>
+              <div class="photo-card">
+                <img
+                class="perfil-img"
+                src="../uploads/<%= animal.fileName %> "
+                alt="perfil-pet"
+              />
             </div>
-           
+            <% }) %>
           </div>
+        </div>
 
           <section id="customProfile">
             <ul>
@@ -59,7 +71,7 @@
                 <li>opçõesDoPerfil3</li>
                 <li>opçõesDoPerfil4</li>
                 <li>opçõesDoPerfil5</li>
-                <li>opçõesDoPerfil6</li>
+                <li><a href="/doando/pet">Doe seu pet!</a></li>
               </ul>
           </section>
         </section>
