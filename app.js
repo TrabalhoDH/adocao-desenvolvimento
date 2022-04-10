@@ -7,6 +7,7 @@ const logger = require('morgan');
 const indexRouter = require('./src/routes/index');
 const perfilRouter = require('./src/routes/perfilRouter');
 const cadastroRouter = require('./src/routes/cadastroRouter');
+const feedRouter = require('./src/routes/feedRouter');
 
 
 const app = express();
@@ -16,14 +17,15 @@ app.set('views', path.join(__dirname, 'src', 'views'));
 app.set('view engine', 'ejs');
 
 app.use(logger('dev'));
-app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
+app.use(express.json());
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/',indexRouter);
 app.use('/perfil', perfilRouter);
 app.use('/cadastro', cadastroRouter);
+app.use('/feed', feedRouter);
 
 
 // catch 404 and forward to error handler

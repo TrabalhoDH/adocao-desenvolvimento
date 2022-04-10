@@ -23,84 +23,71 @@
            
             <p id="titulo">Cadastre seu pet</p>
             
-            <form>
+            <form method="post" action="/cadastro/pet">
                 
                 <label for="pet"> Qual seu pet: </label>     
-                <br>
+
                     <select id ="tipo do pet" name ="tipo de pet" >
                         <option  value ="Cão" > Cão </option >
                         <option  value ="Gato" > Gato </option >
                         <option  value ="Coelho" > Coelho </option >
                         </select >
-                        <br><br>
                                
                 <label for="raca">Raça :</label>
                         <input type="text" id="raca" name="raca" placeholder="Pastor Alemão, Buldog, Persa, indefinidas ">
-                        <br><br>
-                        
                         
                 <label for="tamanho"> Qual porte do seu pet: </label>     
-                <br>
+
                     <select id ="tamanho do pet" name ="tamanho do pet" >
                         <option  value ="grande" >Grande</option >
                         <option  value ="médio" >Médio</option >
                         <option  value ="pequeno" >Pequeno</option >
                         </select >
-                        <br><br>
 
                 <label>Genero :</label>
                     
                     <input type="radio" id="femea" name="genero" value="femea" checked><label for="femea">Femea</label>
                     <input type="radio" id="macho" name="genero" value="macho"><label for="macho">Macho</label>
-                    <br><br>
                
                 <label for="idade">Idade (anos) :</label>
                     <input type="number" id="idade" name="idade" placeholder="1">
-                    <br><br>
 
                 <label for="cor"> Qual a cor do seu pet: </label>     
-                <br>
+
                     <select id ="cor predominante" name ="cor predominante" >
                         <option value ="preto"> Preto </option >
                         <option value ="branco"> Branco </option >
                         <option value ="caramelho"> Caramelo </option >
                         <option value = "marrom">Marrom</option>
                         <option value = "cinza"> Cinza</option>   
-                        </select >
-                        <br><br>               
+                        </select >              
                     
                 <label for="tipo de pelo"> Qual a pelagem do seu pet: </label>     
-                <br>
+
                     <select id ="pelagem" name ="pelagem" >
                         <option  value ="curto">Curto</option >
                         <option  value ="médio">Médio</option >
                         <option  value ="longo">Longo</option >
                         <option  value ="sem pelo">Sem pelo</option >
                         </select >
-                        <br><br>
-                 
+          
                 <div id="check">
                     <label for="maisInformacoes">Mais Informações:</label>
-                    <br><br>
-                
+    
                 <input type="checkbox" name="maisInformacoes" id="castrado" value="castrado"><label for="castrado">Castrado</label>
                 <input type="checkbox" name="maisInformacoes" id="vacinado" value="vacinado"><label for="vacinado">Vacinado</label>
                 <input type="checkbox" name="maisInformacoes" id="filhote" value="filhote"><label for="filhote">Filhote</label> 
-                <input type="checkbox" name="maisInformacoes" id="chipado" value="chipado"><label for="chipado">Possui Chipe</label>
-                <input type="checkbox" name="maisInformacoes" id="outras" value="outras"><label for="outras">Outras observações:</label>
+                <input type="checkbox" name="maisInformacoes" id="outras" value="outras"><label for="outras">Mais observações:</label>
                 </div>
-                <br> <br>
-                <textarea name="mensagem" id="mensagem" cols="60" rows="4"></textarea>
-                <br> <br>
-            
-            </form>
-            
-            <button class="btFotos" type="button">Upload fotos</button>
-            <button class="btFeito" type="submit">Feito! </button> 
-        
-        </div>
-        
 
+                <textarea name="mensagem" id="mensagem" cols="60" rows="5"></textarea>
+
+                <button class="btFotos" type="button">Upload fotos</button>
+                <button class="btFeito" type="submit">Finalizar </button> 
+
+            </form>
+
+        </div>
     </main>
 
   <%- include('./partials/footer') %>

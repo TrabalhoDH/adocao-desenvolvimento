@@ -107,3 +107,13 @@ aside {
   border-top: solid 2px black;
   list-style-type: none;
 }
+
+
+@media only screen and (max-width: 850px) {
+  .content{
+    width: auto;
+  }
+  .perfil{
+    width: 100%;
+  }
+}
