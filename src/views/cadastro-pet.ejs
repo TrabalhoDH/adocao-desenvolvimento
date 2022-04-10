@@ -23,7 +23,7 @@
            
             <p id="titulo">Cadastre seu pet</p>
             
-            <form method="post" action="/cadastro/pet">
+            <form method="post" action="/doando/pet" enctype="multipart/form-data">
                 
                 <label for="pet"> Qual seu pet: </label>     
 
@@ -82,7 +82,8 @@
 
                 <textarea name="mensagem" id="mensagem" cols="60" rows="5"></textarea>
 
-                <button class="btFotos" type="button">Upload fotos</button>
+                <label for="fotoAnimais"></label>
+                <input type="file" id="fotoAnimais" name="fotoAnimais" required accept="image/*">
                 <button class="btFeito" type="submit">Finalizar </button> 
 
             </form>
