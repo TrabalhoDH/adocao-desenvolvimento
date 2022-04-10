@@ -4,14 +4,24 @@ const fs = require('fs');
 
 
 
+
 const perfilController = (request, response)=>{
 
     const novoArquivoUsuario = 'usuario.json';
+    const novoArquivoAnimal = 'animais.json';
 
     const usuarioArquivo = fs.readFileSync(novoArquivoUsuario);
-    const usuario = JSON.parse(usuarioArquivo);
 
-    response.render('perfil',{usuario})
+    const animalArquivo = fs.readFileSync(novoArquivoAnimal);
+    
+    const usuario = JSON.parse(usuarioArquivo);
+    
+    const animal = JSON.parse(animalArquivo);
+
+    response.render('perfil',{
+        usuario,
+        animal
+    })
 };
 
 
