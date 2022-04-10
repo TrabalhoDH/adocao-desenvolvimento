@@ -11,7 +11,7 @@ const doandoController ={
 
         const animalArquivo = fs.readFileSync(novoArquivoAnimal);
         const animalJSON = JSON.parse(animalArquivo);
-        console.log(request)
+
 
         const novoAnimal = {
             id: uuid(),
