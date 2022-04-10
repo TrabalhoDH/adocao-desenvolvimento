@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.head-feed{
+    text-align: center;
+    background-color: #7861be;
+    margin-top: 5vw;
+    padding: 10px;
+}
+.ads-feed{
+    background-color: #646464;
+    width: 90px;
+    height: 900px;
+}
+
+.feed-principal{
+    display: flex;
+    background-color: #646464;
+    justify-content: center;
+}
+
+.feed-principal ul li{
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+
+
+    flex-direction: column;
+    gap: 10px;
+}

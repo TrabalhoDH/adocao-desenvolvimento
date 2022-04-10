@@ -9,6 +9,9 @@ router.get('/login',(req , res)=>{
     res.render('../views/login')
 });
 
+router.get('/feed',(req , res)=>{
+    res.render('../views/feed')
+});
 
 
 
