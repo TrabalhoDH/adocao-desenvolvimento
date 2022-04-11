@@ -17,17 +17,17 @@
         <section id="Tema">Tema</section>
         <!--imagem do pefil e opções(coluna esquerda)-->
         <section id="content">
-          <% usuario.forEach((usuario) => { %>
+          <% usuario.find(usuario => usuario === usuarioEncontrado) %>
           <section class="perfil">
-            <img src="../uploads/<%= usuario.fileName %>" alt="perfil-pet" />
+            <img src="../uploads/<%= usuarioEncontrado.fileName %>" alt="perfil-pet" />
             <ul>
-              <li><%= usuario.nome %></li>
-              <li><%= usuario.email %></li>
-              <li><%= usuario.telefone %></li>
-              <li><p><%= usuario.estado %></p></li>
-              <li><p><%= usuario.cidade %></p></li>
+              <li><%= usuarioEncontrado.nome %></li>
+              <li><%= usuarioEncontrado.email %></li>
+              <li><%= usuarioEncontrado.telefone %></li>
+              <li><p><%= usuarioEncontrado.estado %></p></li>
+              <li><p><%= usuarioEncontrado.cidade %></p></li>
               <li>opçõesDoPerfil6</li>
-              <% }) %>
+              <%  %>
             </ul>
 
           </section>
