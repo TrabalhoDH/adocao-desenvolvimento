@@ -20,7 +20,8 @@ const perfilController = (request, response)=>{
 
     response.render('perfil',{
         usuario,
-        animal
+        animal,
+        usuarioEncontrado:request.session.usuarioEncontrado    
     })
 };
 
