@@ -25,8 +25,8 @@ const loginController = {
             return response.status(401).render('login');
         }
         
-        request.session.autorizado = true
-        request.session.usuarioEncontrado = usuarioEncontrado
+        request.session.autorizado = true;
+        request.session.usuarioEncontrado = usuarioEncontrado;
         return response.redirect('/perfil');
     },
 }
