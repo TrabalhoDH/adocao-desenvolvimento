@@ -26,7 +26,10 @@ const cadastroController ={
         usuarioJSON.push(novoUsuario);
         
         fs.writeFileSync(novoArquivoUsuario, JSON.stringify(usuarioJSON));
-        
+
+        request.session.autorizado = true;
+        request.session.usuarioEncontrado = novoUsuario;
+
         response.redirect('/perfil');
     }
 };
