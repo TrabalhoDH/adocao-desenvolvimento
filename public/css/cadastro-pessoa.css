@@ -22,7 +22,7 @@ div.cadastro{
     bottom: 10%;
     left: 35%;
     width: 30%;
-    height:80%;
+    height:85%;
     display: table;
     box-shadow: 2px 2px 2px #380b61;
 }
@@ -54,13 +54,39 @@ label{
     top: 15px;
 }
     
-input[type="radio"],input[type="date"], select{
+input[type="radio"],input[type="file"],input[type="date"], select{
     cursor: pointer;
 }
 
+label[for="fotoPerfil"]{
+    cursor: pointer;
+    color: #f4f4f4;
+    background-color: #9b75d8;
+    border-radius: 10px; 
+    width: 155px; 
+    height: 35px;
+    padding: 1% 1%;
+    display: block;
+    border: none;
+    font-size: 1em;
+    position:relative;
+    left: 12%;
+    bottom: 75%;
+    text-align: center;
+}
 
+label[for="fotoPerfil"]:hover{
+    background-color:#8754d9;
+    transition-duration: 0.5s;
+    cursor: pointer;
+}
 
-input[type="text"], input[type="email"], input[type="tel"], input[type="date"], select{
+input[type="file"]{
+    transition-property:all;
+    display: none;
+}
+
+input[type="password"],input[type="text"], input[type="email"], input[type="tel"], input[type="date"], select{
     
     width: 95%;
     padding: 8px ;
@@ -83,16 +109,17 @@ button{
   color: #f4f4f4;
   box-sizing: border-box ;
   position:relative;
-  top: 85%;
-  left: 10px;
+  left: 50%;
+  bottom: 35px;
   width: 150px;
   height: 35px;
   margin: 0% 10%;   
   transition-property:all;
-  font-size: 0.9em;
-  margin-top: 1rem;
+  font-size: 1em;
+  
   
 }
+
 
 button:hover{
     background-color:#8754d9;

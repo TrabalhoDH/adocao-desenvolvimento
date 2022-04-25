@@ -12,8 +12,8 @@ const loginController = {
    
         const { email, senha } = request.body;
 
-        const usuarioEncontrado = usuarios.find(usuario => usuario.email === email);
-
+        const usuarioEncontrado = usuarios.find(usuario => usuario.email === email); 
+        
         if (!usuarioEncontrado) {
             return response.status(401).render('login');
         }
