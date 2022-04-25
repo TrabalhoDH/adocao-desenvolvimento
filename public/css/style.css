@@ -60,7 +60,8 @@ header nav ul li a {
 footer {
     display: flex;
     justify-content: space-between;
-
+    position: absolute;
+    top: 100%;
     margin-top: 6.2rem;
     padding: 15px;
     width:100%;
