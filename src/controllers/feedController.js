@@ -1,10 +1,11 @@
-const express = require("express");
-const router = express.Router();
+const fs = require('fs');
 
 
-
-const feedControler = (request, response)=>{
+const feedControler ={
+    show : (request, response)=>{
     response.render('feed')
+    },
+
 };
 
 
