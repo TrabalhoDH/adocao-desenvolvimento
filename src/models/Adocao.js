@@ -1,0 +1,25 @@
+module.exports=(sequelize,DataType)=>{
+    const Adocao = sequelize.define('Adocao',{
+        id_adocao:{
+            type:DataType.INTEGER,
+            primaryKey:true,
+            autoIncrement:true,
+        },
+        criado_em:{
+            type:DataType.INTEGER,
+            allowNull:false
+        },
+        usuario_id:{
+            type:DataType.INTEGER,
+            forgeinKey:true,
+        },
+        animal_id:{
+            type:DataType.INTEGER,
+            forgeinKey:true,
+        }
+    },{
+        tableName:'adocao',
+        timestamps:false,
+    })
+    return Adocao
+}
