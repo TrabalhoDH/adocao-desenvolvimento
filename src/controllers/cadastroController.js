@@ -1,18 +1,38 @@
-const fs = require('fs');
-const { v4: uuid} = require('uuid');
 const bcrypt = require('bcryptjs');
-const {check, validationResult,body} =require('express-validator')
+const {Usuario} = require('../models')
 
 
 const cadastroController ={
     usuario: (request, response)=>{
     response.render('cadastro-pessoas')},
 
-    novoUsuarios: (request,response)=>{
-        const {senha} = request.body;
-        const senhaC = bcrypt.hashSync(senha ,10);
+    novoUsuarios: async (request,response)=>{
+        const {nome,senha,cpf,email,genero,date} = request.body;
+        /* const as = bcrypt.hashSync(senha ,10); */
+
+        const usuario = await Usuario.create({
+            nome:nome,
+            senha:senha,
+            cpf:cpf,
+            email:email,
+            genero:genero,
+            data_nasc:date,
+            criado_em:`${new Date()}`
+        })
         
-        const novoArquivoUsuario = 'usuario.json';
+        request.session.autorizado = true;
+        request.session.usuarioEncontrado = usuario;
+ 
+        console.log(usuario)
+
+        response.redirect('/perfil');
+    }
+};
+
+
+module.exports = cadastroController
+
+/*         const novoArquivoUsuario = 'usuario.json';
         const usuarioArquivo = fs.readFileSync(novoArquivoUsuario);
         const usuarioJSON = JSON.parse(usuarioArquivo);
 
@@ -25,14 +45,4 @@ const cadastroController ={
         
         usuarioJSON.push(novoUsuario);
         
-        fs.writeFileSync(novoArquivoUsuario, JSON.stringify(usuarioJSON));
-
-        request.session.autorizado = true;
-        request.session.usuarioEncontrado = novoUsuario;
-
-        response.redirect('/perfil');
-    }
-};
-
-
-module.exports = cadastroController
+        fs.writeFileSync(novoArquivoUsuario, JSON.stringify(usuarioJSON)); */

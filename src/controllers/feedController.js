@@ -1,12 +1,19 @@
-const fs = require('fs');
+const {Animal} = require('../models');
 
 
 const feedControler ={
-    show : (request, response)=>{
-    response.render('feed')
+    show : async (request, response)=>{
+    const pesquisa = request.query;
+
+    const resultadoPesquisa = await Animal.findAll({
+        
+        like :`%${pesquisa}%`
+    });
+
+    response.render('feed',{
+        resultadoPesquisa
+    })
     },
 
 };
-
-
 module.exports = feedControler;
