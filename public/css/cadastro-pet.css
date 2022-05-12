@@ -80,20 +80,19 @@ input[type="checkbox"]{
 }
 
 button{
-  
     border: none;
     border-radius: 10px;
     background-color: #9b75d8;
     color: #f4f4f4;
     box-sizing: border-box ;
     position:relative;
-    top: 25px;
-    left: 10px;
+    left: 50%;
+    bottom: 15px;
     width: 150px;
     height: 35px;
     margin: 0% 10%;   
     transition-property:all;
-    font-size: 0.9em;
+    font-size: 1em;
   }
 
 button:hover{
@@ -112,3 +111,31 @@ textarea{
      position: relative;
      left: 14px;
  }
+
+ label[for="fotoAnimais"]{
+    cursor: pointer;
+    color: #f4f4f4;
+    background-color: #9b75d8;
+    border-radius: 10px; 
+    width: 155px; 
+    height: 35px;
+    padding: 1% 1%;
+    display: block;
+    border: none;
+    font-size: 1em;
+    position:relative;
+    left: 12%;
+    top: 19px;
+    text-align: center;
+ }
+
+ label[for="fotoAnimais"]:hover{
+    background-color:#8754d9;
+    transition-duration: 0.5s;
+    cursor: pointer;
+ }
+
+ input[type="file"]{
+    transition-property:all;
+    display: none;
+}

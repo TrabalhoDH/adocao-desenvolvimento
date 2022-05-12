@@ -2,6 +2,7 @@ const {check,validationResult,body} = require('express-validator');
 
 const cadastroUserValidator = [
     body("nome").notEmpty().withMessage('Deve preencher o nome').bail(),
+
     body("cpf").notEmpty().withMessage('Deve preencher o nome').bail(),
     body("email").isEmail(),
     body("telefone").isLength({min:11}),

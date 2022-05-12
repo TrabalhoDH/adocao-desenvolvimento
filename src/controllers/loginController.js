@@ -15,12 +15,12 @@ const loginController = {
                 email: email,
                 senha: senha
             }
-        }).then((resultado)=>{
-
+        });
+      
         request.session.autorizado = true;
         request.session.usuarioEncontrado = resultado;
         return response.redirect('/perfil');
-    })
+    
     }
 };
 
