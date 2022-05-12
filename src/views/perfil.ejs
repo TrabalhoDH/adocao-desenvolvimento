@@ -17,50 +17,35 @@
         <section id="Tema">Tema</section>
         <!--imagem do pefil e opções(coluna esquerda)-->
         <section id="content">
-          <% usuario.find(usuario => usuario === usuarioEncontrado) %>
           <section class="perfil">
-            <img src="../uploads/<%= usuarioEncontrado.fileName %>" alt="perfil-pet" />
+            <img src="" alt="perfil-pet" />
             <ul>
-              <li><%= usuarioEncontrado.nome %></li>
-              <li><%= usuarioEncontrado.email %></li>
-              <li><%= usuarioEncontrado.telefone %></li>
-              <li><p><%= usuarioEncontrado.estado %></p></li>
-              <li><p><%= usuarioEncontrado.cidade %></p></li>
+              <li><%= user.nome %></li>
+              <li><%= user.email %></li>
               <li>opçõesDoPerfil6</li>
-              <%  %>
             </ul>
 
           </section>
-          <% animal.forEach((animal) => { %>
-          <% usuario.find((usuario)=> { %>
+          
           <div id="card">
-            <h2><%=usuario.nome%></h2>
+            <h2><%= user.nome %></h2>
             <div class="infoPerfil">
               <aside>
                 <img
                   class="perfil-img"
-                  src="../uploads/<%= usuario.fileName %> "
+                  src=""
                   alt="perfil-pet"
                 />
-                <% }) %>
-                <ul class="infoPerfil-pet">
-                  <li><%= animal.pet %></li>
-                  <li><%= animal.raca %></li>
-                  <li><%= animal.pet %></li>
-                  <li><%= animal.tamanho %></li>
-                  <li><%= animal.genero %></li>
-                  <li><%= animal.idade %></li>
-                  
-                </ul>
+                <ul class="infoPerfil-pet">                
+               </ul>
               </aside>
               <div class="photo-card">
                 <img
                 class="perfil-img"
-                src="../uploads/<%= animal.fileName %> "
+                src=""
                 alt="perfil-pet"
               />
             </div>
-            <% }) %>
           </div>
         </div>
 
@@ -79,5 +64,6 @@
 
       <%- include('./partials/footer') %>
       
-    </body></html
-></DOCTYPE>
+    </body>
+  </html>
+</DOCTYPE>

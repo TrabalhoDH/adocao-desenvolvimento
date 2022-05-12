@@ -1,6 +1,6 @@
 module.exports=(sequelize,DataType)=>{
     const Usuario = sequelize.define('Usuario',{
-        id_usuario:{
+        id:{
             type:DataType.INTEGER,
             primaryKey:true,
             autoIncrement:true
@@ -23,20 +23,34 @@ module.exports=(sequelize,DataType)=>{
         },
         genero:{
             type:DataType.STRING,
-            allowNull:false,
+            
         },
         data_nasc:{
             type:DataType.DATE,
-            allowNull:false,
+            
         },
         criado_em:{
             type:DataType.DATE,
-            allowNull:false,
+            
         },
     },{
         tableName:'usuarios',
         timestamps: false
     })
+
+    Usuario.associate = (models)=>{
+        Usuario.hasMany(models.Adocao,{
+            as: 'adocao',
+            foreignKey: 'usuario_id'
+        });
+        
+        Usuario.hasMany(models.Anuncio,{
+            as: 'anuncios',
+            foreignKey: 'usuario_id'
+        });
+    }
+
+
     return Usuario
 }
 

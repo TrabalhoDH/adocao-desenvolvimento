@@ -1,6 +1,6 @@
 module.exports=(sequelize,DataType)=>{
-    const Interesse = sequelize.define('Interesse_adocao',{
-        id_anuncio:{
+    const InteresseAdocao = sequelize.define('InteresseAdocao',{
+        id:{
             type:DataType.INTEGER,
             primaryKey:true,
             autoIncrement:true,
@@ -31,5 +31,5 @@ module.exports=(sequelize,DataType)=>{
         tableName:'interesse_doacao',
         timestamps:false
     })
-    return Interesse_adocao
+    return InteresseAdocao
 }

@@ -1,6 +1,6 @@
 module.exports=(sequelize,DataType)=>{
     const Adocao = sequelize.define('Adocao',{
-        id_adocao:{
+        id:{
             type:DataType.INTEGER,
             primaryKey:true,
             autoIncrement:true,
@@ -21,5 +21,6 @@ module.exports=(sequelize,DataType)=>{
         tableName:'adocao',
         timestamps:false,
     })
+
     return Adocao
 }

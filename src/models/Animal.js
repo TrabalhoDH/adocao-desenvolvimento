@@ -1,6 +1,6 @@
 module.exports=(sequelize,DataType)=>{
     const Animal = sequelize.define('Animal',{
-        id_animal:{
+        id:{
             type:DataType.INTEGER,
             primaryKey:true,
             autoIncrement:true,
@@ -19,13 +19,19 @@ module.exports=(sequelize,DataType)=>{
             allowNull:false
         },
         criado_em:{
-            type:DataTypes.DATE,
+            type:DataType.DATE,
             allowNull:false
         }
 
     },{
         tableName:'animais',
         timestamps:false
-    })
-    return animal
+    });
+/*     Animal.associate = (models)=>{
+        Animal.belongsTo(models.Adocao,{
+            as: 'adocao',
+            foreignKey: 'animal_id'
+        });
+    }  */   
+    return Animal
 }

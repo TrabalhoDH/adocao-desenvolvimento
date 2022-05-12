@@ -1,23 +1,7 @@
 module.exports ={
-  "development": {
-    "username": "root",
-    "password": null,
-    "database": "projeto_integrador",
-    "host": "127.0.0.1",
-    "dialect": "mysql"
-  },
-  "test": {
-    "username": "root",
-    "password": null,
-    "database": "database_test",
-    "host": "127.0.0.1",
-    "dialect": "mysql"
-  },
-  "production": {
-    "username": "root",
-    "password": null,
-    "database": "database_production",
-    "host": "127.0.0.1",
-    "dialect": "mysql"
-  }
-}
+  username: "root",
+  password: '082931kb',
+  database: "projeto_integrador",
+  host: "127.0.0.1",
+  dialect: "mysql"
+};

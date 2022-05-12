@@ -3,7 +3,7 @@ const multer = require('multer');
 
 const storage = require('../config/multer');
 const cadastroController = require('../controllers/cadastroController');
-const cadastroUserValidator = require('../../middlewares/cadastroUserValidator')
+const cadastroUserValidator = require('../middlewares/cadastroUserValidator')
 const {check,validationResult,body} = require('express-validator');
 const router =express.Router();
 

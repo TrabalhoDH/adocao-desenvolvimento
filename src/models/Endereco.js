@@ -1,6 +1,6 @@
 module.exports=(sequelize,DataType)=>{
     const Endereco = sequelize.define('Endereco',{
-        id_endereco:{
+        id:{
             type:DataType.INTEGER,
             primaryKey:true,
             autoIncrement:true,
@@ -39,5 +39,5 @@ module.exports=(sequelize,DataType)=>{
         tableName:'enderecos',
         timestamps:false
     })
-    return endereco
+    return Endereco
 }

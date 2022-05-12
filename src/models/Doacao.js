@@ -1,6 +1,6 @@
 module.exports=(sequelize,DataType)=>{
     const Doacao = sequelize.define('Doacao',{
-        id_doacao:{
+        id:{
             type:DataType.INTEGER,
             primaryKey:true,
             autoIncrement:true
