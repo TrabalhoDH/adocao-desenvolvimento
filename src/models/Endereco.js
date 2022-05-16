@@ -7,7 +7,7 @@ module.exports=(sequelize,DataType)=>{
         },
         cep:{
             type:DataType.INTEGER,
-            forgeinKey:true,
+            foreignKey:true,
         },
         logradouro:{
             type:DataType.STRING,
@@ -15,7 +15,7 @@ module.exports=(sequelize,DataType)=>{
         },
         numero:{
             type:DataType.INTEGER,
-            forgeinKey:true,
+            foreignKey:true,
         },
         complemento:{
             type:DataType.STRING,
@@ -31,7 +31,7 @@ module.exports=(sequelize,DataType)=>{
         },
         usuario_id:{
             type:DataType.INTEGER,
-            forgeinKey:true,
+            foreignKey:true,
         }
         
 

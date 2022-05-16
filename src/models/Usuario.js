@@ -1,3 +1,4 @@
+
 module.exports=(sequelize,DataType)=>{
     const Usuario = sequelize.define('Usuario',{
         id:{
@@ -33,24 +34,34 @@ module.exports=(sequelize,DataType)=>{
             type:DataType.DATE,
             
         },
-    },{
+        animais_id:{
+            type:DataType.INTEGER,
+            foreignKey:true
+            
+            
+        },
+    },
+    
+    {
         tableName:'usuarios',
         timestamps: false
-    })
+    }
+    )
 
     Usuario.associate = (models)=>{
-        Usuario.hasMany(models.Adocao,{
-            as: 'adocao',
-            foreignKey: 'usuario_id'
+        Usuario.hasMany(models.Animal,{
+            as: 'Animal',
+            foreignKey: 'usuarios_id'
         });
         
         Usuario.hasMany(models.Anuncio,{
             as: 'anuncios',
-            foreignKey: 'usuario_id'
+            foreignKey: 'usuarios_id'
         });
     }
 
 
     return Usuario
 }
+
 

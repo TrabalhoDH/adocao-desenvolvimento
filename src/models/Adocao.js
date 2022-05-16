@@ -11,11 +11,11 @@ module.exports=(sequelize,DataType)=>{
         },
         usuario_id:{
             type:DataType.INTEGER,
-            forgeinKey:true,
+            foreignKey:true,
         },
         animal_id:{
             type:DataType.INTEGER,
-            forgeinKey:true,
+            foreignKey:true,
         }
     },{
         tableName:'adocao',
