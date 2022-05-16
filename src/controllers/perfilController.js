@@ -9,12 +9,14 @@ const perfilController = {
             where: {
                 id
             },
-            include:['anuncios']
+            include:['Animal']
         });
-        
+        console.log(user)
+       
         return response.render('perfil', {
             user,
         });
+        // return response.json(user)
     },
 };
 

@@ -9,7 +9,6 @@ const loginController = {
     logar: async (request, response) => {
    
         const { email, senha } = request.body;
-
         const usuarioEncontrado = await Usuario.findOne({
             where:{
                 email: email,
@@ -18,7 +17,7 @@ const loginController = {
         });
       
         request.session.autorizado = true;
-        request.session.usuarioEncontrado = resultado;
+        request.session.usuarioEncontrado = usuarioEncontrado;
         return response.redirect('/perfil');
     
     }

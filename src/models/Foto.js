@@ -11,7 +11,7 @@ module.exports=(sequelize,DataType)=>{
         },
         caminho:{
             type:DataType.STRING,
-            forgeinKey:true,
+            foreignKey:true,
         },
         criado_em:{
             type:DataType.DATE,
@@ -19,7 +19,7 @@ module.exports=(sequelize,DataType)=>{
         },
         anuncio_id:{
             type:DataType.INTEGER,
-            forgeinKey:true,
+            foreignKey:true,
         }
         
 

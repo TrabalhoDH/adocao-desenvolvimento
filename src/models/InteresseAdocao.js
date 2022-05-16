@@ -15,15 +15,15 @@ module.exports=(sequelize,DataType)=>{
         },
         usuario_id:{
             type:DataType.INTEGER,
-            forgeinKey:true,
+            foreignKey:true,
         },
         anuncio_id:{
             type:DataType.INTEGER,
-            forgeinKey:true,
+            foreignKey:true,
         },
         doacao_id:{
             type:DataType.INTEGER,
-            forgeinKey:true,
+            foreignKey:true,
         }
         
 
