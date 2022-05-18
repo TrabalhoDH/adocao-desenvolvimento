@@ -22,31 +22,45 @@
             <ul>
               <li><%= user.nome %></li>
               <li><%= user.email %></li>
-              <li>opçõesDoPerfil6</li>
+              <li><%= user.genero %></li>
+              <li><%= user.cpf %></li>
             </ul>
 
           </section>
-          
-          <div id="card">
-            <h2><%= user.nome %></h2>
-            <div class="infoPerfil">
-              <aside>
-                <img
+          <% user.Animal.forEach((animais)=>{ %>
+            <div id="card">
+              <h2>></h2>
+              <div class="infoPerfil">
+                <aside>
+                  <img
+                    class="perfil-img"
+                    src="../uploads/<%- animais.imagem %>"
+                    alt="perfil-pet"
+                  />
+                  <ul class="infoPerfil-pet">
+                    
+                    <li><%= animais.raca %></li>
+                    <li><%= animais.porte %></li>
+                    <li><%= animais.tipo %></li>               
+                    <li><%= animais.pelagem %></li>
+                    <li>
+                      <form method="get" action="/adocao">
+                        <input type="hidden" name="animal" value="<%= animais.id %>">
+                  
+                        <button type="submit">Doar!</button>
+                      </form>
+                    </li>
+                 </ul>
+                </aside>
+                <div class="photo-card">
+                  <img
                   class="perfil-img"
                   src=""
                   alt="perfil-pet"
                 />
-                <ul class="infoPerfil-pet">                
-               </ul>
-              </aside>
-              <div class="photo-card">
-                <img
-                class="perfil-img"
-                src=""
-                alt="perfil-pet"
-              />
+              </div>
             </div>
-          </div>
+          <% }) %>
         </div>
 
           <section id="customProfile">

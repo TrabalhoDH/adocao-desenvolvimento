@@ -11,10 +11,10 @@ const perfilController = {
             },
             include:['Animal']
         });
-        console.log(user)
-       
+
         return response.render('perfil', {
             user,
+            
         });
         // return response.json(user)
     },

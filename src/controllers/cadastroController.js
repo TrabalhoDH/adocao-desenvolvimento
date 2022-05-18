@@ -8,11 +8,12 @@ const cadastroController ={
 
     novoUsuarios: async (request,response)=>{
         const {nome,senha,cpf,email,genero,date} = request.body;
-        /* const as = bcrypt.hashSync(senha ,10); */
+        
+        const senhaCriptografada = bcrypt.hashSync(senha ,10);
 
         const usuario = await Usuario.create({
             nome:nome,
-            senha:senha,
+            senha:senhaCriptografada,
             cpf:cpf,
             email:email,
             genero:genero,
