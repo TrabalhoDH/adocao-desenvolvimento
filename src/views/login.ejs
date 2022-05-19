@@ -6,16 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="../css/login.css">
-    <title>Adoção Legal</title>
+    <title>Adoção Legal</title>s
 </head>
 <body>
     <div id="login-container">
         <h1>Login</h1>
-        <form action="">
+        <form action="/login" method="post">
             <label for="email">E-mail</label>
             <input type="email" name="email" id="email" placeholder="Digite o seu Email!">
-            <label for="password">Senha</label>
-            <input type="password" name="password" id="password" placeholder="Digite a sua senha!">
+            <label for="senha">Senha</label>
+            <input type="password" name="senha" id="senha" placeholder="Digite a sua senha!">
 
             <a href="#" id="esqueciSenha">Esqueceu a senha?</a>
             <input type="submit" value="Login">
@@ -27,7 +27,7 @@
         </div>
         <div id="registro-container">
             <p>Ainda não tem uma conta?</p>
-            <a href="#">Registrar</a>
+            <a href="/cadastro/usuario">Registrar</a>
         </div>
     </div>
 </body>

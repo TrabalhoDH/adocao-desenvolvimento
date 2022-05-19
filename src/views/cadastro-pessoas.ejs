@@ -8,44 +8,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     
-    <title> Cadastro de Pessoas </title>
     <link rel="stylesheet" href="../css/cadastro-pessoa.css">
     <link rel="stylesheet" href="../css/style.css"/>
+    <title> Cadastro de Pessoas </title>
 
 
 </head>
  
 <body>
-    
     <%- include('./partials/header') %>
-
-    <main>
-
-    </main> 
-
-        <div class="cadastro">
+        
+    <div class="cadastro">
         
         <p id="titulo">Cadastre-se</p>
         
-        <form method="post" action="/cadastro/usuario">  
+        <form method="post" action="/cadastro/usuario" enctype="multipart/form-data">  
 
                 <label for="nome"> Nome: </label>
-                    <input type="text" id="nome" name="nome" placeholder="Digite o seu nome">
+                    <input type="text" id="nome" name="nome" placeholder="Digite o seu nome" required maxlength= "25">
+           
+                <label for="senha"> Senha: </label>
+                    <input type="password" id="senha" name="senha" placeholder="Digite o sua senha" required maxlength="30">
 
                 <label for="cpf"> CPF: </label>    
-                    <input type="text" id="cpf" name="cpf" placeholder= "Digite o seu CPF">
+                    <input type="text" id="cpf" name="cpf" placeholder= "Digite o seu CPF" required maxlength="15">
 
                 <label for="nome">Endereço de E-mail: </label>
-                    <input type="email" id="email" name="email" placeholder="Digite o seu email">
+                    <input type="email" id="email" name="email" placeholder="Digite o seu email" required maxlength="25">
                 
                 <label for="telefone">Telefone</label> 
-                    <input type="tel" id="telefone" class="input-padrao" required placeholder="(xx) xxxxx-xxxx">
+                    <input type="tel" id="telefone" name="telefone" class="input-padrao"  placeholder="(xx) xxxxx-xxxx" required>
 
                 <label for="data"> Data de Nascimento: </label>
                     <input type="date" name="date">
 
                 <label for="estado"> Estado: </label>     
-                    <select id =" estado " name =" estado " >
+                    <select id =" estado " name =" estado " required >
                         <option  value =" AC " > Acre </option >
                         <option  value =" AL " > Alagoas </option >
                         <option  value =" AP " > Amapá </option >
@@ -77,7 +75,7 @@
                     </select >
 
                 <label for="cidade"> Cidade: </label>
-                    <input type="text" id="cidade" name="cidade" placeholder="Digite a sua cidade">
+                    <input type="text" id="cidade" name="cidade" placeholder="Digite a sua cidade" requirednpm maxlength="15">
 
                 <div>
                 <label> Genero : </label>   
@@ -88,13 +86,12 @@
                     <input type="radio" name="genero" value="mulher"><label for="mulher">Feminino</label>
                 </div>
                 
-                <button type="reset"> Upload de foto</button> 
-                <button type="submit"> Finalizar </button> 
-
-            </form> 
+                <label for="fotoPerfil">Enviar arquivo</label>
+                <input type="file" id="fotoPerfil" name="fotoPerfil" accept="image/*">
                 
+                <button type="submit"> Finalizar </button> 
+        </form>            
     </div>
-    
     <%- include('./partials/footer') %>
  </body>
 

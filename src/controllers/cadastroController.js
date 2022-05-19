@@ -1,61 +1,48 @@
-const express = require('express');
-const router = express.Router;
-const fs = require('fs');
-const { v4: uuid} = require('uuid');
+const bcrypt = require('bcryptjs');
+const {Usuario} = require('../models')
 
 
 const cadastroController ={
     usuario: (request, response)=>{
     response.render('cadastro-pessoas')},
+
+    novoUsuarios: async (request,response)=>{
+        const {nome,senha,cpf,email,genero,date} = request.body;
+        /* const as = bcrypt.hashSync(senha ,10); */
+
+        const usuario = await Usuario.create({
+            nome:nome,
+            senha:senha,
+            cpf:cpf,
+            email:email,
+            genero:genero,
+            data_nasc:date,
+            criado_em:`${new Date()}`
+        })
+        
+        request.session.autorizado = true;
+        request.session.usuarioEncontrado = usuario;
  
-    pet : (request, response)=>{
-    response.render('cadastro-pet')},
+        console.log(usuario)
 
-    novoUsuarios: (request,response)=>{
-        const novoArquivoUsuario = 'usuario.json';
-
-        const usuarioArquivo = fs.readFileSync(novoArquivoUsuario);
-        const usuarioJSON = JSON.parse(usuarioArquivo);
-
-        const novoUsuario = {
-            id: uuid(),
-            ...request.body
-        }
-
-        usuarioJSON.push(novoUsuario);
-
-        console.log(request.body);
-        console.log(novoUsuario);
-
-        fs.writeFileSync(novoArquivoUsuario, JSON.stringify(usuarioJSON));
-        
-        response.render('perfil',{
-            title: 'Express',
-        });
-    },
-    novoAnimais:(request,response)=>{
-        const novoArquivoAnimal = 'animais.json';
-
-        const animalArquivo = fs.readFileSync(novoArquivoAnimal);
-        const animalJSON = JSON.parse(animalArquivo);
-
-        const novoAnimal = {
-            id: uuid(),
-            ...request.body
-        }
-
-        animalJSON.push(novoAnimal);
-
-        console.log(request.body);
-        console.log(novoAnimal);
-
-        fs.writeFileSync(novoArquivoAnimal, JSON.stringify(animalJSON));
-        
-        response.render('perfil',{
-            title: 'Express',
-        });
+        response.redirect('/perfil');
     }
 };
 
 
 module.exports = cadastroController
+
+/*         const novoArquivoUsuario = 'usuario.json';
+        const usuarioArquivo = fs.readFileSync(novoArquivoUsuario);
+        const usuarioJSON = JSON.parse(usuarioArquivo);
+
+        const novoUsuario = {
+            id: uuid(),
+            ...request.body,
+            senha : senhaC,
+            fileName: request.file.filename
+        }
+        
+        usuarioJSON.push(novoUsuario);
+        
+        fs.writeFileSync(novoArquivoUsuario, JSON.stringify(usuarioJSON)); */

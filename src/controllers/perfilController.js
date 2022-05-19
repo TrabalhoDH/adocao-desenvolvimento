@@ -1,11 +1,23 @@
-const express = require("express");
-const router = express.Router();
+const { Usuario } = require('../models');
 
+const perfilController = {
+    index: async (request, response) => {
 
+        const { id } = request.session.usuarioEncontrado;
 
-const perfilController = (request, response)=>{
-    response.render('perfil')
+        const user = await Usuario.findOne({
+            where: {
+                id
+            },
+            include:['Animal']
+        });
+        console.log(user)
+       
+        return response.render('perfil', {
+            user,
+        });
+        // return response.json(user)
+    },
 };
-
 
 module.exports = perfilController;
