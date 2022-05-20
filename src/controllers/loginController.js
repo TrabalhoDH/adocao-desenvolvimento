@@ -9,14 +9,21 @@ const loginController = {
     logar: async (request, response) => {
    
         const { email, senha } = request.body;
-
+        
+        
         const usuarioEncontrado = await Usuario.findOne({
             where:{
                 email
             },
-
-            // const  = 
+            
         });
+        
+        const ehSenhaCorreta = bcrypt.compareSync(senha, usuarioEncontrado.senha);
+
+            if (!ehSenhaCorreta) {
+                return response.status(401).render('login');
+            }
+
       
         request.session.autorizado = true;
         request.session.usuarioEncontrado = usuarioEncontrado;

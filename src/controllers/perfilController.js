@@ -14,8 +14,8 @@ const perfilController = {
 
         return response.render('perfil', {
             user,
-            
         });
+
         // return response.json(user)
     },
 };
