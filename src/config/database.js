@@ -1,5 +1,5 @@
 module.exports ={
-  
+
   username: "root",
   password: '082931kb',
   database: "projeto_integrador",
