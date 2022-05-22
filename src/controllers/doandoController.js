@@ -21,7 +21,6 @@ const doandoController ={
            tipo:tipoDePet,
            genero:genero,
            idade:idade,
-           imagem: request.file.filename,
            pelagem:pelagem,
            infoExtra:maisInformacoes,
            usuarios_id: id,

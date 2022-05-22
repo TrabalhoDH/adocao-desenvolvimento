@@ -1,11 +1,11 @@
 const {Animal} = require('../models');
 const {Usuario} = require('../models');
 
-const adocaoController ={
+const anuncioController ={
     show :(request, response)=>{
        
-    response.render('adocao')
+    response.render('anuncio')
     },
 
 };
-module.exports = adocaoController;
+module.exports = anuncioController;

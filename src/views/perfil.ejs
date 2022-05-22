@@ -18,7 +18,8 @@
         <!--imagem do pefil e opções(coluna esquerda)-->
         <section id="content">
           <section class="perfil">
-            <img src="" alt="perfil-pet" />
+
+            <img src="../uploads/sem-foto.jpg" alt="perfil-pet" />
             <ul>
               <li><%= user.nome %></li>
               <li><%= user.email %></li>
@@ -29,13 +30,13 @@
           </section>
           <% user.Animal.forEach((animais)=>{ %>
             <div id="card">
-              <h2>></h2>
+              <h2 id="Nome do pet"> <li> <%=animais.raca %></li> </h2>
               <div class="infoPerfil">
                 <aside>
                   <img
                     class="perfil-img"
-                    src="../uploads/<%- animais.imagem %>"
-                    alt="perfil-pet"
+                    src="../uploads/<%= animais.imagem %>"
+                    alt="fot de perfil-pet"
                   />
                   <ul class="infoPerfil-pet">
                     
@@ -44,7 +45,7 @@
                     <li><%= animais.tipo %></li>               
                     <li><%= animais.pelagem %></li>
                     <li>
-                      <form method="get" action="/adocao">
+                      <form method="get" action="/anunciar">
                         <input type="hidden" name="animal" value="<%= animais.id %>">
                   
                         <button type="submit">Doar!</button>
@@ -67,9 +68,6 @@
             <ul>
                 <li>opçõesDoPerfil1</li>
                 <li>opçõesDoPerfil2</li>
-                <li>opçõesDoPerfil3</li>
-                <li>opçõesDoPerfil4</li>
-                <li>opçõesDoPerfil5</li>
                 <li><a href="/doando/pet">Doe seu pet!</a></li>
               </ul>
           </section>

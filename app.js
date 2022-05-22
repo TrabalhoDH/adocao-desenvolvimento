@@ -11,7 +11,7 @@ const perfilRouter = require('./src/routes/perfilRouter');
 const cadastroRouter = require('./src/routes/cadastroRouter');
 const feedRouter = require('./src/routes/feedRouter');
 const doandoRouter = require('./src/routes/doandoRouter')
-const adocaoRouter = require('./src/routes/adocaoRouter')
+const anuncioRouter = require('./src/routes/anuncioRouter')
 
 const app = express();
 
@@ -37,7 +37,7 @@ app.use('/perfil', perfilRouter);
 app.use('/cadastro', cadastroRouter);
 app.use('/feed', feedRouter);
 app.use('/doando',doandoRouter);
-app.use('/adocao',adocaoRouter);
+app.use('/anuncio',anuncioRouter);
 
 
 // catch 404 and forward to error handler
