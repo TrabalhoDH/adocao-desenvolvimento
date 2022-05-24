@@ -1,4 +1,3 @@
-const createError = require('http-errors');
 const express = require('express');
 const path = require('path');
 const session = require('express-session')
@@ -26,13 +25,13 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use('/uploads', express.static(path.join(__dirname, 'src', 'uploads')));
 app.use(session({
-  secret:'6FAPGgszInSVc4Z+jKL1/7PfAHCbnTxUlDmySEQWNTY=',
+  secret: '6FAPGgszInSVc4Z+jKL1/7PfAHCbnTxUlDmySEQWNTY=',
   resave: true,
   saveUninitialized: true
 }))
 
-app.use('/',indexRouter);
-app.use('/login',loginRouter);
+app.use('/', indexRouter);
+app.use('/login', loginRouter);
 app.use('/perfil', perfilRouter);
 app.use('/cadastro', cadastroRouter);
 app.use('/feed', feedRouter);
@@ -41,7 +40,7 @@ app.use('/anuncio',anuncioRouter);
 
 
 // catch 404 and forward to error handler
-app.use((req, res, next) =>{
+app.use((req, res, next) => {
   return res.status(404).render('not-found404');
 });
 

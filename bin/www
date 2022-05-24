@@ -4,13 +4,16 @@
  * Module dependencies.
  */
 
-const app = require('../app');
+const app = require('../src/app');
 const debug = require('debug')('adocao-desenvolvimento:server');
 const http = require('http');
+require('dotenv').config();
 
 /**
  * Get port from environment and store in Express.
  */
+
+console.log(process.env);
 
 const port = normalizePort(process.env.PORT || '3000');
 app.set('port', port);
