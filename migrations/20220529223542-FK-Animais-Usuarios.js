@@ -2,23 +2,23 @@
 
 module.exports = {
     up: async (queryInterface, Sequelize)=>{
-        await queryInterface.addConstraint('anuncios',{
-          fields:['animais_id'],
+        await queryInterface.addConstraint('animais',{
+          fields:['usuarios_id'],
           type: 'foreign key',
-          name: 'anuncios_animais_association',
+          name: 'animais_usuarios_association',
           references: {
-           table: 'animais',
+           table: 'usuarios',
             field: 'id' 
             },
           })
         },
    down: async (queryInterface, Sequelize)=>{
-    await queryInterface.removeConstraint('anuncios',{
-          fields:['animais_id'],
+    await queryInterface.removeConstraint('animais',{
+          fields:['usuarios_id'],
           type: 'foreign key',
-          name: 'anuncios_animais_association',
+          name: 'animais_usuarios_association',
           references: {
-           table: 'animais',
+           table: 'usuarios',
             field: 'id' 
             },
     })
