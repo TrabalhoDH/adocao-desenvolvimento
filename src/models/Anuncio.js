@@ -13,12 +13,6 @@ module.exports=(sequelize,DataType)=>{
             type:DataType.STRING,
             allowNull:false
         },
-        usuario_id:{
-            type:DataType.INTEGER,
-            foreignKey:true,
-        }
-        
-
     },{
         tableName:'anuncios',
         timestamps:false

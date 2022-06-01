@@ -28,13 +28,7 @@ module.exports=(sequelize,DataType)=>{
         estado:{
             type:DataType.STRING,
             allowNull:false
-        },
-        usuario_id:{
-            type:DataType.INTEGER,
-            foreignKey:true,
         }
-        
-
     },{
         tableName:'enderecos',
         timestamps:false

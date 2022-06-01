@@ -13,20 +13,6 @@ module.exports=(sequelize,DataType)=>{
             type:DataType.DATE,
             allowNull:false,
         },
-        usuario_id:{
-            type:DataType.INTEGER,
-            foreignKey:true,
-        },
-        anuncio_id:{
-            type:DataType.INTEGER,
-            foreignKey:true,
-        },
-        doacao_id:{
-            type:DataType.INTEGER,
-            foreignKey:true,
-        }
-        
-
     },{
         tableName:'interesse_doacao',
         timestamps:false

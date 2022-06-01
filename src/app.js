@@ -4,18 +4,18 @@ const session = require('express-session')
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 
-const indexRouter = require('./src/routes/index');
-const loginRouter = require('./src/routes/loginRouter');
-const perfilRouter = require('./src/routes/perfilRouter');
-const cadastroRouter = require('./src/routes/cadastroRouter');
-const feedRouter = require('./src/routes/feedRouter');
-const doandoRouter = require('./src/routes/doandoRouter')
-const anuncioRouter = require('./src/routes/anuncioRouter')
+const indexRouter = require('./routes/index');
+const loginRouter = require('./routes/loginRouter');
+const perfilRouter = require('./routes/perfilRouter');
+const cadastroRouter = require('./routes/cadastroRouter');
+const feedRouter = require('./routes/feedRouter');
+const doandoRouter = require('./routes/doandoRouter')
+const anuncioRouter = require('./routes/anuncioRouter')
 
 const app = express();
 
 // view engine setup
-app.set('views', path.join(__dirname, 'src', 'views'));
+app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
 app.use(logger('dev'));
