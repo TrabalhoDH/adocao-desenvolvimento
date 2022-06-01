@@ -1,5 +1,5 @@
 const {Usuario} = require('../models')
-
+const bcrypt = require('bcryptjs');
 
 
 const loginController = {
@@ -9,13 +9,21 @@ const loginController = {
     logar: async (request, response) => {
    
         const { email, senha } = request.body;
+        
+        
         const usuarioEncontrado = await Usuario.findOne({
             where:{
-                email: email,
-                senha: senha
-            }
+                email
+            },
+            
         });
-      
+        
+        const ehSenhaCorreta = bcrypt.compareSync(senha, usuarioEncontrado.senha);
+
+            if (!ehSenhaCorreta) {
+                return response.status(401).render('login');
+            };
+ 
         request.session.autorizado = true;
         request.session.usuarioEncontrado = usuarioEncontrado;
         return response.redirect('/perfil');

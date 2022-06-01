@@ -10,12 +10,12 @@ const perfilRouter = require('./routes/perfilRouter');
 const cadastroRouter = require('./routes/cadastroRouter');
 const feedRouter = require('./routes/feedRouter');
 const doandoRouter = require('./routes/doandoRouter')
-const adocaoRouter = require('./routes/adocaoRouter')
+const anuncioRouter = require('./routes/anuncioRouter')
 
 const app = express();
 
 // view engine setup
-app.set('views', path.join(__dirname, 'src', 'views'));
+app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
 app.use(logger('dev'));
@@ -35,8 +35,8 @@ app.use('/login', loginRouter);
 app.use('/perfil', perfilRouter);
 app.use('/cadastro', cadastroRouter);
 app.use('/feed', feedRouter);
-app.use('/doando', doandoRouter);
-app.use('/adocao', adocaoRouter);
+app.use('/doando',doandoRouter);
+app.use('/anuncio',anuncioRouter);
 
 
 // catch 404 and forward to error handler

@@ -15,17 +15,15 @@ const doandoController ={
         const { id } = request.session.usuarioEncontrado;
         
         const animal = await Animal.create({
-           raca:raca,
+           raca,
            porte:tamanhoDoPet,
            cor:corPredominante,
            tipo:tipoDePet,
-           genero:genero,
-           idade:idade,
-           imagem: request.file.filename,
-           pelagem:pelagem,
+           genero,
+           idade,
+           pelagem,
            infoExtra:maisInformacoes,
            usuarios_id: id,
-           criado_em:`${new Date()}`
         })
         
 

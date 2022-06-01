@@ -8,21 +8,22 @@ const cadastroController ={
 
     novoUsuarios: async (request,response)=>{
         const {nome,senha,cpf,email,genero,date} = request.body;
-        /* const as = bcrypt.hashSync(senha ,10); */
+
+        const senhaCriptografada = bcrypt.hashSync(senha ,10);
 
         const usuario = await Usuario.create({
             nome:nome,
-            senha:senha,
+            senha:senhaCriptografada,
             cpf:cpf,
             email:email,
             genero:genero,
             data_nasc:date,
             criado_em:`${new Date()}`
         })
-        
+
         request.session.autorizado = true;
         request.session.usuarioEncontrado = usuario;
- 
+
         console.log(usuario)
 
         response.redirect('/perfil');
@@ -42,7 +43,7 @@ module.exports = cadastroController
             senha : senhaC,
             fileName: request.file.filename
         }
-        
+
         usuarioJSON.push(novoUsuario);
-        
+
         fs.writeFileSync(novoArquivoUsuario, JSON.stringify(usuarioJSON)); */

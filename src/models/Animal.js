@@ -47,7 +47,9 @@ module.exports=(sequelize,DataType)=>{
         },
     },{
         tableName:'animais',
-        timestamps:false
+        timestamps:false,
+        createAt: true,
+        updateAt: true
     });
      Animal.associate = (models)=>{
         Animal.belongsTo(models.Usuario,{

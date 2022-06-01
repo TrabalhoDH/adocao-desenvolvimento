@@ -34,12 +34,6 @@ module.exports=(sequelize,DataType)=>{
             type:DataType.DATE,
             
         },
-        animais_id:{
-            type:DataType.INTEGER,
-            foreignKey:true
-            
-            
-        },
     },
     
     {
@@ -51,11 +45,6 @@ module.exports=(sequelize,DataType)=>{
     Usuario.associate = (models)=>{
         Usuario.hasMany(models.Animal,{
             as: 'Animal',
-            foreignKey: 'usuarios_id'
-        });
-        
-        Usuario.hasMany(models.Anuncio,{
-            as: 'anuncios',
             foreignKey: 'usuarios_id'
         });
     }

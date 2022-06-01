@@ -17,12 +17,6 @@ module.exports=(sequelize,DataType)=>{
             type:DataType.DATE,
             allowNull:false,
         },
-        anuncio_id:{
-            type:DataType.INTEGER,
-            foreignKey:true,
-        }
-        
-
     },{
         tableName:'fotos',
         timestamps:false
