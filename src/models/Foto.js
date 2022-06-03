@@ -17,15 +17,15 @@ module.exports=(sequelize,DataType)=>{
             type:DataType.DATE,
             allowNull:false,
         },
-        anuncio_id:{
+        animal_id:{
             type:DataType.INTEGER,
-            foreignKey:true,
-        }
-        
-
+            foreignKey: true,
+        },
     },{
         tableName:'fotos',
-        timestamps:false
+        timestamps:false,
+        createdAt: 'criado_em',
+        updatedAt: false
     })
     return Foto
 }

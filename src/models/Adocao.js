@@ -9,14 +9,6 @@ module.exports=(sequelize,DataType)=>{
             type:DataType.INTEGER,
             allowNull:false
         },
-        usuario_id:{
-            type:DataType.INTEGER,
-            foreignKey:true,
-        },
-        animal_id:{
-            type:DataType.INTEGER,
-            foreignKey:true,
-        }
     },{
         tableName:'adocao',
         timestamps:false,
