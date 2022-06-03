@@ -19,7 +19,7 @@
         <section id="content">
           <section class="perfil">
 
-            <img src="../uploads/sem-foto.jpg" alt="perfil-pet" />
+            <img src="../img/sem-foto.jpg" alt="perfil-pet" />
             <ul>
               <li><%= user.nome %></li>
               <li><%= user.email %></li>
@@ -28,38 +28,40 @@
             </ul>
 
           </section>
-          <% user.Animal.forEach((animais)=>{ %>
+          <% animais.forEach((animal)=>{ %>
             <div id="card">
-              <h2 id="Nome do pet"> <li> <%=animais.raca %></li> </h2>
+              <h2 id="Nome do pet"> <li> <%=animal.raca %></li> </h2>
               <div class="infoPerfil">
                 <aside>
                   <img
                     class="perfil-img"
-                    src="../uploads/<%= animais.imagem %>"
+                    src="../img/sem-foto.jpg"
                     alt="fot de perfil-pet"
                   />
                   <ul class="infoPerfil-pet">
                     
-                    <li><%= animais.raca %></li>
-                    <li><%= animais.porte %></li>
-                    <li><%= animais.tipo %></li>               
-                    <li><%= animais.pelagem %></li>
+                    <li><%= animal.raca %></li>
+                    <li><%= animal.porte %></li>
+                    <li><%= animal.tipo %></li>               
+                    <li><%= animal.pelagem %></li>
                     <li>
                       <form method="get" action="/anuncio">
-                        <input type="hidden" name="animal" value="<%= animais.id %>">
+                        <input type="hidden" name="animal" value="<%= animal.id %>">
                   
                         <button type="submit">Doar!</button>
                       </form>
                     </li>
                  </ul>
                 </aside>
+                <% animal.Fotos.forEach((fotos)=>{ %>
                 <div class="photo-card">
                   <img
                   class="perfil-img"
-                  src=""
+                  src="<%= fotos.caminho %><%= fotos.nome %>"
                   alt="perfil-pet"
-                />
-              </div>
+                  />
+                </div>
+                <% }) %>
             </div>
           <% }) %>
         </div>

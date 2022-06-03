@@ -38,7 +38,9 @@ module.exports=(sequelize,DataType)=>{
     
     {
         tableName:'usuarios',
-        timestamps: false
+        timestamps: false,
+        createdAt: 'criado_em',
+        updatedAt: false
     }
     )
 

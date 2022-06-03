@@ -35,9 +35,6 @@ module.exports=(sequelize,DataType)=>{
         pelagem:{
             type: DataType.STRING,
         },
-        imagem:{
-            type: DataType.STRING,
-        },
         infoExtra:{
             type: DataType.JSON,
         },
@@ -48,14 +45,18 @@ module.exports=(sequelize,DataType)=>{
     },{
         tableName:'animais',
         timestamps:false,
-        createAt: true,
-        updateAt: true
+        createdAt: 'criado_em',
+        updatedAt: false
     });
      Animal.associate = (models)=>{
         Animal.belongsTo(models.Usuario,{
             as: 'Usuario',
             foreignKey: 'usuarios_id'
-        });
+        }),
+        Animal.hasMany(models.Foto,{
+            as: 'Fotos',
+            foreignKey: 'animal_id'
+        })
     }
       
     return Animal
