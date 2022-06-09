@@ -10,12 +10,13 @@ const doandoController ={
     
 
     novoAnimais: async (request,response)=>{
-        const {tipoDePet,raca,tamanhoDoPet,genero,idade,corPredominante,pelagem,maisInformacoes} = request.body;
+        const {nome,tipoDePet,raca,tamanhoDoPet,genero,idade,corPredominante,pelagem,maisInformacoes} = request.body;
    
         const { id } = request.session.usuarioEncontrado;
         
         const animal = await Animal.create({
            raca,
+           nome,
            porte:tamanhoDoPet,
            cor:corPredominante,
            tipo:tipoDePet,
@@ -23,11 +24,11 @@ const doandoController ={
            idade,
            pelagem,
            infoExtra:maisInformacoes,
-           usuarios_id: id,
+           usuario_id:id,
         })
         
 
-        console.log(animal.id)
+        //console.log(animal.id)
         
         request.session.autorizado = true;
         response.redirect('/perfil');

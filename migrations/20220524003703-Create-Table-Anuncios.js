@@ -6,7 +6,7 @@ module.exports = {
       CREATE TABLE anuncios(
         id int unsigned NOT NULL AUTO_INCREMENT,
         criado_em date NOT NULL,
-        mensagem varchar(10000) NOT NULL,
+        mensagem varchar(10000),
         PRIMARY KEY (id)
       );
     `)
