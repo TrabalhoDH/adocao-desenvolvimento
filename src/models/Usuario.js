@@ -41,6 +41,7 @@ module.exports=(sequelize,DataType)=>{
         timestamps: true,
         createdAt: 'criado_em',
         updatedAt:false
+       
     }
     )
 

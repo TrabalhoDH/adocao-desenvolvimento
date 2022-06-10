@@ -17,9 +17,15 @@ module.exports=(sequelize,DataType)=>{
             type:DataType.DATE,
             allowNull:false,
         },
+        animal_id:{
+            type:DataType.INTEGER,
+            foreignKey: true,
+        },
     },{
         tableName:'fotos',
-        timestamps:false
+        timestamps:false,
+        createdAt: 'criado_em',
+        updatedAt: false
     })
     return Foto
 }

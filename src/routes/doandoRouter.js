@@ -12,6 +12,6 @@ const upload = multer({ storage: storage });
 
 router.get('/pet',doandoController.pet);
 
-router.post('/pet',upload.single('fotoAnimais'),cadastroPetValidator,doandoController.novoAnimais);
+router.post('/pet',upload.array('fotos'),cadastroPetValidator,doandoController.novoAnimais);
 
 module.exports= router;
