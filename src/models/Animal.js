@@ -1,4 +1,4 @@
-
+const { DataType } = require('sequelize');
 module.exports=(sequelize,DataType)=>{
     const Animal = sequelize.define('Animal',{
         id:{
@@ -35,24 +35,30 @@ module.exports=(sequelize,DataType)=>{
         pelagem:{
             type: DataType.STRING,
         },
+        nome:{ 
+            type: DataType.STRING,
+        },
         infoExtra:{
             type: DataType.JSON,
         },
-        usuarios_id:{
+        usuario_id:{
             type: DataType.INTEGER,
             foreignKey: true
         },
-    },{
+    },
+    
+    {
         tableName:'animais',
-        timestamps:false,
+        timestamps:true,
         createdAt: 'criado_em',
         updatedAt: false
     });
-     Animal.associate = (models)=>{
+     
+    Animal.associate = (models)=>{
         Animal.belongsTo(models.Usuario,{
             as: 'Usuario',
-            foreignKey: 'usuarios_id'
-        }),
+            foreignKey: 'usuario_id'
+        });
         Animal.hasMany(models.Foto,{
             as: 'Fotos',
             foreignKey: 'animal_id'

@@ -28,9 +28,10 @@
             </ul>
 
           </section>
-          <% animais.forEach((animal)=>{ %>
+          <% user.Animal.forEach((animais)=>{ %>
             <div id="card">
-              <h2 id="Nome do pet"> <li> <%=animal.raca %></li> </h2>
+              <h2 id="Nome do pet"> <li> <%=animais.nome %></li> </h2>
+
               <div class="infoPerfil">
                 <aside>
                   <img
@@ -63,8 +64,8 @@
                 </div>
                 <% }) %>
             </div>
+          </div>
           <% }) %>
-        </div>
 
           <section id="customProfile">
             <ul>

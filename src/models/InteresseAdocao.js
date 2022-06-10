@@ -13,9 +13,26 @@ module.exports=(sequelize,DataType)=>{
             type:DataType.DATE,
             allowNull:false,
         },
+        usuario_id:{
+            type:DataType.INTEGER,
+            foreignKey: true
+        },
+        anuncio_id:{
+            type:DataType.INTEGER,
+            foreignKey:true
+        }
     },{
         tableName:'interesse_doacao',
-        timestamps:false
+        timestamps:false,
+        criatedAt:'criado_em',
+        updatedAt:false
     })
+
+    InteresseAdocao.associate =(models) =>{
+        InteresseAdocao.belongsTo(models.Anuncio,{
+            as: 'Anuncio',
+            foreignKey:'anuncio_id'
+        })
+    }
     return InteresseAdocao
 }

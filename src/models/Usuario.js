@@ -38,17 +38,26 @@ module.exports=(sequelize,DataType)=>{
     
     {
         tableName:'usuarios',
-        timestamps: false,
+        timestamps: true,
         createdAt: 'criado_em',
-        updatedAt: false
+        updatedAt:false
+       
     }
     )
 
     Usuario.associate = (models)=>{
         Usuario.hasMany(models.Animal,{
             as: 'Animal',
-            foreignKey: 'usuarios_id'
-        });
+            foreignKey: 'usuario_id'
+        })
+        Usuario.hasMany(models.Anuncio,{
+            as:'Anuncio',
+            foreignKey: 'usuario_id'
+        })
+        Usuario.hasMany(models.InteresseAdocao,{
+            as:'InteresseAdocao',
+            foreignKey:'usuario_id'
+        })
     }
 
 
