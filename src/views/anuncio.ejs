@@ -80,20 +80,20 @@
       </div>
       <div class="dadosPet">
        <ul> 
-          <li><%= buscarAnimal.nome %></li>
-          <li><%= buscarAnimal.tipo %></li>
-          <li><%= buscarAnimal.porte %></li>
-          <li><%= buscarAnimal.genero %></li>
-          <li><%= buscarAnimal.raca %></li>
-          <li><%= buscarAnimal.idade %></li>
-          <li><%= buscarAnimal.pelagem %></li>
-          <li><%= buscarAnimal.cor %></li>
-          <li><%= buscarAnimal.infoExtra %></li>
+          <li><%= animal.nome %></li>
+          <li><%= animal.tipo %></li>
+          <li><%= animal.porte %></li>
+          <li><%= animal.genero %></li>
+          <li><%= animal.raca %></li>
+          <li><%= animal.idade %></li>
+          <li><%= animal.pelagem %></li>
+          <li><%= animal.cor %></li>
+          <li><%= animal.infoExtra %></li>
         </ul>
         
         <form action="anuncio" method="post">
           <textarea name="mensagem" id="mensagem" cols="60" rows="5"></textarea>
-          <input type="hidden"  name="animal" value="<%= buscarAnimal.id %>">
+          <input type="hidden"  name="idAnimal" value="<%= animal.id %>">
           <button type="submit"> Finalizar </button>
         </form>
       
