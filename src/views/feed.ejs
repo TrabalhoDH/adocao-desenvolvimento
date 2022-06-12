@@ -28,44 +28,15 @@
       </div>
     </section>
     <section class="feed-principal">
-      
       <ul>
+        <% anuncios.map((animal)=>{ %>
         <li>
-          <img src="img/cão-filhote (1).jpg" alt="" />
-          <p>nome:<br>raça:<br>porte:</p>
+          
+          <img src="<%= animal.Animal.Fotos[0].caminho %><%= animal.Animal.Fotos[0].nome %>" alt="" />
+
+          <p>nome: <%= animal.Animal.nome %><br>raça: <%= animal.Animal.raca %><br>porte: <%= animal.Animal.porte %></p>
         </li>
-        <li>
-          <img src="img/cão-filhote (2).jpg" alt="" />
-          <p>nome:<br>raça:<br>porte:</p>
-        </li>
-        <li>
-          <img src="img/cão-filhote (3).jpg" alt="" />
-          <p>nome:<br>raça:<br>porte:</p>
-        </li>
-        <li>
-          <img src="img/cão-filhote (2).jpg" alt="" />
-          <p>nome:<br>raça:<br>porte:</p>
-        </li>
-        <li>
-          <img src="img/cão-filhote (1).jpg" alt="" />
-          <p>nome:<br>raça:<br>porte:</p>
-        </li>
-        <li>
-          <img src="img/gato (1).jpg" alt="" />
-          <p>nome:<br>raça:<br>porte:</p>
-        </li>
-        <li>
-          <img src="img/gato (2).jpg" alt="" />
-          <p>nome:<br>raça:<br>porte:</p>
-        </li>
-        <li>
-          <img src="img/gato (1).jpg" alt="" />
-          <p>nome:<br>raça:<br>porte:</p>
-        </li>
-        <li>
-          <img src="img/gato-idoso.jpg" alt="" />
-          <p>nome:<br>raça:<br>porte:</p>
-        </li>
+        <% }) %>
       </ul>
       
     </section>
