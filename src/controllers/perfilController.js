@@ -1,19 +1,26 @@
 const { Usuario } = require('../models');
+const { Animal } = require('../models');
 
 const perfilController = {
     index: async (request, response) => {
         const { id } = request.session.usuarioEncontrado;
  
-        const user = await Usuario.findOne({
+        const usuario = await Usuario.findOne({
             where: {
                 id
             },
-            include:['Animal']
         });
 
-        return response.render('perfil', {
-            user,
-            
+        const animais = await Animal.findAll({
+            where: {
+                usuario_id:id
+            },
+            include:['Fotos']
+        });
+
+        return response.render('perfil',{
+            usuario,
+            animais
         });
 
     },

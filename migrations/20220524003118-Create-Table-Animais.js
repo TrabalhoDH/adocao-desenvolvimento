@@ -15,7 +15,7 @@ module.exports = {
         idade int DEFAULT NULL,
         pelagem varchar(255) DEFAULT NULL,
         infoExtra varchar(255) DEFAULT NULL,
-        usuarios_id int unsigned NOT NULL,
+        usuario_id int unsigned NOT NULL,
         PRIMARY KEY (id)
       );
     `)

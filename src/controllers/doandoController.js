@@ -1,8 +1,5 @@
-const fs = require('fs');
-const { v4: uuid} = require('uuid');
 const {Animal} = require('../models');
-const {Usuario} = require ('../models');
-
+const {Foto} = require('../models');
 
 const doandoController ={
     pet : (request, response)=>{
@@ -10,12 +7,15 @@ const doandoController ={
     
 
     novoAnimais: async (request,response)=>{
-        const {tipoDePet,raca,tamanhoDoPet,genero,idade,corPredominante,pelagem,maisInformacoes} = request.body;
-   
+        const {nome,tipoDePet,raca,tamanhoDoPet,genero,idade,corPredominante,pelagem,maisInformacoes} = request.body;
+ 
         const { id } = request.session.usuarioEncontrado;
-        
+       
+        const imagens = request.files
+
         const animal = await Animal.create({
            raca,
+           nome,
            porte:tamanhoDoPet,
            cor:corPredominante,
            tipo:tipoDePet,
@@ -23,29 +23,29 @@ const doandoController ={
            idade,
            pelagem,
            infoExtra:maisInformacoes,
-           usuarios_id: id,
-        })
-        
+           usuario_id:id,
 
-        console.log(animal.id)
-        
+          
+           
+        });
+
+        const foto = imagens.forEach( async element =>{
+            await Foto.create({                     
+                nome: element.filename,
+                caminho:'../uploads/',
+                criado_em:`${new Date()}`,
+                animal_id: animal.id
+            })        
+        })
+
+
+        //console.log(animal.id)
+        console.log(foto)
+
+
         request.session.autorizado = true;
         response.redirect('/perfil');
     }
-}; module.exports = doandoController
 
-/*         const novoArquivoAnimal = 'animais.json';
-
-        const animalArquivo = fs.readFileSync(novoArquivoAnimal);
-        const animalJSON = JSON.parse(animalArquivo);
-
-
-        const novoAnimal = {
-            id: uuid(),
-            ...request.body,
-            fileName:request.file.filename
-        }
-
-        animalJSON.push(novoAnimal);
-
-        fs.writeFileSync(novoArquivoAnimal, JSON.stringify(animalJSON)); */
+}; 
+module.exports = doandoController

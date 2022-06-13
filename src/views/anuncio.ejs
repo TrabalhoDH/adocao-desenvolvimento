@@ -5,11 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../css/style.css" />
-    <link rel="stylesheet" href="/css/anuncio.css" />
+    <link rel="stylesheet" href="../css/anuncio.css" />
     <title>Doando</title>
   </head>
   <body>
     <%- include('./partials/header') %>
+    <h1>Confira as informações Pet</h1>
 
     <div class="folderAnimal">
       <div class="fotoPet">
@@ -20,7 +21,6 @@
               style="width: 100%"
             />
           </div>
-
           <div class="mySlides fade">
             <img class=""
               src="./img/WhatsApp Image 2022-05-21 at 16.39.45.jpeg"
@@ -78,10 +78,28 @@
           </script>
         </div>
       </div>
-      <div class="dadosPet"># DADOS DO PET #</div>
-      <div class="descricaoPet"># DESCRIÇÃO DO PET #</div>
+      <div class="dadosPet">
+       <ul> 
+          <li><%= animal.nome %></li>
+          <li><%= animal.tipo %></li>
+          <li><%= animal.porte %></li>
+          <li><%= animal.genero %></li>
+          <li><%= animal.raca %></li>
+          <li><%= animal.idade %></li>
+          <li><%= animal.pelagem %></li>
+          <li><%= animal.cor %></li>
+          <li><%= animal.infoExtra %></li>
+        </ul>
+        
+        <form action="anuncio" method="post">
+          <textarea name="mensagem" id="mensagem" cols="60" rows="5"></textarea>
+          <input type="hidden"  name="idAnimal" value="<%= animal.id %>">
+          <button type="submit"> Finalizar </button>
+        </form>
+      
+      </div>
+      <div class="descricaoPet"></div>
     </div>
-
     <%- include('./partials/footer') %>
   </body>
 </html>

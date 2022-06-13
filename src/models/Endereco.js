@@ -28,10 +28,21 @@ module.exports=(sequelize,DataType)=>{
         estado:{
             type:DataType.STRING,
             allowNull:false
-        }
+        },
+        usuario_id:{
+            type: DataType.INTEGER,
+            foreignKey: true
+        },
     },{
         tableName:'enderecos',
-        timestamps:false
+        timestamps:false,
     })
+    Endereco.associate =(models)=>{
+        Endereco.belongsTo(models.Usuario,{
+            as:'Usuario',
+            foreignKey:'usuario_id'
+        })
+    }
+
     return Endereco
 }
