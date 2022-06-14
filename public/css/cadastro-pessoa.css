@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -8,132 +8,120 @@ body {
     font-family: "Open Sans", sans-serif;
     margin: 0;
     padding: 0;
-    
 }
 
-
-div.cadastro{
-    box-sizing: border-box ;
+div.cadastro {
+    box-sizing: border-box;
     border-radius: 25px;
     background-color: #e2e2f7;
-    border:1px solid #522180 ;
-    position: absolute;
-    top:24%;
-    bottom: 10%;
-    left: 35%;
+    border: 1px solid #522180;
     width: 30%;
-    height:85%;
-    display: table;
+    height: 85%;
+    display: flex;
+    flex-direction: column;
     box-shadow: 2px 2px 2px #380b61;
+    max-width: 350px;
+    margin: 10px auto;
 }
 
-
-
-form{
-
-    
+form {
     width: 100%;
     padding: 5px 0px;
-    position: absolute;
-    top: 10%; 
 }
 
-
-label{
+label {
     position: relative;
     left: 15px;
     color: #380b61;
 }
 
-
-#titulo{
+#titulo {
     color: #380b61;
     text-align: center;
-    font-size: 25px ;
+    font-size: 25px;
     position: relative;
     top: 15px;
 }
-    
-input[type="radio"],input[type="file"],input[type="date"], select{
+
+input[type="radio"],
+input[type="file"],
+input[type="date"],
+select {
     cursor: pointer;
 }
 
-label[for="fotoPerfil"]{
+label[for="fotoPerfil"] {
     cursor: pointer;
     color: #f4f4f4;
     background-color: #9b75d8;
-    border-radius: 10px; 
-    width: 155px; 
+    border-radius: 10px;
+    width: 155px;
     height: 35px;
     padding: 1% 1%;
     display: block;
     border: none;
     font-size: 1em;
-    position:relative;
+    position: relative;
     left: 12%;
     bottom: 75%;
     text-align: center;
 }
 
-label[for="fotoPerfil"]:hover{
-    background-color:#8754d9;
+label[for="fotoPerfil"]:hover {
+    background-color: #8754d9;
     transition-duration: 0.5s;
     cursor: pointer;
 }
 
-input[type="file"]{
-    transition-property:all;
+input[type="file"] {
+    transition-property: all;
     display: none;
 }
 
-input[type="password"],input[type="text"], input[type="email"], input[type="tel"], input[type="date"], select{
-    
+input[type="password"],
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+select {
     width: 95%;
-    padding: 8px ;
+    padding: 8px;
     border-radius: 5px;
-    box-sizing: border-box ;
+    box-sizing: border-box;
     position: relative;
     left: 15px;
     border: 1px solid #59429d;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
     color: #380b61;
-    font-size: 1.0em;
+    font-size: 1em;
 }
 
-
-button{
-  
-  border: none;
-  border-radius: 10px;
-  background-color: #9b75d8;
-  color: #f4f4f4;
-  box-sizing: border-box ;
-  position:relative;
-  left: 50%;
-  bottom: 35px;
-  width: 150px;
-  height: 35px;
-  margin: 0% 10%;   
-  transition-property:all;
-  font-size: 1em;
-  
-  
+button {
+    border: none;
+    border-radius: 10px;
+    background-color: #9b75d8;
+    color: #f4f4f4;
+    box-sizing: border-box;
+    position: relative;
+    left: 50%;
+    bottom: 35px;
+    width: 150px;
+    height: 35px;
+    margin: 0% 10%;
+    transition-property: all;
+    font-size: 1em;
 }
 
-
-button:hover{
-    background-color:#8754d9;
+button:hover {
+    background-color: #8754d9;
     transition-duration: 0.5s;
     cursor: pointer;
-    
 }
 
-
-input{
+input {
     margin-bottom: 20px;
 }
 
-select{
+select {
     margin-bottom: 20px;
 }
-
