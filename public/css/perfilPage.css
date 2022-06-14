@@ -34,6 +34,7 @@ body {
   border-radius: 22px;
   display: flex;
   flex-direction: column;
+  margin-top: 1rem;
 }
 #card h2 {
   margin-top: 2rem;
@@ -42,6 +43,7 @@ body {
   line-height: 13px;
   text-align: left;
   margin: auto;
+  list-style-type: none;
 }
 
 #content {
@@ -91,16 +93,23 @@ body {
   list-style-type: none;
   display: flex;
   flex-direction: column;
+  list-style-type: none;
 }
 aside {
   margin-left: 1rem;
 }
+.photo-content{
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-between;
+  justify-content: space-between;
+}
 .photo-card {
-  width: 27.75rem;
-  height: 15.938rem;
-
+  width: 9rem;
+  height: 10rem;
   background: #f1eeee;
   border-radius: 8px;
+  margin: auto;
 }
 #customProfile ul li {
   line-height: 40px;
