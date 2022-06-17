@@ -14,28 +14,24 @@ body {
 }
 
 .cadastropet{
-
-    box-sizing: border-box ;
+    box-sizing: border-box;
     border-radius: 25px;
     background-color: #e2e2f7;
-    border:1px solid #522180 ;
-    position: absolute;
-    top:24%;
-    bottom: 10%;
-    left: 35%;
+    border: 1px solid #522180;
     width: 30%;
-    height:85%;
-    display: table;
+    height: 85%;
+    display: flex;
+    flex-direction: column;
     box-shadow: 2px 2px 2px #380b61;
+    max-width: 350px;
+    margin: 10px auto;
     
 }
 
-form{
+.cadastropet form{
     
     width: 100%;
     padding: 5px 0px;
-    position: absolute;
-    top: 10%; 
 }
 
 label{
@@ -44,7 +40,7 @@ label{
     color: #380b61;
 }
 
-input{
+.cadastropet input{
     margin-bottom: 20px;
 }
 
@@ -52,10 +48,36 @@ select{
     margin-bottom: 20px;    
 }
 
+label[for="fotos"] {
+    cursor: pointer;
+    color: #f4f4f4;
+    background-color: #9b75d8;
+    border-radius: 10px;
+    width: 155px;
+    height: 35px;
+    padding: 1% 1%;
+    display: block;
+    border: none;
+    font-size: 1em;
+    position: relative;
+    left: 12%;
+    bottom: 75%;
+    text-align: center;
+}
+
+label[for="fotos"]:hover {
+    background-color: #8754d9;
+    transition-duration: 0.5s;
+    cursor: pointer;
+}
+
+#fotos{
+    transition-property: all;
+    display: none;
+}
 
 
-input[type="text"], input[type="tel"], input[type="number"], select{
-    
+.cadastropet input, select{
     width: 95%;
     padding: 8px ;
     border-radius: 5px;
@@ -66,17 +88,11 @@ input[type="text"], input[type="tel"], input[type="number"], select{
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
     color: #380b61;
     font-size: 1.0em;
+    outline: none;
 }
 
-input[type="radio"], input[type="checkbox"],select{
+input[type="radio"],select{
     cursor: pointer;
-}
-
-input[type="checkbox"]{
-    display: inline-block;
-    position: relative;
-    left: 15px;
-    margin-right: 5px ;
 }
 
 #cadastrarPet{
