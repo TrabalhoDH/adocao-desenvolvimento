@@ -18,7 +18,6 @@ const cadastroController ={
             email:email,
             genero:genero,
             data_nasc:date,
-            criado_em:`${new Date()}`
         })
 
         request.session.autorizado = true;

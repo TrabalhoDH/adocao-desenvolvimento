@@ -1,4 +1,4 @@
-
+ 
 module.exports=(sequelize,DataType)=>{
     const Usuario = sequelize.define('Usuario',{
         id:{
