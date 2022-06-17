@@ -16,11 +16,10 @@ header {
     display: flex;
     justify-content: space-around;
     align-items: center;
-
     background-color: #7861be;
     height: 18vh;
 }
-header img {
+#logo {
     height: 12vh;
     margin-right: 50px;
 }
@@ -33,14 +32,12 @@ header nav ul {
     justify-content: flex-end;
     list-style: none;
     gap: 15px;
-
+    align-items: center;
     font-weight: 600;
     font-size: 20px;
     line-height: 33px;
-
     color: #ffff;
     gap: 20px;
-    cursor: pointer;
 }
 
 header nav ul li a {
@@ -109,3 +106,52 @@ footer ul li.FAQ {
     font-size: 20px;
     align-items: flex-start;
 }
+
+#barraPesquisa{
+    background-color: #f4f4f4;
+    border-radius: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+}
+
+#barraPesquisa form{
+    display: flex;
+    justify-content: space-between;
+    width: 500px;
+    align-items: center;
+    background:none;
+}
+
+#barra{
+    border: none;
+    background:none;
+    outline: none;
+    font-size: 20px;
+    line-height: 40px;
+    margin: auto;
+    width: 450px;
+    border-radius:10px;
+    color:#59429d;
+    
+}
+#barraPesquisa button{
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+#lupa{
+    width: 40px;
+    height: 40px;
+}
+
+
+

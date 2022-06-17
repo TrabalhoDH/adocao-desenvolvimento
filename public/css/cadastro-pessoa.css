@@ -24,7 +24,7 @@ div.cadastro {
     margin: 10px auto;
 }
 
-form {
+.cadastro form {
     width: 100%;
     padding: 5px 0px;
 }
@@ -78,12 +78,7 @@ input[type="file"] {
     display: none;
 }
 
-input[type="password"],
-input[type="text"],
-input[type="email"],
-input[type="tel"],
-input[type="date"],
-select {
+.cadastro input, select {
     width: 95%;
     padding: 8px;
     border-radius: 5px;
@@ -96,7 +91,8 @@ select {
     font-size: 1em;
 }
 
-button {
+
+ #cadastrar{
     border: none;
     border-radius: 10px;
     background-color: #9b75d8;
@@ -112,7 +108,7 @@ button {
     font-size: 1em;
 }
 
-button:hover {
+#cadastrar:hover {
     background-color: #8754d9;
     transition-duration: 0.5s;
     cursor: pointer;
@@ -120,6 +116,7 @@ button:hover {
 
 input {
     margin-bottom: 20px;
+    outline: none;
 }
 
 select {
