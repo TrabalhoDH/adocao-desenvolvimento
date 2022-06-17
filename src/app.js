@@ -9,8 +9,10 @@ const loginRouter = require('./routes/loginRouter');
 const perfilRouter = require('./routes/perfilRouter');
 const cadastroRouter = require('./routes/cadastroRouter');
 const feedRouter = require('./routes/feedRouter');
-const doandoRouter = require('./routes/doandoRouter')
-const anuncioRouter = require('./routes/anuncioRouter')
+const doandoRouter = require('./routes/doandoRouter');
+const anuncioRouter = require('./routes/anuncioRouter');
+const animalDivulgadoRouter = require('./routes/animalDivulgadoRouter')
+
 
 const app = express();
 
@@ -37,6 +39,7 @@ app.use('/cadastro', cadastroRouter);
 app.use('/feed', feedRouter);
 app.use('/doando',doandoRouter);
 app.use('/anuncio',anuncioRouter);
+app.use('/animalDivulgado',animalDivulgadoRouter);
 
 
 // catch 404 and forward to error handler

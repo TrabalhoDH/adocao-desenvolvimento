@@ -7,7 +7,7 @@ const doandoController ={
     
 
     novoAnimais: async (request,response)=>{
-        const {nome,tipoDePet,raca,tamanhoDoPet,genero,idade,corPredominante,pelagem,maisInformacoes} = request.body;
+        const {nome,tipoDePet,raca,tamanhoDoPet,genero,dataNascimento,corPredominante,pelagem,vacinado,castrado} = request.body;
  
         const { id } = request.session.usuarioEncontrado;
        
@@ -16,17 +16,15 @@ const doandoController ={
         const animal = await Animal.create({
            raca,
            nome,
+           vacinado,
+           castrado,
            porte:tamanhoDoPet,
            cor:corPredominante,
            tipo:tipoDePet,
            genero,
-           idade,
+           idade:dataNascimento,
            pelagem,
-           infoExtra:maisInformacoes,
-           usuario_id:id,
-
-          
-           
+           usuario_id:id,     
         });
 
         const foto = imagens.forEach( async element =>{

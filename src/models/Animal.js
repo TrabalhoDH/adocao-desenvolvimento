@@ -30,7 +30,7 @@ module.exports=(sequelize,DataType)=>{
             type: DataType.STRING,
         },
         idade:{
-            type: DataType.INTEGER
+            type: DataType.DATE
         },
         pelagem:{
             type: DataType.STRING,
@@ -38,8 +38,11 @@ module.exports=(sequelize,DataType)=>{
         nome:{ 
             type: DataType.STRING,
         },
-        infoExtra:{
-            type: DataType.JSON,
+        castrado:{
+            type: DataType.STRING
+        },
+        vacinado: {
+            type: DataType.STRING
         },
         usuario_id:{
             type: DataType.INTEGER,

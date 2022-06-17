@@ -51,6 +51,9 @@
   label {
     font-weight: bold;
   }
+
+
+
   input {
     border-bottom: 2px solid #615f5f;
     padding: 10px;
@@ -67,7 +70,7 @@
     display: block;
   }
   
-  input[type="submit"] {
+  button[type="submit"] {
     text-align: center;
     text-transform: uppercase;
     font-weight: bold;
@@ -77,8 +80,9 @@
     margin-top: 10px;
     color: #59429d;
     cursor: pointer;
+    width: 100%;
   }
-  input[type="submit"]:hover {
+  button[type="submit"]:hover {
     background-color: #3b2777;
     color: #fff;
     transition: 0.5s;

@@ -1,16 +1,17 @@
 <header>
-    <img src="../img/Adote.png" alt="" />
-    <nav>
-      <ul class="lista-nav">
+  <img src="../img/Adote.png" alt="" />
+  <nav>
+    <ul class="lista-nav">
+      <div id="barra-pesquisa">
         <form action="/feed" method="get">
-          <input type="text" name="pesquise" placeholder="Procure aqui seu novo amigo(a)!!" >
-          <button type="submit"></button>
+          <input id="barra" type="text" name="pesquise" placeholder="Procure aqui seu novo amigo(a)!!">
+          <button id="pesquisar" type="submit"><img id="lupa" src="../img/loupe.png" alt=""></button>
         </form>
-        <li><a href="/feed">Novo amigo</a></li>
-        <li><a href="/">Home</a></li>
-        <li><a href="/perfil">Perfil</a></li>
-        <li><a href="/cadastro/usuario">Cadastro</a></li>
-        <li><a href="/login">Login</a></li>
-      </ul>
-    </nav>
-  </header>
+      </div>
+      <li><a href="/">Home</a></li>
+      <li><a href="/perfil">Perfil</a></li>
+      <li><a href="/cadastro/usuario">Cadastro</a></li>
+      <li><a href="/login">Login</a></li>
+    </ul>
+  </nav>
+</header>

@@ -1,105 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../css/style.css" />
-    <link rel="stylesheet" href="../css/anuncio.css" />
-    <title>Doando</title>
-  </head>
-  <body>
-    <%- include('./partials/header') %>
-    <h1>Confira as informações Pet</h1>
+<%- include('./partials/header') %>
 
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/anuncio.css" />
+  <title>Doando</title>
+</head>
+<body>
     <div class="folderAnimal">
       <div class="fotoPet">
         <div class="slideshow-container">
-          <div class="mySlides fade">
-            <img
-              src="./img/WhatsApp Image 2022-05-21 at 16.39.44 (1).jpeg"
-              style="width: 100%"
-            />
-          </div>
-          <div class="mySlides fade">
-            <img class=""
-              src="./img/WhatsApp Image 2022-05-21 at 16.39.45.jpeg"
-              style="width: 100%"
-            />
-          </div>
+          <% foto.forEach((fotos)=>{ %>
+            <div id="cardFoto" class="mySlides fade">
+              <img id="imagemPet" src="<%= fotos.caminho %><%= fotos.nome %>" />
+            </div>
+            <% }) %>
+              <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+              <a class="next" onclick="plusSlides(1)">&#10095;</a>
 
-          <div class="mySlides fade">
-            <img
-              src="./img/WhatsApp Image 2022-05-21 at 16.39.44 (2).jpeg"
-              style="width: 100%"
-            />
-          </div>
+              <div style="text-align: center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+              </div>
+              <script>
+                var slideIndex = 1;
+                showSlides(slideIndex);
 
-          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                function plusSlides(n) {
+                  showSlides((slideIndex += n));
+                }
 
-          <div style="text-align: center">
-            <span class="dot" onclick="currentSlide(1)"></span>
-            <span class="dot" onclick="currentSlide(2)"></span>
-            <span class="dot" onclick="currentSlide(3)"></span>
-          </div>
+                function currentSlide(n) {
+                  showSlides((slideIndex = n));
+                }
 
-          <script>
-            var slideIndex = 1;
-            showSlides(slideIndex);
-
-            function plusSlides(n) {
-              showSlides((slideIndex += n));
-            }
-
-            function currentSlide(n) {
-              showSlides((slideIndex = n));
-            }
-
-            function showSlides(n) {
-              var i;
-              var slides = document.getElementsByClassName("mySlides");
-              var dots = document.getElementsByClassName("dot");
-              if (n > slides.length) {
-                slideIndex = 1;
-              }
-              if (n < 1) {
-                slideIndex = slides.length;
-              }
-              for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
-              }
-              for (i = 0; i < dots.length; i++) {
-                dots[i].className = dots[i].className.replace(" active", "");
-              }
-              slides[slideIndex - 1].style.display = "block";
-              dots[slideIndex - 1].className += " active";
-            }
-          </script>
+                function showSlides(n) {
+                  var i;
+                  var slides = document.getElementsByClassName("mySlides");
+                  var dots = document.getElementsByClassName("dot");
+                  if (n > slides.length) {
+                    slideIndex = 1;
+                  }
+                  if (n < 1) {
+                    slideIndex = slides.length;
+                  }
+                  for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                  }
+                  for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                  }
+                  slides[slideIndex - 1].style.display = "block";
+                  dots[slideIndex - 1].className += " active";
+                }
+              </script>
         </div>
       </div>
       <div class="dadosPet">
-       <ul> 
-          <li><%= animal.nome %></li>
-          <li><%= animal.tipo %></li>
-          <li><%= animal.porte %></li>
-          <li><%= animal.genero %></li>
-          <li><%= animal.raca %></li>
-          <li><%= animal.idade %></li>
-          <li><%= animal.pelagem %></li>
-          <li><%= animal.cor %></li>
-          <li><%= animal.infoExtra %></li>
-        </ul>
-        
-        <form action="anuncio" method="post">
-          <textarea name="mensagem" id="mensagem" cols="60" rows="5"></textarea>
-          <input type="hidden"  name="idAnimal" value="<%= animal.id %>">
-          <button type="submit"> Finalizar </button>
-        </form>
-      
+        <h1 id="titulo">Confira as informações do Pet</h1>
+        <li>Nome: <%= animal.nome %>
+        </li>
+        <li>Tipo: <%= animal.tipo %>
+        </li>
+        <li>Porte: <%= animal.porte %>
+        </li>
+        <li>Genero: <%= animal.genero %>
+        </li>
+        <li>Raça: <%= animal.raca %>
+        </li>
+        <li>Idade: <%= animal.idade.toISOString().split('T')[0] %>
+        </li>
+        <li>Pelagem: <%= animal.pelagem %>
+        </li>
+        <li>Cor predominante: <%= animal.cor %>
+        </li>
+        <li>Castrado: <%= animal.castrado %>
+        </li>
+        <li>Vacinado: <%= animal.vacinado %>
+        </li>
       </div>
-      <div class="descricaoPet"></div>
+      <div class="descricaoPet">
+        <form id="anunciar" action="anuncio" method="post">
+          <h1 id="informacoes">Informações adicionais</h1>
+          <textarea name="mensagem" id="mensagem" cols="60" rows="5"></textarea>
+          <input type="hidden" name="idAnimal" value="<%= animal.id %>">
+          <button id="enviar" type="submit"> Finalizar </button>
+        </form>
+      </div>
     </div>
-    <%- include('./partials/footer') %>
   </body>
+  
+  <%- include('./partials/footer') %>
 </html>

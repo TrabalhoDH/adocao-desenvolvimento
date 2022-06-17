@@ -79,7 +79,7 @@ input[type="checkbox"]{
     margin-right: 5px ;
 }
 
-button{
+#cadastrarPet{
     border: none;
     border-radius: 10px;
     background-color: #9b75d8;
@@ -95,7 +95,7 @@ button{
     font-size: 1em;
   }
 
-button:hover{
+#cadastrarPet:hover{
     background-color:#8754d9;
     transition-duration: 0.5s;
     cursor: pointer;
