@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap");
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -17,11 +17,10 @@ header {
     justify-content: space-around;
     align-items: center;
 
-    background-color: #7861be   ;
+    background-color: #7861be;
     height: 18vh;
-
 }
-header img{
+header img {
     height: 12vh;
     margin-right: 50px;
 }
@@ -49,51 +48,45 @@ header nav ul li a {
     text-decoration: none;
     font-size: 2rem;
     color: #f4f4f4;
-
 }
 
-.lista-nav li a:hover{
+.lista-nav li a:hover {
     color: #f5f565;
-
 }
 
 footer {
     display: flex;
     justify-content: space-between;
-    position: absolute;
-    top: 100%;
     margin-top: 6.2rem;
     padding: 15px;
-    width:100%;
-
-
+    width: 100%;
 }
 
-.centralizar{
+.centralizar {
     display: flex;
     align-items: center;
 }
 
-.alinhar{
+.alinhar {
     padding: 0;
     color: #000;
 }
-.alinhar:hover{
-    color: #59429d
+.alinhar:hover {
+    color: #59429d;
 }
 
-footer .logoFooter{
+footer .logoFooter {
     width: 150px;
     display: flex;
     align-items: center;
 }
-.redeSocial{
-    display:flex;
+.redeSocial {
+    display: flex;
     align-items: center;
     position: relative;
     right: 1.5em;
 }
-.redeSocial img{
+.redeSocial img {
     width: 6rem;
     cursor: pointer;
 }
@@ -115,6 +108,4 @@ footer ul li.FAQ {
     font-weight: bold;
     font-size: 20px;
     align-items: flex-start;
-
 }
-
