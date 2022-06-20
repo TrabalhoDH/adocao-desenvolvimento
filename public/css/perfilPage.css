@@ -72,9 +72,9 @@ body {
   flex-direction: column;
 }
 .perfil-img {
-  width: 5rem;
-  max-height: 5em;
-  border-radius: 10rem;
+  display: flex;
+  max-height: 15em;
+  border-radius: 8px;
 }
 
 .perfil ul li {
@@ -101,12 +101,12 @@ aside {
 .photo-content{
   display: flex;
   flex-wrap: wrap;
+  width: max-content;
   align-content: space-between;
   justify-content: space-between;
 }
 .photo-card {
-  width: 9rem;
-  height: 10rem;
+  width: 100%;
   background: #f1eeee;
   border-radius: 8px;
   margin: auto;
