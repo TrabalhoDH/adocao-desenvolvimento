@@ -73,7 +73,8 @@
         </li>
         <li>Raça: <%= animal.raca %>
         </li>
-        <li>Idade: <%= animal.idade.toISOString().split('T')[0] %>
+        <li>Idade: <%= new Date(animal.idade).toLocaleDateString('pt-br')
+          %>
         </li>
         <li>Pelagem: <%= animal.pelagem %>
         </li>
