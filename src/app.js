@@ -17,7 +17,7 @@ const animalDivulgadoRouter = require('./routes/animalDivulgadoRouter')
 const app = express();
 
 // view engine setup
-app.set('views', path.join(__dirname,  'views'));
+app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
 app.use(logger('dev'));
@@ -37,9 +37,9 @@ app.use('/login', loginRouter);
 app.use('/perfil', perfilRouter);
 app.use('/cadastro', cadastroRouter);
 app.use('/feed', feedRouter);
-app.use('/doando',doandoRouter);
-app.use('/anuncio',anuncioRouter);
-app.use('/animalDivulgado',animalDivulgadoRouter);
+app.use('/doando', doandoRouter);
+app.use('/anuncio', anuncioRouter);
+app.use('/animalDivulgado', animalDivulgadoRouter);
 
 
 // catch 404 and forward to error handler
@@ -52,7 +52,7 @@ app.use(function (err, req, res, next) {
   // set locals, only providing error in development
   res.locals.message = err.message;
   res.locals.error = req.app.get('env') === 'development' ? err : {};
-  
+
   // render the error page
   console.log(error)
   res.status(error.status || 500);

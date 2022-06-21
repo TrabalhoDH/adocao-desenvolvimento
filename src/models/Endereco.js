@@ -1,46 +1,46 @@
-module.exports=(sequelize,DataType)=>{
-    const Endereco = sequelize.define('Endereco',{
-        id:{
-            type:DataType.INTEGER,
-            primaryKey:true,
-            autoIncrement:true,
+module.exports = (sequelize, DataType) => {
+    const Endereco = sequelize.define('Endereco', {
+        id: {
+            type: DataType.INTEGER,
+            primaryKey: true,
+            autoIncrement: true,
         },
-        cep:{
-            type:DataType.INTEGER,
-            foreignKey:true,
+        cep: {
+            type: DataType.INTEGER,
+            foreignKey: true,
         },
-        logradouro:{
-            type:DataType.STRING,
-            allowNull:false,
+        logradouro: {
+            type: DataType.STRING,
+            allowNull: false,
         },
-        numero:{
-            type:DataType.INTEGER,
-            foreignKey:true,
+        numero: {
+            type: DataType.INTEGER,
+            foreignKey: true,
         },
-        complemento:{
-            type:DataType.STRING,
-            allowNull:false
+        complemento: {
+            type: DataType.STRING,
+            allowNull: false
         },
-        cidade:{
-            type:DataType.STRING,
-            allowNull:false
+        cidade: {
+            type: DataType.STRING,
+            allowNull: false
         },
-        estado:{
-            type:DataType.STRING,
-            allowNull:false
+        estado: {
+            type: DataType.STRING,
+            allowNull: false
         },
-        usuario_id:{
+        usuario_id: {
             type: DataType.INTEGER,
             foreignKey: true
         },
-    },{
-        tableName:'enderecos',
-        timestamps:false,
+    }, {
+        tableName: 'enderecos',
+        timestamps: false,
     })
-    Endereco.associate =(models)=>{
-        Endereco.belongsTo(models.Usuario,{
-            as:'Usuario',
-            foreignKey:'usuario_id'
+    Endereco.associate = (models) => {
+        Endereco.belongsTo(models.Usuario, {
+            as: 'Usuario',
+            foreignKey: 'usuario_id'
         })
     }
 

@@ -1,28 +1,27 @@
-.folderAnimal{
+.folder-animal {
     display: flex;
     justify-content: space-around;
-    background-color: #59429d3d;
-    width: 75vw;
-    height: 85vh;
     justify-content: center;
-    display: flex;
-    flex-wrap: wrap;
+    align-items: center;
+    flex-direction: column;
+
+    max-width: 968px;
+    background-color: #59429d3d;
     margin-right: auto;
     margin-left: auto;
     margin-top: 2vw;
-    align-items: center;
     border-radius: 10px;
 }
 
-.fotoPet{
+.fotoPet {
     display: flex;
-    width: 50vw;
+    width: 100%;
     height: 450px;
     border-radius: 10px;
 }
 
-#mensagem{
-    max-width: 100%;  
+#mensagem {
+    max-width: 100%;
     justify-content: center;
     border-radius: 10px;
     color: #59429d;
@@ -32,14 +31,11 @@
 
 .mySlides {
     display: none;
-
 }
 
 .mySlides img {
     border-radius: 10px;
-
 }
-
 
 .slideshow-container {
     display: flex;
@@ -49,7 +45,8 @@
     flex-wrap: wrap;
 }
 
-.prev, .next {
+.prev,
+.next {
     cursor: pointer;
     position: absolute;
     top: calc(50% - 20px);
@@ -70,12 +67,15 @@
     border-radius: 3px 0 0 3px;
 }
 
-
-.prev:hover, .next:hover {
+.prev:hover,
+.next:hover {
     background-color: rgba(0, 0, 0, 0.8);
 }
+.descricaoPet textarea {
+    outline: none;
+}
 
-#anunciar{
+#anunciar {
     display: flex;
     align-items: flex-end;
     width: 480px;
@@ -84,14 +84,13 @@
     flex-wrap: wrap;
 }
 
-#enviar:hover{
+#enviar:hover {
     background-color: #3b2777;
     color: #fff;
     transition: 0.5s;
-
 }
 
-#enviar{
+#enviar {
     text-align: center;
     text-transform: uppercase;
     font-weight: bold;
@@ -105,14 +104,12 @@
     width: 120px;
     position: relative;
     cursor: pointer;
-
 }
-    
-#anunciar{
+
+#anunciar {
     justify-content: space-around;
     width: 560px;
     height: 250px;
-
 }
 
 .dot {
@@ -122,23 +119,31 @@
     margin: 0 2px;
     background-color: #bbb;
     border-radius: 50%;
-    
+
     transition: background-color 0.6s ease;
     position: relative;
     top: -25px;
 }
 
-.active, .dot:hover {
+.active,
+.dot:hover {
     background-color: #717171;
 }
 
-#imagemPet{
-    display: flex;
-    max-width: 100%;
-    height: 450px;
+h1 {
+    text-align: center;
 }
 
-
+#imagemPet {
+    display: flex;
+    height: 420px;
+    width: 350px;
+    object-fit: scale-down;
+    background-color: #bfb8d9;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 13px;
+}
 
 .fade {
     -webkit-animation-name: fade;
@@ -167,37 +172,42 @@
     }
 }
 
-.dadosPet{
+.dados-pet {
     display: flex;
-    width: 400px;
-    height: 55vh;
-    border-radius: 10px;
-    flex-wrap: wrap;
-    font-size: 30px;
     flex-direction: column;
     justify-content: flex-start;
+
+    border-radius: 10px;
+
+    font-size: 30px;
     color: #59429d;
 }
 
-.descricaoPet{
+.dados-pet ul {
+    background-color: #58429d2e;
+    list-style: none;
+    padding: 31px;
+    border-radius: 15px;
+}
+
+.descricaoPet {
     display: flex;
     width: 570px;
     height: 250px;
-    border-radius: 10px; 
+    border-radius: 10px;
     justify-content: center;
     align-items: center;
-
 }
-#informacoes{
+#informacoes {
     font-size: 25px;
     color: #59429d;
 }
 
-li{
+li {
     margin-bottom: 5px;
 }
 
-#titulo{
+#titulo {
     font-size: 25px;
     margin-bottom: 15px;
     color: #59429d;
