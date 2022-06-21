@@ -100,7 +100,6 @@ select {
     border-radius: 5px;
     box-sizing: border-box;
     border: 1px solid #59429d;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
     color: #380b61;
     font-size: 1em;
 }
