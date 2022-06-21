@@ -1,11 +1,5 @@
-const express = require("express");
-
-const mainController = (request, response)=>{
+const mainController = (_, response) => {
     response.render('home')
 };
-
-
-
-
 
 module.exports = mainController;

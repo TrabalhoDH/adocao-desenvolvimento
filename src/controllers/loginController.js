@@ -3,7 +3,7 @@ const bcrypt = require('bcryptjs');
 
 
 const loginController = {
-    login: (request, response) => {
+    login: (_, response) => {
         response.render('login');
     },
     logar: async (request, response) => {
@@ -17,13 +17,13 @@ const loginController = {
 
         if (!usuarioEncontrado) {
             return response.status(401).render('login');
-        };
+        }
 
         const ehSenhaCorreta = bcrypt.compareSync(senha, usuarioEncontrado.senha);
 
         if (!ehSenhaCorreta) {
             return response.status(401).render('login');
-        };
+        }
 
         request.session.autorizado = true;
         request.session.usuarioEncontrado = usuarioEncontrado;
