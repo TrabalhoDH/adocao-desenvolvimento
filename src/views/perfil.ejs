@@ -28,13 +28,12 @@
             </ul>
 
           </section>
-          
-          
+
           <section class="faq-container">
             <div class="faq-mini">
               <details class="faq-h2">
                 <summary>cadastrados</summary>
-                      
+
                 <% animais.forEach((animal)=>{ %>
                   <div id="card">
                   <h2 id="Nome do pet"> <li> <%=animal.nome %></li> </h2>
@@ -46,15 +45,15 @@
                         alt="fot de perfil-pet"
                         /> -->
                         <ul class="infoPerfil-pet">
-                          
+
                           <li><%= animal.raca %></li>
                           <li><%= animal.porte %></li>
-                          <li><%= animal.tipo %></li>               
+                          <li><%= animal.tipo %></li>
                           <li><%= animal.pelagem %></li>
                           <li>
                             <form method="get" action="/anuncio">
                               <input type="hidden" name="idAnimal" value="<%= animal.id %>">
-                              
+
                               <button type="submit">Doar!</button>
                             </form>
                           </li>
