@@ -1,41 +1,23 @@
 const { Animal, Anuncio } = require('../models');
-const { Op } = require("sequelize");
+const { Op } = require('sequelize');
 
 const feedControler = {
     show: async (request, response) => {
-        const pesquisa = request.query;
+        const pesquisa = request.query.pesquise;
 
-        const pesquisaJSON = JSON.stringify(pesquisa);
-
-        const obj = JSON.parse(pesquisaJSON);
+        const campoBuscar = ['nome', 'raca', 'porte', 'tipo']
+        const where = campoBuscar.map(item => ({
+            [item]: {
+                [Op.like]: `%${pesquisa}%`
+            }
+        }));
 
         const anuncios = await Anuncio.findAll({
             include: [{
                 model: Animal,
                 as: 'Animal',
                 where: {
-                    [Op.or]: [
-                        {
-                            nome: {
-                                [Op.like]: `%${obj.pesquise}%`
-                            }
-                        },
-                        {
-                            raca: {
-                                [Op.like]: `%${obj.pesquise}%`
-                            }
-                        },
-                        {
-                            porte: {
-                                [Op.like]: `%${obj.pesquise}%`
-                            }
-                        },
-                        {
-                            tipo: {
-                                [Op.like]: `%${obj.pesquise}%`
-                            }
-                        },
-                    ]
+                    [Op.or]: where
                 },
                 include: ['Fotos']
             }],
@@ -45,10 +27,9 @@ const feedControler = {
             anuncios,
         })
     },
-
-    adotarAnimal: (request,response)=>{
+    adotarAnimal: (_, response) => {
         response.render('animalDivulgado')
     }
-
 };
+
 module.exports = feedControler;

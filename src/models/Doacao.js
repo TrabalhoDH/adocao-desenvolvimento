@@ -1,22 +1,21 @@
-module.exports=(sequelize,DataType)=>{
-    const Doacao = sequelize.define('Doacao',{
-        id:{
-            type:DataType.INTEGER,
-            primaryKey:true,
-            autoIncrement:true
+module.exports = (sequelize, DataType) => {
+    return sequelize.define('Doacao', {
+        id: {
+            type: DataType.INTEGER,
+            primaryKey: true,
+            autoIncrement: true
         },
-        valor:{
-            type:DataType.INTEGER,
-            allowNull:false,
+        valor: {
+            type: DataType.INTEGER,
+            allowNull: false,
         },
-        criado_em:{
-            type:DataType.DATE,
-            allowNull:false
+        criado_em: {
+            type: DataType.DATE,
+            allowNull: false
         }
-        
-    },{
-        tableName:'doacoes',
+
+    }, {
+        tableName: 'doacoes',
         timestamps: false
-    })
-    return Doacao
+    });
 }
