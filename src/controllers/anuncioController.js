@@ -1,4 +1,4 @@
-const { Animal, Anuncio, Foto} = require('../models');
+const { Animal, Anuncio, Foto } = require('../models');
 
 const anuncioController = {
   anunciarAnimal: async (request, response) => {
@@ -11,7 +11,7 @@ const anuncioController = {
         animal_id: idAnimal
       },
     });
-    
+
     response.render('anuncio', {
       animal,
       foto
