@@ -1,16 +1,13 @@
-#titulo{
-    color: #380b61;
-    text-align: center;
-    font-size: 25px ;
-    position: relative;
-    top: 15px;
-}
-
 body {
     font-family: "Open Sans", sans-serif;
     margin: 0;
     padding: 0;
-    
+}
+
+#titulo{
+    color: #380b61;
+    text-align: center;
+    font-size: 25px;
 }
 
 .cadastropet{
@@ -18,26 +15,46 @@ body {
     border-radius: 25px;
     background-color: #e2e2f7;
     border: 1px solid #522180;
-    width: 30%;
     height: 85%;
-    display: flex;
-    flex-direction: column;
     box-shadow: 2px 2px 2px #380b61;
-    max-width: 350px;
+    max-width: 500px;
     margin: 10px auto;
-    
 }
 
 .cadastropet form{
-    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
     width: 100%;
     padding: 5px 0px;
+    align-items: center;
 }
 
 label{
-    position: relative;
-    left: 15px;
+    width: fit-content;
     color: #380b61;
+}
+
+.check > div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.check div input {
+    display: flex;
+    width: auto;
+    margin: 0;
+}
+
+.check > div input:first-of-type {
+    margin-right: 25px;
+}
+
+.input-group {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
 }
 
 .cadastropet input{
@@ -45,7 +62,7 @@ label{
 }
 
 select{
-    margin-bottom: 20px;    
+    margin-bottom: 20px;
 }
 
 label[for="fotos"] {
@@ -55,13 +72,10 @@ label[for="fotos"] {
     border-radius: 10px;
     width: 155px;
     height: 35px;
-    padding: 1% 1%;
     display: block;
     border: none;
     font-size: 1em;
-    position: relative;
-    left: 12%;
-    bottom: 75%;
+
     text-align: center;
 }
 
@@ -78,17 +92,12 @@ label[for="fotos"]:hover {
 
 
 .cadastropet input, select{
-    width: 95%;
-    padding: 8px ;
+    padding: 8px;
     border-radius: 5px;
-    box-sizing: border-box ;
-    position: relative;
-    left: 15px;
+    box-sizing: border-box;
     border: 1px solid #59429d;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
     color: #380b61;
-    font-size: 1.0em;
-    outline: none;
+    font-size: 1em;
 }
 
 input[type="radio"],select{
@@ -101,12 +110,9 @@ input[type="radio"],select{
     background-color: #9b75d8;
     color: #f4f4f4;
     box-sizing: border-box ;
-    position:relative;
-    left: 50%;
-    bottom: 15px;
+
     width: 150px;
     height: 35px;
-    margin: 0% 10%;   
     transition-property:all;
     font-size: 1em;
   }
@@ -118,15 +124,10 @@ input[type="radio"],select{
 }
 
 textarea{
-    position: relative;
-    left: 10%;
+
     color: #380b61;
     margin-top: 20px;
 }
- input[type="radio"]{
-     position: relative;
-     left: 14px;
- }
 
  label[for="fotos"]{
     cursor: pointer;
@@ -139,9 +140,7 @@ textarea{
     display: block;
     border: none;
     font-size: 1em;
-    position:relative;
-    left: 12%;
-    top: 19px;
+
     text-align: center;
  }
 
@@ -154,4 +153,10 @@ textarea{
  input[type="file"]{
     transition-property:all;
     display: none;
+}
+
+.form-footer {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
 }

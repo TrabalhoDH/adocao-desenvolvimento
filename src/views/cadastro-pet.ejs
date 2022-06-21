@@ -3,88 +3,120 @@
 <html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Adoção Legal</title>
-    <link rel="stylesheet" href="../css/cadastro-pet.css">
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/cadastro-pet.css" />
+    <link rel="stylesheet" href="../css/style.css" />
 </head>
 
 <body>
     <%- include('./partials/header') %>
-    <main>
-        <div class="cadastropet">
-            <p id="titulo">Cadastre seu pet</p>
+        <main>
+            <div class="cadastropet">
+                <p id="titulo">Cadastre seu pet</p>
+                <form method="post" action="/doando/pet" enctype="multipart/form-data">
 
-            <form method="post" action="/doando/pet" enctype="multipart/form-data">
-                <label for="pet"> Qual seu pet : </label>
-                <select id="tipo do pet" name="tipoDePet">
-                    <option value="Cão"> Cão </option>
-                    <option value="Gato"> Gato </option>
-                    <option value="Coelho"> Coelho </option>
-                </select>
+                    <div class="input-group">
+                        <label for="pet"> Qual seu pet: </label>
+                        <select id="tipo do pet" name="tipoDePet">
+                        <option value="Cão">Cão</option>
+                        <option value="Gato">Gato</option>
+                        <option value="Coelho">Coelho</option>
+                        </select>
+                    </div>
 
-                <label for="nome"> Nome do Pet: </label>
-                <input type="text" id="nome" name="nome" placeholder="Digite o nome do seu pet" required maxlength="25">
+                    <div class="input-group">
+                        <label for="nome"> Nome do Pet: </label>
+                        <input type="text" id="nome" name="nome" placeholder="Digite o nome do seu pet" required maxlength="25" />
+                    </div>
 
-                <label for="raca">Raça :</label>
-                <input type="text" id="raca" name="raca" placeholder="Pastor Alemão, Buldog, Persa, indefinidas ">
+                    <div class="input-group">
+                        <label for="raca">Raça:</label>
+                        <input type="text" id="raca" name="raca"
+                            placeholder="Pastor Alemão, Buldog, Persa, indefinidas " />
+                    </div>
 
-                <label for="tamanho"> Qual porte do seu pet: </label>
-                <select id="tamanhoDoPet" name="tamanhoDoPet">
-                    <option value="Grande">Grande</option>
-                    <option value="Médio">Médio</option>
-                    <option value="Pequeno">Pequeno</option>
-                </select>
+                    <div class="input-group">
+                        <label for="tamanho"> Qual porte do seu pet:</label>
+                        <select id="tamanhoDoPet" name="tamanhoDoPet">
+                            <option value="Grande">Grande</option>
+                            <option value="Médio">Médio</option>
+                            <option value="Pequeno">Pequeno</option>
+                        </select>
+                    </div>
 
-                <label>Genero :</label>
+                    <div class="input-group">
 
-                <input type="radio" id="femea" name="genero" value="Femea" checked><label for="Femea">Femea</label>
-                <input type="radio" id="macho" name="genero" value="Macho"><label for="Macho">Macho</label>
+                        <label for="idade">Data Nascimento:</label>
+                        <input type="date" name="dataNascimento" id="dataNacimentoPet" required />
+                    </div>
 
-                <label> Vacinado :</label>
+                    <div class="input-group">
 
-                <input type="radio" id="simVacinado" name="vacinado" value="Vacinado" checked><label
-                    for="sim">Sim</label>
-                <input type="radio" id="naoVacinado" name="vacinado" value="Não é vacinado"><label for="não">Não</label>
+                        <label for="cor"> Qual a cor do seu pet: </label>
+                        <select id="corPredominante" name="corPredominante">
+                            <option value="Preto">Preto</option>
+                            <option value="Branco">Branco</option>
+                            <option value="Caramelo">Caramelo</option>
+                            <option value="Marrom">Marrom</option>
+                            <option value="Cinza">Cinza</option>
+                        </select>
+                    </div>
 
-                <label>Castrado :</label>
+                    <div class="input-group">
 
-                <input type="radio" id="simCastrado" name="castrado" value="Castrado" checked><label
-                    for="sim">Sim</label>
-                <input type="radio" id="naoCastrado" name="castrado" value="Nâo é castrado"><label for="nao">Não</label>
+                        <label for="tipoDePelo"> Qual a pelagem do seu pet: </label>
+                        <select id="pelagem" name="pelagem">
+                            <option value="Curto">Curto</option>
+                            <option value="Médio">Médio</option>
+                            <option value="Longo">Longo</option>
+                            <option value="Sem pelo">Sem pelo</option>
+                        </select>
+                    </div>
 
-                <label for="idade">Idade (anos) :</label>
-                <input type="date" name="dataNascimento" id="dataNacimentoPet" required>
+                    <div class="check input-group">
+                        <label>Genero:</label>
+                        <div>
+                            <label for="Femea">Femea</label>
+                        <input type="radio" id="femea" name="genero" value="Femea" checked />
+                        <label for="Macho">Macho</label>
+                        <input type="radio" id="macho" name="genero" value="Macho" />
+                        </div>
+                    </div>
 
-                <label for="cor"> Qual a cor do seu pet: </label>
-                <select id="corPredominante" name="corPredominante">
-                    <option value="Preto"> Preto </option>
-                    <option value="Branco"> Branco </option>
-                    <option value="Caramelo"> Caramelo </option>
-                    <option value="Marrom">Marrom</option>
-                    <option value="Cinza"> Cinza</option>
-                </select>
+                    <div class="check input-group">
+                        <label>Vacinado:</label>
+                        <div>
+                        <label for="sim">Sim</label>
+                        <input type="radio" id="simVacinado" name="vacinado" value="Vacinado" checked />
+                            <label for="não">Não</label>
+                        <input type="radio" id="naoVacinado" name="vacinado" value="Não é vacinado" />
+                        </div>
+                    </div>
 
-                <label for="tipoDePelo"> Qual a pelagem do seu pet: </label>
-                <select id="pelagem" name="pelagem">
-                    <option value="Curto">Curto</option>
-                    <option value="Médio">Médio</option>
-                    <option value="Longo">Longo</option>
-                    <option value="Sem pelo">Sem pelo</option>
-                </select>
-                <label for="fotos">Enviar arquivo</label>
-                <input type="file" id="fotos" name="fotos" required accept="image/*" multiple>
-                <button id="cadastrarPet" type="submit">Finalizar </button>
+                    <div class="check input-group">
+                        <label>Castrado:</label>
+                        <div>
 
-            </form>
+                            <label for="sim">Sim</label>
+                            <input type="radio" id="simCastrado" name="castrado" value="Castrado" checked />
+                            <label for="nao">Não</label>
+                            <input type="radio" id="naoCastrado" name="castrado" value="Nâo é castrado" />
+                        </div>
+                    </div>
 
-        </div>
-    </main>
+                    <div class="form-footer">
+                        <label for="fotos">Enviar arquivo</label>
+                        <input type="file" id="fotos" name="fotos" required accept="image/*" multiple />
+                        <button id="cadastrarPet" type="submit">Finalizar</button>
+                    </div>
+                    </form>
+            </div>
+        </main>
 
-    <%- include('./partials/footer') %>
+        <%- include('./partials/footer') %>
 </body>
-
 
 </html>
