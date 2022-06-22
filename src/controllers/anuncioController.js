@@ -1,7 +1,7 @@
 const { Animal, Anuncio, Foto } = require('../models');
 
 const anuncioController = {
-  anunciarAnimal: async (request, response) => {
+  show: async (request, response) => {
     const idAnimal = request.query.idAnimal;
 
     const animal = await Animal.findByPk(idAnimal);
@@ -12,7 +12,7 @@ const anuncioController = {
       },
     });
 
-    response.render('anuncio', {
+    response.render('atualizar', {
       animal,
       foto
     });
@@ -28,7 +28,7 @@ const anuncioController = {
       animal_id: idAnimal
     })
 
-    return response.redirect('/feed');
+    return response.redirect('/perfil');
   }
 }
 module.exports = anuncioController;
