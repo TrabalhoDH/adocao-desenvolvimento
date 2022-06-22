@@ -39,17 +39,11 @@ const doandoController = {
         response.redirect('/perfil');
     },
     atualizar: async(request,response)=>{
-        const { nome, tipoDePet, raca, tamanhoDoPet, genero, dataNascimento, corPredominante, pelagem, vacinado, castrado } = request.body;
+        const { nome, tipoDePet, raca, tamanhoDoPet, genero, dataNascimento, corPredominante, pelagem, vacinado, castrado,idAnimal } = request.body;
 
-        const { id } = request.session.usuarioEncontrado;
+        const animal = await Animal.findByPk(idAnimal);
 
-        const usuario = await Usuario.findOne({
-            where: {
-                id
-            },
-        });
-
-        const animal = await Animal.update({
+        await Animal.update({
             raca,
             nome,
             vacinado,
@@ -62,9 +56,7 @@ const doandoController = {
             pelagem,
         },
         {
-            where:{
-                usuario_id:id
-            }
+            where:{id:animal.id}
         });
 
         request.session.autorizado = true;
