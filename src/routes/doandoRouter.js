@@ -13,4 +13,6 @@ router.get('/pet', doandoController.pet);
 
 router.post('/pet',upload.array('fotos',4),cadastroPetValidator,doandoController.novoAnimais);
 
+router.put('/pet',doandoController.atualizar);
+
 module.exports = router;
