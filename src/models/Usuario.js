@@ -24,43 +24,38 @@ module.exports = (sequelize, DataType) => {
         },
         genero: {
             type: DataType.STRING,
-
         },
-        data_nasc: {
+        dataNascimento: {
             type: DataType.DATE,
-
+            field: 'data_nasc'
         },
-        criado_em: {
+        criadoEm: {
             type: DataType.DATE,
-
+            allowNull: false,
+            field: 'criado_em'
         },
-    },
-
-        {
-            tableName: 'usuarios',
-            timestamps: true,
-            createdAt: 'criado_em',
-            updatedAt: false
-
-        }
+    }, {
+        tableName: 'usuarios',
+        timestamps: true,
+        createdAt: 'criadoEm',
+        updatedAt: false
+    }
     )
 
     Usuario.associate = (models) => {
         Usuario.hasMany(models.Animal, {
             as: 'Animal',
-            foreignKey: 'usuario_id'
+            foreignKey: 'idUsuario'
         })
         Usuario.hasMany(models.Anuncio, {
             as: 'Anuncio',
-            foreignKey: 'usuario_id'
+            foreignKey: 'idUsuario'
         })
         Usuario.hasMany(models.InteresseAdocao, {
             as: 'InteresseAdocao',
-            foreignKey: 'usuario_id'
+            foreignKey: 'idUsuario'
         })
     }
 
     return Usuario
 }
-
-

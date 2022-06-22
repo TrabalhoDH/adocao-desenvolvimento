@@ -13,7 +13,7 @@ const perfilController = {
 
         const animais = await Animal.findAll({
             where: {
-                usuario_id: id
+                idUsuario: id
             },
             include: ['Fotos']
         });

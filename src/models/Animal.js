@@ -11,7 +11,6 @@ module.exports = (sequelize, DataType) => {
             allowNull: false,
         },
         porte: {
-
             type: DataType.STRING,
             allowNull: false
         },
@@ -19,9 +18,10 @@ module.exports = (sequelize, DataType) => {
             type: DataType.STRING,
             allowNull: false
         },
-        criado_em: {
+        criadoEm: {
             type: DataType.DATE,
-            allowNull: false
+            allowNull: false,
+            field: 'criado_em'
         },
         tipo: {
             type: DataType.STRING,
@@ -44,27 +44,26 @@ module.exports = (sequelize, DataType) => {
         vacinado: {
             type: DataType.STRING
         },
-        usuario_id: {
+        idUsuario: {
             type: DataType.INTEGER,
-            foreignKey: true
+            foreignKey: true,
+            field: 'usuario_id'
         },
-    },
-
-        {
-            tableName: 'animais',
-            timestamps: true,
-            createdAt: 'criado_em',
-            updatedAt: false
-        });
+    }, {
+        tableName: 'animais',
+        timestamps: true,
+        createdAt: 'criadoEm',
+        updatedAt: false
+    });
 
     Animal.associate = (models) => {
         Animal.belongsTo(models.Usuario, {
             as: 'Usuario',
-            foreignKey: 'usuario_id'
+            foreignKey: 'idUsuario'
         });
         Animal.hasMany(models.Foto, {
             as: 'Fotos',
-            foreignKey: 'animal_id'
+            foreignKey: 'idAnimal'
         })
     }
 
