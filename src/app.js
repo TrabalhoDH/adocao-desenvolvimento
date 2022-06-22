@@ -3,6 +3,7 @@ const path = require('path');
 const session = require('express-session')
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
+const methodOverride = require('method-override')
 
 const indexRouter = require('./routes/index');
 const loginRouter = require('./routes/loginRouter');
@@ -26,6 +27,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, '../public')));
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
+app.use(methodOverride('_method'))
 app.use(session({
   secret: '6FAPGgszInSVc4Z+jKL1/7PfAHCbnTxUlDmySEQWNTY=',
   resave: true,

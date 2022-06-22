@@ -50,11 +50,23 @@
                           <li><%= animal.porte %></li>
                           <li><%= animal.tipo %></li>
                           <li><%= animal.pelagem %></li>
+                          <li><%= animal.cor %></li>
+                          <li><%= animal.genero %></li>
                           <li>
                             <form method="get" action="/anuncio">
                               <input type="hidden" name="idAnimal" value="<%= animal.id %>">
+<<<<<<< HEAD
 
                               <button type="submit">Doar!</button>
+=======
+                              <button type="submit">Atualizar</button>
+                            </form>
+                          </li>
+                          <li>
+                            <form method="post" action="/anuncio">
+                              <input type="hidden" name="idAnimal" value="<%= animal.id %>">
+                              <button type="submit">Anunciar</button>
+>>>>>>> 5d057891105903f4d9e0c3d397504600621a4b51
                             </form>
                           </li>
                         </ul>

@@ -1,5 +1,4 @@
-const { Animal } = require('../models');
-const { Foto } = require('../models');
+const { Animal,Usuario,Foto } = require('../models');
 
 const doandoController = {
     pet: (_, response) => {
@@ -35,6 +34,30 @@ const doandoController = {
                 animal_id: animal.id
             })
         ));
+
+        request.session.autorizado = true;
+        response.redirect('/perfil');
+    },
+    atualizar: async(request,response)=>{
+        const { nome, tipoDePet, raca, tamanhoDoPet, genero, dataNascimento, corPredominante, pelagem, vacinado, castrado,idAnimal } = request.body;
+
+        const animal = await Animal.findByPk(idAnimal);
+
+        await Animal.update({
+            raca,
+            nome,
+            vacinado,
+            castrado,
+            porte: tamanhoDoPet,
+            cor: corPredominante,
+            tipo: tipoDePet,
+            genero,
+            idade: dataNascimento,
+            pelagem,
+        },
+        {
+            where:{id:animal.id}
+        });
 
         request.session.autorizado = true;
         response.redirect('/perfil');
