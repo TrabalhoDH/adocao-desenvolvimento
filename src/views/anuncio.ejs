@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-<%- include('./partials/header') %>
 
 <head>
   <meta charset="UTF-8" />
@@ -9,9 +8,10 @@
   <link rel="stylesheet" href="../css/style.css" />
   <link rel="stylesheet" href="../css/anuncio.css" />
   <script defer src="./javascript/anuncio.js"></script>
-
   <title>Doando</title>
 </head>
+
+<%- include('./partials/header') %>
 
 <body>
   <div class="folder-animal">
@@ -36,76 +36,124 @@
     </div>
     <div class="dados-pet">
       <h1 id="titulo">Confira as informações do Pet</h1>
+      <form id="anunciar" action="doando/pet?_method=PUT" method="post">
       <ul>
-        <li>
-          <strong>
+        <li> 
+          <label for="nome">
+           <strong>
             Nome:
-          </strong>
-          <%= animal.nome %>
+            </strong>
+          </label>
+          <input type="text" id="nome" name="nome" placeholder="<%= animal.nome %>" required maxlength="25" /> 
         </li>
         <li>
-          <strong>
-            Tipo:
-          </strong>
-          <%= animal.tipo %>
+          <label for="tipo">
+            <strong>
+              Tipo:
+            </strong>
+          </label>
+          <select id="tipo do pet" name="tipoDePet">
+            <option value="" disabled selected><%= animal.tipo %></option>
+            <option value="Cão">Cão</option>
+            <option value="Gato">Gato</option>
+            <option value="Coelho">Coelho</option>
+          </select>
         </li>
         <li>
-          <strong>
-            Porte:
-          </strong>
-          <%= animal.porte %>
+          <label for="tipo">
+            <strong>
+              Porte:
+            </strong>
+          </label>
+          <select id="tamanhoDoPet" name="tamanhoDoPet">
+            <option value=""disabled selected><%= animal.porte %></option>
+            <option value="Grande">Grande</option>
+            <option value="Médio">Médio</option>
+            <option value="Pequeno">Pequeno</option>
+          </select> 
         </li>
         <li>
-          <strong>
-            Genero:
-          </strong>
-          <%= animal.genero %>
+          <label>
+            <strong>
+              Genero:
+            </strong>
+          </label>
+            <label for="Femea">Femea</label>
+            <input type="radio" id="femea" name="genero" value="Femea" />
+            <label for="Macho">Macho</label>
+            <input type="radio" id="macho" name="genero" value="Macho" />
         </li>
         <li>
-          <strong>
-            Raça:
-          </strong>
-          <%= animal.raca %>
+          <label for="raca">
+            <strong>
+              Raça:
+            </strong>
+          </label>
+          <input type="text" id="raca" name="raca" placeholder="<%= animal.raca %>"/>
         </li>
         <li>
-          <strong>
-            Data Nascimento:
-          </strong>
-          <%= new Date(animal.idade).toLocaleDateString('pt-br') %>
+          <label for="idade">
+           <strong>
+             Data Nascimento:
+            </strong>
+          </label>
+          <input type="text" name="dataAntiga" id="dataAntiga" placeholder="<%= new Date(animal.idade).toLocaleDateString('pt-br')%>">
+          <input type="date" name="dataNascimento" id="dataNacimentoPet" required />
         </li>
         <li>
-          <strong>
-            Pelagem:
-          </strong>
-          <%= animal.pelagem %>
+          <label for="tipoDePelo">
+            <strong>
+              Pelagem:
+            </strong>
+          </label>
+          <select id="pelagem" name="pelagem">
+            <option value=""disabled selected><%= animal.pelagem %></option>
+            <option value="Curto">Curto</option>
+            <option value="Médio">Médio</option>
+            <option value="Longo">Longo</option>
+            <option value="Sem pelo">Sem pelo</option>
+          </select>
         </li>
         <li>
-          <strong>
-            Cor predominante:
-          </strong>
-          <%= animal.cor %>
+          <label for="cor">
+            <strong>
+              Cor predominante:
+            </strong>
+          </label>
+          <select id="corPredominante" name="corPredominante">
+            <option value=""disabled selected><%= animal.cor %></option>
+            <option value="Preto">Preto</option>
+            <option value="Branco">Branco</option>
+            <option value="Caramelo">Caramelo</option>
+            <option value="Marrom">Marrom</option>
+            <option value="Cinza">Cinza</option>
+          </select>
         </li>
         <li>
-          <strong>
+          <label>
+            <strong>
             Castrado:
-          </strong>
-          <%= animal.castrado %>
+            </strong>
+          </label>
+          <label for="sim">Sim</label>
+          <input type="radio" id="simCastrado" name="castrado" value="Castrado" />
+          <label for="nao">Não</label>
+          <input type="radio" id="naoCastrado" name="castrado" value="Nâo é castrado" />
         </li>
         <li>
-          <strong>
+          <label>
+            <strong>
             Vacinado:
-          </strong>
-          <%= animal.vacinado %>
+            </strong>
+          </label>
+          <label for="sim">Sim</label>
+          <input type="radio" id="simVacinado" name="vacinado" value="Vacinado"  />
+          <label for="não">Não</label>
+          <input type="radio" id="naoVacinado" name="vacinado" value="Não é vacinado" />
         </li>
       </ul>
-    </div>
 
-    <div class="descricaoPet">
-      <form id="anunciar" action="anuncio" method="post">
-        <h1 id="informacoes">Informações adicionais</h1>
-        <textarea name="mensagem" id="mensagem" cols="60" rows="5"></textarea>
-        <input type="hidden" name="idAnimal" value="<%= animal.id %>">
-        <button id="enviar" type="submit"> Finalizar </button>
+      <button id="enviar" type="submit"> Finalizar </button>
       </form>
     </div>
   </div>
