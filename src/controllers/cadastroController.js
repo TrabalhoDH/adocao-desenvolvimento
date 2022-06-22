@@ -17,13 +17,11 @@ const cadastroController = {
             cpf: cpf,
             email: email,
             genero: genero,
-            data_nasc: date,
+            dataNascimento: date,
         })
 
         request.session.autorizado = true;
         request.session.usuarioEncontrado = usuario;
-
-        console.log(usuario)
 
         response.redirect('/perfil');
     }

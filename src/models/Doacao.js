@@ -9,13 +9,15 @@ module.exports = (sequelize, DataType) => {
             type: DataType.INTEGER,
             allowNull: false,
         },
-        criado_em: {
+        criadoEm: {
             type: DataType.DATE,
-            allowNull: false
-        }
-
+            allowNull: false,
+            field: 'criado_em'
+        },
     }, {
         tableName: 'doacoes',
-        timestamps: false
+        timestamps: true,
+        createdAt: 'criadoEm',
+        updatedAt: false,
     });
 }

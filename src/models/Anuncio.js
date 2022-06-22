@@ -5,25 +5,28 @@ module.exports = (sequelize, DataType) => {
             primaryKey: true,
             autoIncrement: true,
         },
-        criado_em: {
+        criadoEm: {
             type: DataType.DATE,
             allowNull: false,
+            field: 'criado_em'
         },
         mensagem: {
             type: DataType.STRING,
         },
-        usuario_id: {
+        idUsuario: {
             type: DataType.INTEGER,
-            foreignKey: true
+            foreignKey: true,
+            field: 'usuario_id'
         },
-        animal_id: {
+        idAnimal: {
             type: DataType.INTEGER,
-            foreignKey: true
+            foreignKey: true,
+            field: 'animal_id'
         }
     }, {
         tableName: 'anuncios',
         timestamps: true,
-        createdAt: 'criado_em',
+        createdAt: 'criadoEm',
         updatedAt: false,
 
     });
@@ -31,7 +34,7 @@ module.exports = (sequelize, DataType) => {
     Anuncio.associate = (models) => {
         Anuncio.belongsTo(models.Animal, {
             as: 'Animal',
-            foreignKey: 'animal_id'
+            foreignKey: 'idAnimal'
         });
     }
 

@@ -10,7 +10,7 @@ const loginRouter = require('./routes/loginRouter');
 const perfilRouter = require('./routes/perfilRouter');
 const cadastroRouter = require('./routes/cadastroRouter');
 const feedRouter = require('./routes/feedRouter');
-const doandoRouter = require('./routes/doandoRouter');
+const petsRouter = require('./routes/petsRouter');
 const anuncioRouter = require('./routes/anuncioRouter');
 const animalDivulgadoRouter = require('./routes/animalDivulgadoRouter')
 
@@ -39,7 +39,7 @@ app.use('/login', loginRouter);
 app.use('/perfil', perfilRouter);
 app.use('/cadastro', cadastroRouter);
 app.use('/feed', feedRouter);
-app.use('/doando', doandoRouter);
+app.use('/pets', petsRouter);
 app.use('/anuncio', anuncioRouter);
 app.use('/animalDivulgado', animalDivulgadoRouter);
 

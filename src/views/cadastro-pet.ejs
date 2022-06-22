@@ -13,110 +13,110 @@
 
 <body>
     <%- include('./partials/header') %>
-        <main>
-            <div class="cadastropet">
-                <p id="titulo">Cadastre seu pet</p>
-                <form method="post" action="/doando/pet" enctype="multipart/form-data">
+    <main>
+        <div class="cadastropet">
+            <p id="titulo">Cadastre seu pet</p>
+            <form method="post" action="pets" enctype="multipart/form-data">
 
-                    <div class="input-group">
-                        <label for="pet"> Qual seu pet: </label>
-                        <select id="tipo do pet" name="tipoDePet">
+                <div class="input-group">
+                    <label for="pet"> Qual seu pet: </label>
+                    <select id="tipo do pet" name="tipoDePet">
                         <option value="Cão">Cão</option>
                         <option value="Gato">Gato</option>
                         <option value="Coelho">Coelho</option>
-                        </select>
-                    </div>
+                    </select>
+                </div>
 
-                    <div class="input-group">
-                        <label for="nome"> Nome do Pet: </label>
-                        <input type="text" id="nome" name="nome" placeholder="Digite o nome do seu pet" required maxlength="25" />
-                    </div>
+                <div class="input-group">
+                    <label for="nome"> Nome do Pet: </label>
+                    <input type="text" id="nome" name="nome" placeholder="Digite o nome do seu pet" required
+                        maxlength="25" />
+                </div>
 
-                    <div class="input-group">
-                        <label for="raca">Raça:</label>
-                        <input type="text" id="raca" name="raca"
-                            placeholder="Pastor Alemão, Buldog, Persa, indefinidas " />
-                    </div>
+                <div class="input-group">
+                    <label for="raca">Raça:</label>
+                    <input type="text" id="raca" name="raca" placeholder="Pastor Alemão, Buldog, Persa, indefinidas " />
+                </div>
 
-                    <div class="input-group">
-                        <label for="tamanho"> Qual porte do seu pet:</label>
-                        <select id="tamanhoDoPet" name="tamanhoDoPet">
-                            <option value="Grande">Grande</option>
-                            <option value="Médio">Médio</option>
-                            <option value="Pequeno">Pequeno</option>
-                        </select>
-                    </div>
+                <div class="input-group">
+                    <label for="tamanho"> Qual porte do seu pet:</label>
+                    <select id="tamanhoDoPet" name="tamanhoDoPet">
+                        <option value="Grande">Grande</option>
+                        <option value="Médio">Médio</option>
+                        <option value="Pequeno">Pequeno</option>
+                    </select>
+                </div>
 
-                    <div class="input-group">
+                <div class="input-group">
 
-                        <label for="idade">Data Nascimento:</label>
-                        <input type="date" name="dataNascimento" id="dataNacimentoPet" required />
-                    </div>
+                    <label for="idade">Data Nascimento:</label>
+                    <input type="date" name="dataNascimento" id="dataNacimentoPet" required />
+                </div>
 
-                    <div class="input-group">
+                <div class="input-group">
 
-                        <label for="cor"> Qual a cor do seu pet: </label>
-                        <select id="corPredominante" name="corPredominante">
-                            <option value="Preto">Preto</option>
-                            <option value="Branco">Branco</option>
-                            <option value="Caramelo">Caramelo</option>
-                            <option value="Marrom">Marrom</option>
-                            <option value="Cinza">Cinza</option>
-                        </select>
-                    </div>
+                    <label for="cor"> Qual a cor do seu pet: </label>
+                    <select id="corPredominante" name="corPredominante">
+                        <option value="Preto">Preto</option>
+                        <option value="Branco">Branco</option>
+                        <option value="Caramelo">Caramelo</option>
+                        <option value="Marrom">Marrom</option>
+                        <option value="Cinza">Cinza</option>
+                    </select>
+                </div>
 
-                    <div class="input-group">
+                <div class="input-group">
 
-                        <label for="tipoDePelo"> Qual a pelagem do seu pet: </label>
-                        <select id="pelagem" name="pelagem">
-                            <option value="Curto">Curto</option>
-                            <option value="Médio">Médio</option>
-                            <option value="Longo">Longo</option>
-                            <option value="Sem pelo">Sem pelo</option>
-                        </select>
-                    </div>
+                    <label for="tipoDePelo"> Qual a pelagem do seu pet: </label>
+                    <select id="pelagem" name="pelagem">
+                        <option value="Curto">Curto</option>
+                        <option value="Médio">Médio</option>
+                        <option value="Longo">Longo</option>
+                        <option value="Sem pelo">Sem pelo</option>
+                    </select>
+                </div>
 
-                    <div class="check input-group">
-                        <label>Genero:</label>
-                        <div>
-                            <label for="Femea">Femea</label>
+                <div class="check input-group">
+                    <label>Genero:</label>
+                    <div>
+                        <label for="Femea">Femea</label>
                         <input type="radio" id="femea" name="genero" value="Femea" checked />
                         <label for="Macho">Macho</label>
                         <input type="radio" id="macho" name="genero" value="Macho" />
-                        </div>
                     </div>
+                </div>
 
-                    <div class="check input-group">
-                        <label>Vacinado:</label>
-                        <div>
+                <div class="check input-group">
+                    <label>Vacinado:</label>
+                    <div>
                         <label for="sim">Sim</label>
                         <input type="radio" id="simVacinado" name="vacinado" value="Vacinado" checked />
                         <label for="não">Não</label>
                         <input type="radio" id="naoVacinado" name="vacinado" value="Não é vacinado" />
-                        </div>
                     </div>
+                </div>
 
-                    <div class="check input-group">
-                        <label>Castrado:</label>
-                        <div>
+                <div class="check input-group">
+                    <label>Castrado:</label>
+                    <div>
 
-                            <label for="sim">Sim</label>
-                            <input type="radio" id="simCastrado" name="castrado" value="Castrado" checked />
-                            <label for="nao">Não</label>
-                            <input type="radio" id="naoCastrado" name="castrado" value="Nâo é castrado" />
-                        </div>
+                        <label for="sim">Sim</label>
+                        <input type="radio" id="simCastrado" name="castrado" value="Castrado" checked />
+                        <label for="nao">Não</label>
+                        <input type="radio" id="naoCastrado" name="castrado" value="Nâo é castrado" />
                     </div>
+                </div>
 
-                    <div class="form-footer">
-                        <label for="fotos">Enviar arquivo</label>
-                        <input type="file" id="fotos" name="fotos" required accept="image/*" multiple />
-                        <button id="cadastrarPet" type="submit">Finalizar</button>
-                    </div>
-                    </form>
-            </div>
-        </main>
+                <div class="form-footer">
+                    <label for="fotos">Enviar arquivo</label>
+                    <input type="file" id="fotos" name="fotos" required accept="image/*" multiple />
+                    <button id="cadastrarPet" type="submit">Finalizar</button>
+                </div>
+            </form>
+        </div>
+    </main>
 
-        <%- include('./partials/footer') %>
+    <%- include('./partials/footer') %>
 </body>
 
 </html>
