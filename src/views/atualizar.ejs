@@ -36,48 +36,48 @@
     </div>
     <div class="dados-pet">
       <h1 id="titulo">Confira as informações do Pet</h1>
-      <form id="anunciar" action="pets/<%= animal.id %>?_method=PUT" method="post">
-        <ul>
-          <li>
-            <label for="nome">
-              <strong>
-                Nome:
-              </strong>
-            </label>
-            <input type="text" id="nome" name="nome" placeholder="<%= animal.nome %>" required maxlength="25" />
-          </li>
-          <li>
-            <label for="tipo">
-              <strong>
-                Tipo:
-              </strong>
-            </label>
-            <select id="tipo do pet" name="tipoDePet">
-              <option value="" disabled selected><%= animal.tipo %></option>
-              <option value="Cão">Cão</option>
-              <option value="Gato">Gato</option>
-              <option value="Coelho">Coelho</option>
-            </select>
-          </li>
-          <li>
-            <label for="tipo">
-              <strong>
-                Porte:
-              </strong>
-            </label>
-            <select id="tamanhoDoPet" name="tamanhoDoPet">
-              <option value="" disabled selected><%= animal.porte %></option>
-              <option value="Grande">Grande</option>
-              <option value="Médio">Médio</option>
-              <option value="Pequeno">Pequeno</option>
-            </select>
-          </li>
-          <li>
-            <label>
-              <strong>
-                Genero:
-              </strong>
-            </label>
+      <form id="anunciar" action="doando/pet?_method=PUT" method="post">
+      <ul>
+        <li> 
+          <label for="nome">
+           <strong>
+            Nome:
+            </strong>
+          </label>
+          <input type="text" id="nome" name="nome" placeholder="<%= animal.nome %>" required maxlength="25" /> 
+        </li>
+        <li>
+          <label for="tipo">
+            <strong>
+              Tipo:
+            </strong>
+          </label>
+          <select id="tipo do pet" name="tipoDePet">
+            <option value="" disabled selected><%= animal.tipo %></option>
+            <option value="Cão">Cão</option>
+            <option value="Gato">Gato</option>
+            <option value="Coelho">Coelho</option>
+          </select>
+        </li>
+        <li>
+          <label for="tipo">
+            <strong>
+              Porte:
+            </strong>
+          </label>
+          <select id="tamanhoDoPet" name="tamanhoDoPet">
+            <option value=""disabled selected><%= animal.porte %></option>
+            <option value="Grande">Grande</option>
+            <option value="Médio">Médio</option>
+            <option value="Pequeno">Pequeno</option>
+          </select>
+        </li>
+        <li>
+          <label>
+            <strong>
+              Genero:
+            </strong>
+          </label>
             <label for="Femea">Femea</label>
             <input type="radio" id="femea" name="genero" value="Femea" />
             <label for="Macho">Macho</label>
