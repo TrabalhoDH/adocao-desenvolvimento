@@ -19,25 +19,37 @@
       <!--imagem do pefil e opções(coluna esquerda)-->
       <section id="content">
         <section class="perfil">
-          <img src="../img/sem-foto.jpg" alt="perfil-pet" />
-            <ul>
-              <li><%= usuario.nome %></li>
-              <li><%= usuario.email %></li>
-              <li><%= usuario.genero %></li>
-              <li><%= usuario.cpf %></li>
-            </ul>
-        </section>
-          <section class="faq-container">
-            <div class="faq-mini">
-              <details class="faq-h2">
-                <summary>cadastrados</summary>
 
-                <% animais.forEach((animal)=>{ %>
-                  <div id="card">
-                  <h2 id="Nome do pet"> <li> <%=animal.nome %></li> </h2>
-                    <div class="infoPerfil">
-                      <aside>
-                        <ul class="infoPerfil-pet">
+          <img src="../img/sem-foto.jpg" alt="perfil-pet" />
+          <ul>
+            <li><%= usuario.nome %></li>
+            <li><%= usuario.email %></li>
+            <li><%= usuario.genero %></li>
+            <li><%= usuario.cpf %></li>
+          </ul>
+
+        </section>
+
+
+        <section class="faq-container">
+          <div class="faq-mini">
+            <details class="faq-h2">
+              <summary>cadastrados</summary>
+
+              <% animais.forEach((animal)=>{ %>
+              <div id="card">
+                <h2 id="Nome do pet">
+                  <li> <%=animal.nome %></li>
+                </h2>
+                <div class="infoPerfil">
+                  <aside>
+                    <!-- <img
+                        class="perfil-img"
+                        src="../img/sem-foto.jpg"
+                        alt="fot de perfil-pet"
+                        /> -->
+                    <ul class="infoPerfil-pet">
+
                       <li><%= animal.raca %></li>
                       <li><%= animal.porte %></li>
                       <li><%= animal.tipo %></li>
