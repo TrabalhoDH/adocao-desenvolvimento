@@ -106,12 +106,13 @@ aside {
   justify-content: space-between;
 }
 .photo-card {
-  width: 90px;
+  width: 50px;
   background: #f1eeee;
   border-radius: 8px;
   margin: auto;
 }
 .photo-card:hover{
+  transform: scale(1.1);
   z-index: 9;
 }
 #customProfile ul li {
