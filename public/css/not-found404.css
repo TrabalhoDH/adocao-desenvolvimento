@@ -1,8 +1,9 @@
-
-#not-found{
-
-    position: absolute;
-    left: 22%;
-    top: 2%;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
+#not-found{
+    text-align: center;
+}
