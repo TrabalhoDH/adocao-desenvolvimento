@@ -29,9 +29,10 @@ module.exports = (sequelize, DataType) => {
             type: DataType.STRING,
             allowNull: false
         },
-        usuario_id: {
+        idUsuario: {
             type: DataType.INTEGER,
-            foreignKey: true
+            foreignKey: true,
+            field: 'usuario_id'
         },
     }, {
         tableName: 'enderecos',
@@ -40,7 +41,7 @@ module.exports = (sequelize, DataType) => {
     Endereco.associate = (models) => {
         Endereco.belongsTo(models.Usuario, {
             as: 'Usuario',
-            foreignKey: 'usuario_id'
+            foreignKey: 'idUsuario'
         })
     }
 

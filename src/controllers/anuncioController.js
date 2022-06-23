@@ -8,7 +8,7 @@ const anuncioController = {
 
     const foto = await Foto.findAll({
       where: {
-        animal_id: idAnimal
+        idAnimal
       },
     });
 
@@ -24,8 +24,8 @@ const anuncioController = {
 
     await Anuncio.create({
       mensagem,
-      usuario_id: id,
-      animal_id: idAnimal
+      idUsuario: id,
+      idAnimal
     })
 
     return response.redirect('/perfil');

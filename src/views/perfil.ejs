@@ -1,34 +1,32 @@
 <DOCTYPE html>
   <html lang="en">
-    <head>
-      <meta charset="UTF-8" />
-      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-      <link rel="stylesheet" href="../css/perfilPage.css"/>
-      <link rel="stylesheet" href="../css/style.css"/>
-      <title>Adoção Legal</title>
-    </head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <body>
-      <%- include('./partials/header') %>
+    <link rel="stylesheet" href="../css/perfilPage.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <title>Adoção Legal</title>
+  </head>
 
-      <main id="conteudo">
-        <section id="Tema">Tema</section>
-        <!--imagem do pefil e opções(coluna esquerda)-->
-        <section id="content">
-          <section class="perfil">
+  <body>
+    <%- include('./partials/header') %>
 
-            <img src="../img/sem-foto.jpg" alt="perfil-pet" />
+    <main id="conteudo">
+      <section id="Tema">Tema</section>
+      <!--imagem do pefil e opções(coluna esquerda)-->
+      <section id="content">
+        <section class="perfil">
+          <img src="../img/sem-foto.jpg" alt="perfil-pet" />
             <ul>
               <li><%= usuario.nome %></li>
               <li><%= usuario.email %></li>
               <li><%= usuario.genero %></li>
               <li><%= usuario.cpf %></li>
             </ul>
-
-          </section>
-
+        </section>
           <section class="faq-container">
             <div class="faq-mini">
               <details class="faq-h2">
@@ -39,58 +37,54 @@
                   <h2 id="Nome do pet"> <li> <%=animal.nome %></li> </h2>
                     <div class="infoPerfil">
                       <aside>
-                        <!-- <img
-                        class="perfil-img"
-                        src="../img/sem-foto.jpg"
-                        alt="fot de perfil-pet"
-                        /> -->
                         <ul class="infoPerfil-pet">
-
-                          <li><%= animal.raca %></li>
-                          <li><%= animal.porte %></li>
-                          <li><%= animal.tipo %></li>
-                          <li><%= animal.pelagem %></li>
-                          <li><%= animal.cor %></li>
-                          <li><%= animal.genero %></li>
-                          <li>
-                            <form method="get" action="/anuncio">
-                              <input type="hidden" name="idAnimal" value="<%= animal.id %>">
-
-                              <button type="submit">Doar!</button>
-                            </form>
-                          </li>
-                        </ul>
-                      </aside>
-                      <div class="photo-content">
-                        <% animal.Fotos.forEach((fotos)=>{ %>
-                        <div class="photo-card">
-                          <img
-                          class="perfil-img"
-                          src="<%= fotos.caminho %><%= fotos.nome %>"
-                          alt="perfil-pet"
-                          />
-                        </div>
-                        <% }) %>
-                      </div>
+                      <li><%= animal.raca %></li>
+                      <li><%= animal.porte %></li>
+                      <li><%= animal.tipo %></li>
+                      <li><%= animal.pelagem %></li>
+                      <li><%= animal.cor %></li>
+                      <li><%= animal.genero %></li>
+                      <li>
+                        <form method="get" action="/anuncio">
+                          <input type="hidden" name="idAnimal" value="<%= animal.id %>">
+                          <button type="submit">Atualizar</button>
+                        </form>
+                      </li>
+                      <li>
+                        <form method="post" action="/anuncio">
+                          <input type="hidden" name="idAnimal" value="<%= animal.id %>">
+                          <button type="submit">Anunciar</button>
+                        </form>
+                      </li>
+                    </ul>
+                  </aside>
+                  <div class="photo-content">
+                    <% animal.Fotos.forEach((fotos)=>{ %>
+                    <div class="photo-card">
+                      <img class="perfil-img" src="<%= fotos.caminho %><%= fotos.nome %>" alt="perfil-pet" />
                     </div>
+                    <% }) %>
+                  </div>
                 </div>
-                <% }) %>
-              </details>
-            </div>
-          </section>
-            
-          <section id="customProfile">
-            <ul>
-                <li>opçõesDoPerfil1</li>
-                <li>opçõesDoPerfil2</li>
-                <li><a href="/doando/pet">Doe seu pet!</a></li>
-              </ul>
-          </section>
+              </div>
+              <% }) %>
+            </details>
+          </div>
         </section>
-      </main>
 
-      <%- include('./partials/footer') %>
-      
-    </body>
+        <section id="customProfile">
+          <ul>
+            <li>opçõesDoPerfil1</li>
+            <li>opçõesDoPerfil2</li>
+            <li><a href="pets">Doe seu pet!</a></li>
+          </ul>
+        </section>
+      </section>
+    </main>
+
+    <%- include('./partials/footer') %>
+
+  </body>
+
   </html>
 </DOCTYPE>

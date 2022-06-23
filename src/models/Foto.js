@@ -13,18 +13,20 @@ module.exports = (sequelize, DataType) => {
             type: DataType.STRING,
             foreignKey: true,
         },
-        criado_em: {
+        criadoEm: {
             type: DataType.DATE,
             allowNull: false,
+            field: 'criado_em'
         },
-        animal_id: {
+        idAnimal: {
             type: DataType.INTEGER,
             foreignKey: true,
+            field: 'animal_id'
         },
     }, {
         tableName: 'fotos',
         timestamps: false,
-        createdAt: 'criado_em',
+        createdAt: 'criadoEm',
         updatedAt: false
     });
 }

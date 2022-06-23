@@ -5,12 +5,15 @@ module.exports = (sequelize, DataType) => {
             primaryKey: true,
             autoIncrement: true,
         },
-        criado_em: {
-            type: DataType.INTEGER,
-            allowNull: false
+        criadoEm: {
+            type: DataType.DATE,
+            allowNull: false,
+            field: 'criado_em'
         },
     }, {
         tableName: 'adocao',
-        timestamps: false,
+        timestamps: true,
+        createdAt: 'criadoEm',
+        updatedAt: false
     });
 }

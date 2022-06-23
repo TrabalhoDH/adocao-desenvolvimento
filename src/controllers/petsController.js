@@ -1,11 +1,11 @@
-const { Animal,Usuario,Foto } = require('../models');
+const { Animal, Foto } = require('../models');
 
-const doandoController = {
-    pet: (_, response) => {
+const petsController = {
+    index: (_, response) => {
         response.render('cadastro-pet')
     },
 
-    novoAnimais: async (request, response) => {
+    store: async (request, response) => {
         const { nome, tipoDePet, raca, tamanhoDoPet, genero, dataNascimento, corPredominante, pelagem, vacinado, castrado } = request.body;
 
         const { id } = request.session.usuarioEncontrado;
@@ -23,23 +23,24 @@ const doandoController = {
             genero,
             idade: dataNascimento,
             pelagem,
-            usuario_id: id,
+            idUsuario: id,
         });
 
         await Promise.all(imagens.map(element =>
             Foto.create({
                 nome: element.filename,
                 caminho: '../uploads/',
-                criado_em: `${new Date()}`,
-                animal_id: animal.id
+                criadoEm: `${new Date()}`,
+                idAnimal: animal.id
             })
         ));
 
         request.session.autorizado = true;
         response.redirect('/perfil');
     },
-    atualizar: async(request,response)=>{
-        const { nome, tipoDePet, raca, tamanhoDoPet, genero, dataNascimento, corPredominante, pelagem, vacinado, castrado,idAnimal } = request.body;
+    update: async (request, response) => {
+        const { nome, tipoDePet, raca, tamanhoDoPet, genero, dataNascimento, corPredominante, pelagem, vacinado, castrado } = request.body;
+        const { idAnimal } = request.params
 
         const animal = await Animal.findByPk(idAnimal);
 
@@ -54,9 +55,8 @@ const doandoController = {
             genero,
             idade: dataNascimento,
             pelagem,
-        },
-        {
-            where:{id:animal.id}
+        }, {
+            where: { id: animal.id }
         });
 
         request.session.autorizado = true;
@@ -64,4 +64,4 @@ const doandoController = {
     }
 };
 
-module.exports = doandoController
+module.exports = petsController;
