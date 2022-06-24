@@ -29,8 +29,9 @@ module.exports = (sequelize, DataType) => {
         genero: {
             type: DataType.STRING,
         },
-        idade: {
-            type: DataType.DATE
+        dataNascimento: {
+            type: DataType.DATE,
+            field: 'idade'
         },
         pelagem: {
             type: DataType.STRING,

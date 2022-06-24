@@ -8,12 +8,11 @@ const methodOverride = require('method-override')
 const indexRouter = require('./routes/index');
 const loginRouter = require('./routes/loginRouter');
 const perfilRouter = require('./routes/perfilRouter');
-const cadastroRouter = require('./routes/cadastroRouter');
+const usuariosRouter = require('./routes/usuariosRouter');
 const feedRouter = require('./routes/feedRouter');
 const petsRouter = require('./routes/petsRouter');
 const anuncioRouter = require('./routes/anuncioRouter');
 const animalDivulgadoRouter = require('./routes/animalDivulgadoRouter')
-
 
 const app = express();
 
@@ -37,7 +36,7 @@ app.use(session({
 app.use('/', indexRouter);
 app.use('/login', loginRouter);
 app.use('/perfil', perfilRouter);
-app.use('/cadastro', cadastroRouter);
+app.use('/usuarios', usuariosRouter);
 app.use('/feed', feedRouter);
 app.use('/pets', petsRouter);
 app.use('/anuncio', anuncioRouter);

@@ -8,6 +8,8 @@ body {
     color: #380b61;
     text-align: center;
     font-size: 25px;
+    margin-bottom: 35px;
+    margin-top: 20px;
 }
 
 .cadastropet{
@@ -97,6 +99,7 @@ label[for="fotos"]:hover {
     box-sizing: border-box;
     border: 1px solid #59429d;
     color: #380b61;
+    outline: none;
     font-size: 1em;
 }
 
@@ -159,4 +162,30 @@ textarea{
     display: flex;
     justify-content: space-around;
     width: 100%;
+}
+
+
+.errosPet{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    list-style: none;
+    width: 500px;
+}
+#listaErrosPet{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    color: rgba(255, 0, 0, 0.87);
+    list-style: none;
+    background-color: rgba(255, 0, 0, 0.219);
+    font-size: 16px;
+    
+    width: 350px;
+    height: 35px;
+    
+    margin-bottom: 10px;
+    border-radius: 10px;
 }
