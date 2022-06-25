@@ -4,4 +4,5 @@ const router = express.Router();
 
 router.get('/', anuncioController.show);
 router.post('/', anuncioController.finalizarAnuncio);
+
 module.exports = router;
