@@ -27,9 +27,6 @@ const feedControler = {
             anuncios,
         })
     },
-    adotarAnimal: (_, response) => {
-        response.render('animalDivulgado')
-    }
 };
 
 module.exports = feedControler;
