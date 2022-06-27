@@ -11,7 +11,8 @@ const anuncioController = {
         idAnimal
       },
     });
-    request.session.usuarioEncontrado = true;
+    request.session.autorizado = true;
+        
     response.render('atualizar', {
       animal,
       foto
@@ -19,28 +20,17 @@ const anuncioController = {
   },
 
   finalizarAnuncio: async (request, response) => {
-    const { id } = request.session.usuarioEncontrado;
-    const { mensagem, idAnimal } = request.body;
+    const { idAnimal } = request.params;
+    const { idUsuario } = request.body;
 
-
-    const anuncio = await Anuncio.findOne({
-      where: {
-        idAnimal
-      }
-    });
-
-    if (anuncio == undefined) {
       await Anuncio.create({
-        mensagem,
-        idUsuario: id,
+        idUsuario,
         idAnimal
       })
-      response.redirect('/perfil');
-    } else {
-      response.render('perfil',{
-      })
-    }
-    request.session.usuarioEncontrado = true;
+
+      request.session.autorizado = true;
+      
+      return response.redirect('/perfil');
   },
 }
 module.exports = anuncioController;

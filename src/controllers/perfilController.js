@@ -1,5 +1,4 @@
-const { Usuario } = require('../models');
-const { Animal } = require('../models');
+const { Usuario,Animal,Anuncio } = require('../models');
 
 const perfilController = {
     index: async (request, response) => {
@@ -18,11 +17,22 @@ const perfilController = {
             include: ['Fotos']
         });
 
+        const i = animais.map(item=>{
+            return item.id
+        })
+       
+        const anuncio = await Anuncio.findAll({
+            where:{
+                idAnimal: i
+            }
+        })
+                
         return response.render('perfil', {
             usuario,
-            animais
+            animais,
+            anuncio
         });
     },
 };
 
-module.exports = perfilController;
+module.exports = perfilController; 

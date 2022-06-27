@@ -52,10 +52,8 @@ const petsController = {
     },
 
     update: async (request, response) => {
-        const { nome, tipoDePet, raca, tamanhoDoPet, genero, dataNascimento, corPredominante, pelagem, vacinado, castrado } = request.body;
+        const { nome, tipoDePet, raca, tamanhoDoPet, genero, dataNascimento, corPredominante, pelagem, vacinado, castrado,idUsuario } = request.body;
         const { idAnimal } = request.params
-
-        const animal = await Animal.findByPk(idAnimal);
 
         await Animal.update({
             raca,
@@ -69,10 +67,11 @@ const petsController = {
             idade: dataNascimento,
             pelagem,
         }, {
-            where: { id: animal.id }
+            where: { id: idAnimal }
         });
 
         request.session.autorizado = true;
+
         response.redirect('/perfil');
     },
 

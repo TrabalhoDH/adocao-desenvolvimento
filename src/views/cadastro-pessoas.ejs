@@ -31,41 +31,41 @@
                 <div class="input-group">
                     <label for="nome"> Nome: </label>
                     <input type="text" id="nome" name="nome" placeholder="Digite o seu nome" maxlength="25"
-                        value="<% if(typeof valores != 'undefined') { %><%= valores.nome %><%}%>" required>
+                        value="<% if(typeof valores != 'undefined') { %><%= valores.nome %><%}%>">
                 </div>
 
                 <div class="input-group">
                     <label for="senha"> Senha: </label>
-                    <input type="password" id="senha" name="senha" placeholder="Digite o sua senha" maxlength="30" required>
+                    <input type="password" id="senha" name="senha" placeholder="Digite o sua senha" maxlength="30">
                 </div>
 
                 <div class="input-group">
                     <label for="cpf"> CPF: </label>
                     <input type="text" id="cpf" name="cpf" placeholder="Digite o seu CPF" maxlength="15"
-                        value="<% if (typeof valores != 'undefined') { %><%= valores.cpf %> <% } %>" required>
+                        value="<% if (typeof valores != 'undefined') { %><%= valores.cpf %> <% } %>">
                 </div>
 
                 <div class="input-group">
                     <label for="nome">Endereço de E-mail: </label>
                     <input type="email" id="email" name="email" placeholder="Digite o seu email" maxlength="100"
-                        value="<% if(typeof valores != 'undefined') { %><%= valores.email %><%}%> " required>
+                        value="<% if(typeof valores != 'undefined') { %><%= valores.email %><%}%> ">
                 </div>
 
                 <div class="input-group">
                     <label for="telefone">Telefone</label>
                     <input type="tel" id="telefone" name="telefone" class="input-padrao" placeholder="(xx) xxxxx-xxxx"
-                        value="<% if (typeof valores != 'undefined') { %><%= valores.telefone %> <%}%> " required>
+                        value="<% if (typeof valores != 'undefined') { %><%= valores.telefone %> <%}%> ">
                 </div>
 
                 <div class="input-group">
                     <label for="data"> Data de Nascimento: </label>
                     <input type="date" name="dataNascimento"
-                        value="<% if(typeof valores != 'undefined') { %><%= valores.dataNascimento %><%}%>" required>
+                        value="<% if(typeof valores != 'undefined') { %><%= valores.dataNascimento %><%}%>">
                 </div>
 
                 <div class="input-group">
                     <label for="estado"> Estado: </label>
-                    <select id=" estado " name=" estado " required>
+                    <select id=" estado " name=" estado ">
                         <option value=" AC "> Acre </option>
                         <option value=" AL "> Alagoas </option>
                         <option value=" AP "> Amapá </option>
@@ -100,7 +100,7 @@
                 <div class="input-group">
                     <label for="cidade"> Cidade: </label>
                     <input type="text" id="cidade" name="cidade" placeholder="Digite a sua cidade" maxlength="15"
-                        value="<% if(typeof valores != 'undefined') {%><%= valores.cidade %><% } %>" required>
+                        value="<% if(typeof valores != 'undefined') {%><%= valores.cidade %><% } %>">
                 </div>
 
                 <div class="gender input-group">
@@ -108,16 +108,16 @@
 
                     <div>
                         <label for="homem">Masculino</label>
-                        <input type="radio" name="genero" value="homem" required>
+                        <input type="radio" name="genero" value="homem">
 
                         <label for="mulher">Feminino</label>
-                        <input type="radio" name="genero" value="mulher" required>
+                        <input type="radio" name="genero" value="mulher">
                     </div>
                 </div>
 
                 <div class="form-footer">
                     <label for="fotoPerfil">Enviar arquivo</label>
-                    <input type="file" id="fotoPerfil" name="fotoPerfil" accept="image/*" required>
+                    <input type="file" id="fotoPerfil" name="fotoPerfil" accept="image/*">
 
                     <button id="cadastrar" type="submit"> Finalizar </button>
                 </div>

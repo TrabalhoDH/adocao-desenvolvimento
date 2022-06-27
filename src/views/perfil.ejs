@@ -8,6 +8,8 @@
 
     <link rel="stylesheet" href="../css/perfilPage.css" />
     <link rel="stylesheet" href="../css/style.css" />
+    <script defer src="./javascript/perfil.js"></script>
+
     <title>Adoção Legal</title>
   </head>
 
@@ -16,7 +18,6 @@
 
       <main id="conteudo">
         <section id="Tema">Tema</section>
-        <!--imagem do pefil e opções(coluna esquerda)-->
         <section id="content">
           <section class="perfil">
 
@@ -42,70 +43,11 @@
             <div class="faq-mini">
               <details class="faq-h2">
                 <summary>cadastrados</summary>
-
-                <% animais.forEach((animal)=>{ %>
-                  <div id="card">
-                    <h2 id="Nome do pet">
-                      <li>
-                        <%=animal.nome %>
-                      </li>
-                    </h2>
-                    <div class="infoPerfil">
-                      <aside>
-                        <!-- <img
-                        class="perfil-img"
-                        src="../img/sem-foto.jpg"
-                        alt="fot de perfil-pet"
-                        /> -->
-                        <ul class="infoPerfil-pet">
-
-                          <li>
-                            <%= animal.raca %>
-                          </li>
-                          <li>
-                            <%= animal.porte %>
-                          </li>
-                          <li>
-                            <%= animal.tipo %>
-                          </li>
-                          <li>
-                            <%= animal.pelagem %>
-                          </li>
-                          <li>
-                            <%= animal.cor %>
-                          </li>
-                          <li>
-                            <%= animal.genero %>
-                          </li>
-                          <li>
-                            <form method="get" action="/anuncio">
-                              <input type="hidden" name="idAnimal" value="<%= animal.id %>">
-                              <button type="submit">Atualizar</button>
-                            </form>
-                          </li>
-                          <li>
-                            <form method="post" action="/anuncio">
-                              <input type="hidden" name="idAnimal" value="<%= animal.id %>">
-                              <button type="submit">Anunciar</button>
-                            </form>
-                          </li>
-                          <li>
-                            <form method="post" action="/pets/<%= animal.id %>?_method=DELETE"> 
-                              <button type="submit">Deletar</button>
-                            </form>
-                          </li>
-                        </ul>
-                      </aside>
-                      <div class="photo-content">
-                        <% animal.Fotos.forEach((fotos)=>{ %>
-                          <div class="photo-card">
-                            <img class="perfil-img" src="<%= fotos.caminho %><%= fotos.nome %>" alt="perfil-pet" />
-                          </div>
-                          <% }) %>
-                      </div>
-                    </div>
-                  </div>
-                  <% }) %>
+                <%- include('./partialPerfil/cadastrados') %>
+              </details>
+              <details class="faq-h2">
+                <summary>anunciados</summary>
+                <%- include('./partialPerfil/anunciados') %>
               </details>
             </div>
           </section>
