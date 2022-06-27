@@ -29,6 +29,11 @@
               <%= animal.genero %>
             </li>
             <li><p>Anunciado!</p></li>
+            <li>
+              <form method="post" action="/anuncio/<%= animal.id %>?_method=DELETE"> 
+                <button type="submit">Deletar</button>
+              </form>
+            </li>
           </ul>
         </aside>
         <div class="photo-content">

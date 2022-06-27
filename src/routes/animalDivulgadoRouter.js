@@ -1,7 +1,7 @@
 const express = require('express');
-const feedController = require('../controllers/feedController');
+const animalDivulgadoContrller = require('../controllers/animalDivulgadoController');
 const router = express.Router();
 
-router.get('/', feedController.adotarAnimal)
+router.get('/:id', animalDivulgadoContrller.show)
 
 module.exports = router;

@@ -32,5 +32,18 @@ const anuncioController = {
       
       return response.redirect('/perfil');
   },
+
+  delete: async (request, response) => {
+    const { id } = request.params
+
+    await Anuncio.destroy({
+        where: {
+            idAnimal: id
+        }
+    })
+
+    request.session.autorizado = true;
+    response.redirect('/perfil')
+}
 }
 module.exports = anuncioController;
