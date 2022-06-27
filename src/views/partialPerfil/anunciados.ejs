@@ -1,0 +1,45 @@
+<% animais.map((animal)=>{ %>
+    <% anuncio.map(item=>{ %>
+    <% if(animal.id === item.idAnimal){ %>
+    <div id="card">
+      <h2 id="Nome do pet">
+        <li>
+          <%=animal.nome %>
+        </li>
+      </h2>
+      <div class="infoPerfil">
+        <aside>
+          <ul class="infoPerfil-pet">
+            <li>
+              <%= animal.raca %>
+            </li>
+            <li>
+              <%= animal.porte %>
+            </li>
+            <li>
+              <%= animal.tipo %>
+            </li>
+            <li>
+              <%= animal.pelagem %>
+            </li>
+            <li>
+              <%= animal.cor %>
+            </li>
+            <li>
+              <%= animal.genero %>
+            </li>
+            <li><p>Anunciado!</p></li>
+          </ul>
+        </aside>
+        <div class="photo-content">
+          <% animal.Fotos.forEach((fotos)=>{ %>
+            <div class="photo-card">
+              <img class="perfil-img" src="<%= fotos.caminho %><%= fotos.nome %>" alt="perfil-pet" />
+            </div>
+            <% }) %>
+        </div>
+      </div>
+    </div>
+    <% } %>
+    <% }) %>
+<% }) %>

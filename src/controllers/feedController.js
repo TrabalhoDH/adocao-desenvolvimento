@@ -5,7 +5,7 @@ const feedControler = {
     show: async (request, response) => {
         const pesquisa = request.query.pesquise;
 
-        const campoBuscar = ['nome', 'raca', 'porte', 'tipo']
+        const campoBuscar = ['nome', 'raca', 'porte', 'tipo', 'cor', 'genero', 'pelagem']
         const where = campoBuscar.map(item => ({
             [item]: {
                 [Op.like]: `%${pesquisa}%`

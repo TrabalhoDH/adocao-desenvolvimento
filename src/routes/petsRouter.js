@@ -12,5 +12,6 @@ const upload = multer({ storage: storage });
 router.get('/', petsController.index);
 router.post('/', upload.array('fotos', 4), petsValidator.store, petsController.store);
 router.put('/:idAnimal', petsController.update);
+router.delete('/:id', petsController.deletar);
 
 module.exports = router;

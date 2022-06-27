@@ -1,6 +1,6 @@
 const { info } = require('console');
 const { validationResult } = require('express-validator');
-const { Animal, Foto } = require('../models');
+const { Animal, Foto, Anuncio } = require('../models');
 
 
 const petsController = {
@@ -25,7 +25,7 @@ const petsController = {
                 cor: corPredominante,
                 tipo: tipoDePet,
                 genero,
-                idade: dataNascimento,
+                dataNascimento,
                 pelagem,
                 idUsuario: id,
             });
@@ -52,10 +52,8 @@ const petsController = {
     },
 
     update: async (request, response) => {
-        const { nome, tipoDePet, raca, tamanhoDoPet, genero, dataNascimento, corPredominante, pelagem, vacinado, castrado } = request.body;
+        const { nome, tipoDePet, raca, tamanhoDoPet, genero, dataNascimento, corPredominante, pelagem, vacinado, castrado,idUsuario } = request.body;
         const { idAnimal } = request.params
-
-        const animal = await Animal.findByPk(idAnimal);
 
         await Animal.update({
             raca,
@@ -69,12 +67,38 @@ const petsController = {
             idade: dataNascimento,
             pelagem,
         }, {
-            where: { id: animal.id }
+            where: { id: idAnimal }
         });
 
         request.session.autorizado = true;
+
         response.redirect('/perfil');
+    },
+
+    deletar: async (request, response) => {
+        const { id } = request.params
+
+        const deletarAnuncio = await Anuncio.destroy({
+            where: {
+                idAnimal: id
+            }
+        })
+        const deletarfotos = await Foto.destroy({
+            where: {
+                idAnimal: id
+            }
+        })
+        const deletarAnimal = await Animal.destroy({
+            where: {
+                id
+            }
+        })
+
+        request.session.autorizado = true;
+        response.redirect('/perfil')
     }
+
+
 };
 
 module.exports = petsController;
