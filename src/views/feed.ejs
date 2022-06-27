@@ -30,12 +30,14 @@
     <section class="feed-principal">
       <ul>
         <% anuncios.map((animal)=>{ %>
-        <li>
-          
-          <img src="<%= animal.Animal.Fotos[0].caminho %><%= animal.Animal.Fotos[0].nome %>" alt="" />
-
-          <p>nome: <%= animal.Animal.nome %><br>raça: <%= animal.Animal.raca %><br>porte: <%= animal.Animal.porte %></p>
-        </li>
+          <li>
+            <form action="/animalDivulgado/<%= animal.Animal.id %>" method="get" >
+              <button type="submit">
+                <img src="<%= animal.Animal.Fotos[0].caminho %><%= animal.Animal.Fotos[0].nome %>" alt="" />
+                <p>nome: <%= animal.Animal.nome %><br>raça: <%= animal.Animal.raca %><br>porte: <%= animal.Animal.porte %></p>
+              </button>
+            </form>
+          </li>
         <% }) %>
       </ul>
       

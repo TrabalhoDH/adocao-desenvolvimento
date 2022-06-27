@@ -26,11 +26,11 @@ const perfilController = {
                 idAnimal: i
             }
         })
-                
+
         return response.render('perfil', {
             usuario,
             animais,
-            anuncio
+            anuncio,
         });
     },
 };
