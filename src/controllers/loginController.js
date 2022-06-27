@@ -29,7 +29,13 @@ const loginController = {
         request.session.usuarioEncontrado = usuarioEncontrado;
 
         return response.redirect('/perfil');
+    },
+
+    logout: async (request, response) => {
+        request.session.autorizado = false;
+        response.redirect('/')
     }
+
 };
 
 module.exports = loginController;
