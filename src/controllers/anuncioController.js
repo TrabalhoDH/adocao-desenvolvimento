@@ -1,3 +1,4 @@
+const { info } = require('console');
 const { Animal, Anuncio, Foto } = require('../models');
 
 const anuncioController = {
@@ -12,7 +13,7 @@ const anuncioController = {
       },
     });
     request.session.autorizado = true;
-        
+
     response.render('atualizar', {
       animal,
       foto
@@ -23,14 +24,20 @@ const anuncioController = {
     const { idAnimal } = request.params;
     const { idUsuario } = request.body;
 
+    const anuncio = await Anuncio.findOne({
+      where: {
+        idAnimal
+      }
+    })
+
+    if (!anuncio) {
       await Anuncio.create({
         idUsuario,
         idAnimal
       })
-
-      request.session.autorizado = true;
-      
-      return response.redirect('/perfil');
+    }
+    request.session.autorizado = true;
+    return response.redirect('/perfil');
   },
 }
 module.exports = anuncioController;
