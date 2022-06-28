@@ -34,6 +34,19 @@ module.exports = (sequelize, DataType) => {
             allowNull: false,
             field: 'criado_em'
         },
+        telefone:{
+         type: DataType.INTEGER,   
+        },
+        cidade:{
+            type: DataType. STRING,
+        },
+        estado:{
+            type: DataType.STRING,
+        },
+        rua:{
+            type: DataType. STRING,
+        }
+
     }, {
         tableName: 'usuarios',
         timestamps: true,

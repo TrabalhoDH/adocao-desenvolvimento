@@ -9,7 +9,8 @@ const usuariosValidator = {
         body('telefone').isLength({ min: 11 }).withMessage('Deve preencher o numero de telefone').bail(),
         body('dataNascimento').isDate().withMessage('Deve preencher a data de nascimento').bail(),
         body('cidade').notEmpty().withMessage('Deve preencher a cidade correspondente').bail(),
-        body('genero').isString().withMessage('Deve selecionar o genero correspondente').bail(),
+        body('rua').isString().withMessage('Deve preencher a rua correspondente').bail(),
+        body('estado').isString().withMessage('Deve selecionar o estado correspondente').bail(),
     ]
 }
 
