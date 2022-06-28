@@ -23,24 +23,12 @@
 }
 .adotepets li {
   position: relative;
-  animation: slide 20s infinite ease-out;
+  animation: slide 60s infinite ease-out;
 }
 
 @keyframes slide {
   0% {
     left: 0px;
-  }
-  20% {
-    left: -1485px;
-  }
-  40% {
-    left: -2970px;
-  }
-  60% {
-    left: -4455px;
-  }
-  80% {
-    left: -5940px;
   }
   100% {
     left: -7425px;

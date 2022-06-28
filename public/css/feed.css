@@ -1,66 +1,80 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.head-feed{
-    text-align: center;
-    background-color: #7861be;
-    margin-top: 5vw;
-    padding: 10px;
+.head-feed {
+  text-align: center;
+  background-color: #7861be;
+  margin-top: 5vw;
+  padding: 10px;
 }
-.anuncios-feed > div{
-    display: flex;
-    flex-direction: column;
+.anuncios-feed > div {
+  display: flex;
+  flex-direction: column;
 
-    background-color: #c6b7f3;
-    width: 200px;
-    height: 600px;
-    margin: 60px 25px;
-    border-radius: 10px;
+  background-color: #c6b7f3;
+  width: 200px;
+  height: 600px;
+  margin: 60px 25px;
+  border-radius: 10px;
 
-    padding: 10px;
+  padding: 10px;
 }
-img{
-    max-width: 100%;
-    display: block;
+img {
+  max-width: 100%;
+  display: block;
 }
 
-.feed-principal img{
-    border-radius:15px 15px 0 0 ;
-    border-bottom: solid 2px #000;
+.feed-principal img {
+  border-radius: 15px 15px 0 0;
+  border-bottom: solid 2px #000;
 }
-.feed-principal{
-    display: flex;
-    flex-wrap: wrap;
-    border-radius: 10px;
+.feed-principal {
+  display: flex;
+  flex-wrap: wrap;
 
-    max-width: 800px;
-    margin: 0 auto;
+  max-width: 1000px;
+  margin: 0 auto;
 
-    position: relative;
-    bottom:730px;
-
+  position: relative;
+  bottom: 730px;
 }
-.feed-principal > ul{
-    display: flex;
-    flex-wrap: wrap;
+.feed-principal > ul {
+  display: flex;
+  flex-wrap: wrap;
 
-    margin: 60px 25px;
-    padding: 0;
+  margin: 60px 25px;
+  padding: 0;
 }
-.feed-principal > ul > li{
-    margin: 10px;
 
+.feed-submit-button {
+  margin-left: auto;
 }
-.feed-principal > ul > li > button{
-    list-style: none ;
-    display: flex;
-    flex-wrap: wrap;
-    flex: 1 1 220px;
+.list-feed {
+  gap: 15px;
+}
+.list-item {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 300px !important;
+  max-height: 400px !important;
+}
+.feed-submit-button {
+  margin-top: 5px;
+  border-radius: 5px;
+  font-size: 15px;
+  font-weight: 600;
+  border: none;
+  width: 100%;
+  height: 65px;
+  color: white;
+  background: #59429d !important;
+}
 
-    border-bottom: solid 1px #cccc;
-    border-radius: 15px;
-    box-shadow:2px 2px rgba(0, 0, 0, 0.5);
+.feed-submit-button:hover {
+  background: #59429d63 !important;
 }
