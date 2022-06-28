@@ -96,7 +96,27 @@ body {
   display: flex;
   flex-direction: column;
   list-style-type: none;
+  text-align: start;
+
 }
+
+.botoesPerfil{
+  border-radius: .5rem;
+  background-color: #ae9aec;
+  padding: .3rem;
+  border: none;
+  margin: 3px 0;
+  cursor: pointer;
+  color: #000;
+  transition: .3s;
+
+}
+.botoesPerfil:hover{
+  background-color: #59429d;
+  color: #fff;
+  font-weight: bold;
+}
+
 aside {
   margin-left: 1rem;
 }
