@@ -10,18 +10,22 @@ const cadastroController = {
     novoUsuarios: async (request, response) => {
         const listaErros = validationResult(request);
 
-        const { nome, senha, cpf, email, genero, dataNascimento } = request.body;
+        const { nome, senha, cpf, email, genero, dataNascimento, rua, estado, cidade, telefone } = request.body;
         const senhaCriptografada = bcrypt.hashSync(senha, 10);
         const dados = request.body
 
         if (listaErros.isEmpty()) {
             const usuario = await Usuario.create({
-                nome: nome,
+                nome,
                 senha: senhaCriptografada,
-                cpf: cpf,
-                email: email,
-                genero: genero,
-                dataNascimento
+                cpf,
+                email,
+                genero,
+                dataNascimento,
+                telefone,
+                rua,
+                cidade,
+                estado
             })
 
             request.session.autorizado = true;
