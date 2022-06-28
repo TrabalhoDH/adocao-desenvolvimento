@@ -30,7 +30,7 @@ body {
 #card {
   width: 40.813rem;
   height: 24.938rem;
-  background: #c4c4c4;
+  background: #bdaee9;
   border-radius: 22px;
   display: flex;
   flex-direction: column;
@@ -44,6 +44,7 @@ body {
   text-align: left;
   margin: auto;
   list-style-type: none;
+
 }
 
 #content {
@@ -87,6 +88,7 @@ body {
   gap: 5rem;
   width: 653px;
   height: 300px;
+
 }
 .infoPerfil-pet {
   margin-top: 2rem;
@@ -98,7 +100,7 @@ body {
 aside {
   margin-left: 1rem;
 }
-.photo-content{
+.photo-content {
   display: flex;
   flex-wrap: wrap;
   width: max-content;
@@ -111,7 +113,7 @@ aside {
   border-radius: 8px;
   margin: auto;
 }
-.photo-card:hover{
+.photo-card:hover {
   transform: scale(1.1);
   z-index: 9;
 }
@@ -121,12 +123,41 @@ aside {
   list-style-type: none;
 }
 
-
 @media only screen and (max-width: 850px) {
-  .content{
+  .content {
     width: auto;
   }
-  .perfil{
+  .perfil {
     width: 100%;
   }
+}
+
+.faq-container{
+  width: 87vh;
+  margin: 0 10px;
+
+}
+.faq-h2 {
+  width: 100%;
+  margin: 0 auto ;
+  padding: .5rem 0;
+
+  background-image: ();
+  margin-bottom: 1.5rem;
+
+  border-radius: 8px;
+  text-align: center;
+
+  padding-bottom: 1rem;
+}
+
+summary {
+  padding: 1rem;
+  display: block;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 8px;
+  background: #bdaee9;
+
+  text-align: center;
 }

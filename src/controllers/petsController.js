@@ -78,7 +78,7 @@ const petsController = {
     deletar: async (request, response) => {
         const { id } = request.params
 
-        Promise.all(await Anuncio.destroy({
+        await Anuncio.destroy({
             where: {
                 idAnimal: id
             }
@@ -92,7 +92,7 @@ const petsController = {
             where: {
                 id
             }
-        }))
+        })
 
         request.session.autorizado = true;
         response.redirect('/perfil')
