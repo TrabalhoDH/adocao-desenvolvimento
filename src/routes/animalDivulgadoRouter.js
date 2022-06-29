@@ -1,10 +1,10 @@
 const express = require('express');
 const authMiddleware = require('../middlewares/authMiddleware');
-const animalDivulgadoContrller = require('../controllers/animalDivulgadoController');
+const animalDivulgadoController = require('../controllers/animalDivulgadoController');
 const router = express.Router();
 
-router.get('/:id', animalDivulgadoContrller.show)
+router.get('/:id', animalDivulgadoController.show)
 
-router.post('/', authMiddleware.auth, animalDivulgadoContrller.store)
+router.post('/', authMiddleware.auth, animalDivulgadoController.store)
 
 module.exports = router;

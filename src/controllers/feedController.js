@@ -22,7 +22,7 @@ const feedControler = {
                 include: ['Fotos']
             }],
         });
-
+        request.session.autorizado = true
         response.render('feed', {
             anuncios,
         })

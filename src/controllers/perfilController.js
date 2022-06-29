@@ -1,5 +1,4 @@
-const { Usuario,Animal,Anuncio } = require('../models');
-const InteresseAdocao = require('../models/InteresseAdocao');
+const { Usuario,Animal,Anuncio,InteresseAdocao} = require('../models');
 
 const perfilController = {
     index: async (request, response) => {
@@ -26,22 +25,33 @@ const perfilController = {
             where:{
                 idAnimal: i
             },
-            include:['InteresseAdocao']
+        })
+        
+        const idAnuncio = anuncio.map(anuncio =>{
+            return anuncio.id
         })
 
-        const interesses = anuncio.map(item=>{
-            item.InteresseAdocao.map(()=>{
-                return  indexInteresse = 1
-            })
-            let index = 0
-            return index + indexInteresse
+        const interessados = await InteresseAdocao.findAll({
+            where:{
+              idAnuncio
+            },
+            include:['Usuario']
         })
-        console.log(interesses)
+
+        
+
+        const interesse = interessados.map(item=>{
+        return item.Usuario        
+        })
+        
+        //  console.log(interesse)
 
         return response.render('perfil', {
             usuario,
             animais,
             anuncio,
+            interessados,
+            interesse
         });
     },
 };

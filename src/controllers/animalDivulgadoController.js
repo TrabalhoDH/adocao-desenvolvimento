@@ -7,6 +7,7 @@ const animalDivulgadoContrller = {
         const {id} = request.params;
 
         const anuncio = await Anuncio.findOne({where:{id:id}})
+        
         const animal = await Animal.findByPk(anuncio.idAnimal,{
             include:['Fotos']
         })
@@ -21,9 +22,9 @@ const animalDivulgadoContrller = {
 
     store: async ( request ,response)=>{
         const {id} = request.session.usuarioEncontrado;
-
+        
         const {idAnuncio,mensagem} = request.body;
-
+        
         await InteresseAdocao.create({
             mensagem,
             idUsuario:id,
