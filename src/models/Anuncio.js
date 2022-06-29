@@ -35,7 +35,11 @@ module.exports = (sequelize, DataType) => {
         Anuncio.belongsTo(models.Animal, {
             as: 'Animal',
             foreignKey: 'idAnimal'
-        });
+        })
+        Anuncio.hasMany(models.InteresseAdocao,{
+            as:'InteresseAdocao',
+            foreignKey: 'idAnuncio'
+        })
     }
 
     return Anuncio;

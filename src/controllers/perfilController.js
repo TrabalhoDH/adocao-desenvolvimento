@@ -1,4 +1,5 @@
 const { Usuario,Animal,Anuncio } = require('../models');
+const InteresseAdocao = require('../models/InteresseAdocao');
 
 const perfilController = {
     index: async (request, response) => {
@@ -24,7 +25,8 @@ const perfilController = {
         const anuncio = await Anuncio.findAll({
             where:{
                 idAnimal: i
-            }
+            },
+            include:['InteresseAdocao']
         })
 
         return response.render('perfil', {
