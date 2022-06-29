@@ -42,7 +42,7 @@
                   <li><strong for="tipo">Porte:<%= animal.porte %></strong></li>
                   <li><strong>Genero:<%= animal.genero %></strong></li>
                   <li><strong for="raca">Raça:<%= animal.raca %></strong></li>
-                  <li><strong for="idade">Data Nascimento:<%= animal.dataNascimento %></strong></li>
+                  <li><strong for="idade">Data Nascimento:<%= new Date(animal.dataNascimento).toLocaleDateString('pt-br')%></strong></li>
                   <li><strong for="tipoDePelo">Pelagem:<%= animal.pelagem %></strong></li>
                   <li><strong for="cor">Cor predominante:<%= animal.cor %></strong></li>
                   <li><strong>Castrado:<%= animal.castrado %></strong></li>

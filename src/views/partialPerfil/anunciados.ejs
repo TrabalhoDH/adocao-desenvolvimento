@@ -5,45 +5,25 @@
       <h2 id="Nome do pet">
         <li>
           <%=animal.nome %>
+          <br>
         </li>
       </h2>
-      <div class="infoPerfil">
-        <aside>
+      <h3><p>Anunciado!</p></h3>
+      <div id="interessado">
           <ul class="infoPerfil-pet">
-            <li>
-              <%= animal.raca %>
-            </li>
-            <li>
-              <%= animal.porte %>
-            </li>
-            <li>
-              <%= animal.tipo %>
-            </li>
-            <li>
-              <%= animal.pelagem %>
-            </li>
-            <li>
-              <%= animal.cor %>
-            </li>
-            <li>
-              <%= animal.genero %>
-            </li>
-            <li><p>Anunciado!</p></li>
-            <li>
-              <form method="post" action="/anuncio/<%= animal.id %>?_method=DELETE"> 
-                <button type="submit">Deletar</button>
-              </form>
-            </li>
-          </ul>
-        </aside>
-        <div class="photo-content">
-          <% animal.Fotos.forEach((fotos)=>{ %>
-            <div class="photo-card">
-              <img class="perfil-img" src="<%= fotos.caminho %><%= fotos.nome %>" alt="perfil-pet" />
+            <div>
+              <% interesse.map(item=>{ %>
+                <li><strong><%= item.nome%></strong> interessou-se</li>
+                <li><%= item.email %></li>
+                <li><%= item.telefone %></li>
+              <%})%>
             </div>
-            <% }) %>
-        </div>
+
+          </ul>
       </div>
+        <form method="post" action="/anuncio/<%= animal.id %>?_method=DELETE"> 
+          <button type="submit">Deletar anuncio</button>
+        </form>
     </div>
     <% } %>
     <% }) %>
