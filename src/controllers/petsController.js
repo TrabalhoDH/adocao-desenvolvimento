@@ -1,4 +1,3 @@
-const { info } = require('console');
 const { validationResult } = require('express-validator');
 const { Animal, Foto, Anuncio, InteresseAdocao } = require('../models');
 
@@ -78,11 +77,12 @@ const petsController = {
     deletar: async (request, response) => {
         const { id } = request.session.usuarioEncontrado;
         const { idAnimal } = request.params
+        const {idInteresse} = request.body
+       
 
         await InteresseAdocao.destroy({
             where: {
-                idUsuario: id
-            }
+               idUsuario: idInteresse            }
         })
         await Anuncio.destroy({
             where: {

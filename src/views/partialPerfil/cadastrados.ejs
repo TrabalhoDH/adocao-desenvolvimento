@@ -41,9 +41,12 @@
               </form>
             </li>
             <li>
-              <form method="post" action="/pets/<%= animal.id %>?_method=DELETE"> 
-                <button type="submit">Deletar</button>
-              </form>
+              <% interesse.map(item=>{ %>
+                <form method="post" action="/pets/<%= animal.id %>?_method=DELETE">
+                  <input type="hidden" value="<%=item.id %>" name="idInteresse"> 
+                  <button type="submit">Deletar</button>
+                </form>
+                <%})%>
             </li>
           </ul>
         </aside>
