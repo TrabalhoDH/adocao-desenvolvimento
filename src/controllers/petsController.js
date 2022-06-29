@@ -78,6 +78,12 @@ const petsController = {
     deletar: async (request, response) => {
         const { id } = request.params
 
+        await InteresseAdocao.destroy({
+            where:{
+                idAnimal:id
+            }
+        }),
+
         await Anuncio.destroy({
             where: {
                 idAnimal: id

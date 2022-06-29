@@ -7,8 +7,11 @@ const animalDivulgadoContrller = {
         const {id} = request.params;
 
         const anuncio = await Anuncio.findOne({where:{id:id}})
-        const animal = await Animal.findByPk(Anuncio.idAnimal)
-        const usuario = await Usuario.findOne(Anuncio.idUsuario)
+        const animal = await Animal.findByPk(anuncio.idAnimal,{
+            include:['Fotos']
+        })
+        const usuario = await Usuario.findByPk(anuncio.idUsuario)
+        console.log(animal)
     
         response.render('animalDivulgado',{
             anuncio,

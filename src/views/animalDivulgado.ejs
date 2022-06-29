@@ -7,12 +7,61 @@
     
     <link rel="stylesheet" href="../css/animalDivulgado.css"/>
     <link rel="stylesheet" href="../css/style.css"/>
+    <script defer src="./javascript/anuncio.js"></script>
     
-    <title>Document</title>
+    <title>Animal</title>
 </head>
 <body>
     <%- include('./partials/header') %>
     <section>
+        <div class="folder-animal">
+
+            <div class="fotoPet">
+              <div class="slideshow-container">
+                <% animal.Fotos.forEach(fotos=>{ %>
+                <div id="cardFoto" class="mySlides fade">
+                  <img id="imagemPet" src="<%= fotos.caminho %><%= fotos.nome %>" alt="@todo" />
+                </div>
+                <% }) %>
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        
+                <div style="text-align: center">
+                  <span class="dot" onclick="currentSlide(1)"></span>
+                  <span class="dot" onclick="currentSlide(2)"></span>
+                  <span class="dot" onclick="currentSlide(3)"></span>
+                </div>
+        
+              </div>
+            </div>
+            <div class="dados-pet">
+              <h1 id="titulo">Confira as informações do Pet</h1>
+                <ul>
+                  <li><strong for="nome" >Nome:<%= animal.nome %></strong></li>
+                  <li><strong for="tipo" >Tipo:<%= animal.tipo %></strong></li>
+                  <li><strong for="tipo">Porte:<%= animal.porte %></strong></li>
+                  <li><strong>Genero:<%= animal.genero %></strong></li>
+                  <li><strong for="raca">Raça:<%= animal.raca %></strong></li>
+                  <li><strong for="idade">Data Nascimento:<%= animal.dataNascimento %></strong></li>
+                  <li><strong for="tipoDePelo">Pelagem:<%= animal.pelagem %></strong></li>
+                  <li><strong for="cor">Cor predominante:<%= animal.cor %></strong></li>
+                  <li><strong>Castrado:<%= animal.castrado %></strong></li>
+                  <li><strong>Vacinado:<%= animal.vacinado %></strong></li>
+                </ul>
+            </div>
+          </div>
+          <aside>
+            <div class="dados-pet">
+                <h1 id="titulo">Amigo do Pet</h1>
+                <ul>
+                    <li><strong for="nome" >Nome:<%= usuario.nome %></strong></li>
+                    <li><strong for="nome" >Telefone:<%= usuario.telefone %></strong></li>
+                    <li><strong for="nome" >Estado:<%= usuario.estado %></strong></li>
+                    <li><strong for="nome" >Cidade:<%= usuario.cidade %></strong></li>                  
+                    <li><strong for="nome" >Rua:<%= usuario.rua %></strong></li>    
+                </ul>
+              </div>
+          </aside>
         <form action="/animalDivulgado" method="post">
             <input type="hidden" name="idAnuncio" value="<%= anuncio.id %>">
             <input type="text" name="mensagem">
