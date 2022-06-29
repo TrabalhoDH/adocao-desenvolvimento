@@ -11,7 +11,6 @@ const animalDivulgadoContrller = {
             include:['Fotos']
         })
         const usuario = await Usuario.findByPk(anuncio.idUsuario)
-        console.log(animal)
     
         response.render('animalDivulgado',{
             anuncio,
