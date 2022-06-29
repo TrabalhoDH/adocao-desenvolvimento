@@ -30,14 +30,14 @@
               <form method="get" action="/anuncio">
                 <input type="hidden" name="idAnimal" value="<%= animal.id %>">
                 <input type="hidden" name="idUsuario" value="<%= usuario.id %>" >
-                <button type="submit">Atualizar</button>
+                <button type="submit" class="botoesPerfil">Atualizar</button>
               </form>
             </li>
             <li>
               <form method="post" action="/anuncio/<%= animal.id %>">
                 <input id="anuncio" type="hidden" name="anuncio" value="<%= anuncio %>" >
                 <input type="hidden" name="idUsuario" value="<%= usuario.id %>" >
-                <button type="submit">Anunciar</button>
+                <button type="submit" class="botoesPerfil">Anunciar</button>
               </form>
             </li>
             <li>

@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <link rel="stylesheet" href="../css/animalDivulgado.css"/>
     <link rel="stylesheet" href="../css/style.css"/>
     <script defer src="./javascript/anuncio.js"></script>
-    
+
     <title>Animal</title>
 </head>
 <body>
@@ -65,7 +65,7 @@
         <form action="/animalDivulgado" method="post">
             <input type="hidden" name="idAnuncio" value="<%= anuncio.id %>">
             <input type="text" name="mensagem">
-            <button type="submit">interesse</button>
+            <button type="submit" class="botoesPerfil">interesse</button>
         </form>
     </section>   
     <%- include('./partials/footer') %>
