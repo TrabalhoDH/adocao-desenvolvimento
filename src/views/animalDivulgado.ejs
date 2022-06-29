@@ -12,9 +12,13 @@
 </head>
 <body>
     <%- include('./partials/header') %>
-    <main>
-        
-    </main>    
+    <section>
+        <form action="/animalDivulgado" method="post">
+            <input type="hidden" name="idAnuncio" value="<%= anuncio.id %>">
+            <input type="text" name="mensagem">
+            <button type="submit">interesse</button>
+        </form>
+    </section>   
     <%- include('./partials/footer') %>
 </body>
 </html>
