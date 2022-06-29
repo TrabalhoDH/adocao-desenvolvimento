@@ -29,6 +29,15 @@ const perfilController = {
             include:['InteresseAdocao']
         })
 
+        const interesses = anuncio.map(item=>{
+            item.InteresseAdocao.map(()=>{
+                return  indexInteresse = 1
+            })
+            let index = 0
+            return index + indexInteresse
+        })
+        console.log(interesses)
+
         return response.render('perfil', {
             usuario,
             animais,
