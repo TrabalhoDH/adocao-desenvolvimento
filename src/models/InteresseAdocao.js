@@ -25,9 +25,9 @@ module.exports = (sequelize, DataType) => {
             field: 'anuncio_id'
         }
     }, {
-        tableName: 'interesse_doacao',
+        tableName: 'interesse_adocao',
         timestamps: false,
-        criatedAt: 'criadoEm',
+        createdAt: 'criadoEm',
         updatedAt: false
     })
 

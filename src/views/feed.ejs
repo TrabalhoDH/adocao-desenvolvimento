@@ -29,127 +29,22 @@
     </section>
     <section class="feed-principal">
       <ul class="list-feed">
-        <% anuncios.map((animal)=>{ %>
+        <% anuncios.map(anuncio=>{ %>
         <li class="list-item">
           <div class="list-card">
             <img
-              src="<%= animal.Animal.Fotos[0].caminho %><%= animal.Animal.Fotos[0].nome %>"
+              src="<%= anuncio.Animal.Fotos[0].caminho %><%= anuncio.Animal.Fotos[0].nome %>"
               alt=""
             />
 
             <form
-              action="/animalDivulgado/<%= animal.Animal.id %>"
+              action="/animalDivulgado/<%= anuncio.id %>"
               method="get"
               class="list-form"
             >
               <button type="submit" class="feed-submit-button">
-                nome: <%= animal.Animal.nome %><br />raça: <%=
-                animal.Animal.raca %><br />porte: <%= animal.Animal.porte %>
-              </button>
-            </form>
-          </div>
-        </li>
-        <% }) %>
-        <% anuncios.map((animal)=>{ %>
-          <li class="list-item">
-            <div class="list-card">
-              <img
-                src="<%= animal.Animal.Fotos[0].caminho %><%= animal.Animal.Fotos[0].nome %>"
-                alt=""
-              />
-  
-              <form
-                action="/animalDivulgado/<%= animal.Animal.id %>"
-                method="get"
-                class="list-form"
-              >
-                <button type="submit" class="feed-submit-button">
-                  nome: <%= animal.Animal.nome %><br />raça: <%=
-                  animal.Animal.raca %><br />porte: <%= animal.Animal.porte %>
-                </button>
-              </form>
-            </div>
-          </li>
-          <% }) %>
-          <% anuncios.map((animal)=>{ %>
-            <li class="list-item">
-              <div class="list-card">
-                <img
-                  src="<%= animal.Animal.Fotos[0].caminho %><%= animal.Animal.Fotos[0].nome %>"
-                  alt=""
-                />
-    
-                <form
-                  action="/animalDivulgado/<%= animal.Animal.id %>"
-                  method="get"
-                  class="list-form"
-                >
-                  <button type="submit" class="feed-submit-button">
-                    nome: <%= animal.Animal.nome %><br />raça: <%=
-                    animal.Animal.raca %><br />porte: <%= animal.Animal.porte %>
-                  </button>
-                </form>
-              </div>
-            </li>
-            <% }) %>
-            <% anuncios.map((animal)=>{ %>
-              <li class="list-item">
-                <div class="list-card">
-                  <img
-                    src="<%= animal.Animal.Fotos[0].caminho %><%= animal.Animal.Fotos[0].nome %>"
-                    alt=""
-                  />
-      
-                  <form
-                    action="/animalDivulgado/<%= animal.Animal.id %>"
-                    method="get"
-                    class="list-form"
-                  >
-                    <button type="submit" class="feed-submit-button">
-                      nome: <%= animal.Animal.nome %><br />raça: <%=
-                      animal.Animal.raca %><br />porte: <%= animal.Animal.porte %>
-                    </button>
-                  </form>
-                </div>
-              </li>
-              <% }) %>
-            <% anuncios.map((animal)=>{ %>
-              <li class="list-item">
-                <div class="list-card">
-                  <img
-                    src="<%= animal.Animal.Fotos[0].caminho %><%= animal.Animal.Fotos[0].nome %>"
-                    alt=""
-                  />
-      
-                  <form
-                    action="/animalDivulgado/<%= animal.Animal.id %>"
-                    method="get"
-                    class="list-form"
-                  >
-                    <button type="submit" class="feed-submit-button">
-                      nome: <%= animal.Animal.nome %><br />raça: <%=
-                      animal.Animal.raca %><br />porte: <%= animal.Animal.porte %>
-                    </button>
-                  </form>
-                </div>
-              </li>
-              <% }) %>
-             <% anuncios.map((animal)=>{ %>
-        <li class="list-item">
-          <div class="list-card">
-            <img
-              src="<%= animal.Animal.Fotos[0].caminho %><%= animal.Animal.Fotos[0].nome %>"
-              alt=""
-            />
-
-            <form
-              action="/animalDivulgado/<%= animal.Animal.id %>"
-              method="get"
-              class="list-form"
-            >
-              <button type="submit" class="feed-submit-button">
-                nome: <%= animal.Animal.nome %><br />raça: <%=
-                animal.Animal.raca %><br />porte: <%= animal.Animal.porte %>
+                nome: <%= anuncio.Animal.nome %><br />raça: <%=
+                anuncio.Animal.raca %><br />porte: <%= anuncio.Animal.porte %>
               </button>
             </form>
           </div>
