@@ -39,7 +39,33 @@ const cadastroController = {
                 valores: dados
             });
         }
-    }
+    },
+
+    update: async (request, response) => {
+        const { nome,cpf,email,telefone, genero, dataNascimento, estado, cidade, rua} = request.body;
+        console.log(nome,cpf,email,telefone, genero, dataNascimento, estado, cidade, rua)
+       
+        const {id} = request.session.usuarioEncontrado;
+
+        await Usuario.update({
+            nome,
+            cpf,
+            email,
+            genero,
+            dataNascimento,
+            telefone,
+            rua,
+            cidade,
+            estado
+        }, {
+            where: { id: id }
+        });
+
+        request.session.autorizado = true;
+
+        response.redirect('/perfil');
+    },
+
 };
 
 module.exports = cadastroController;

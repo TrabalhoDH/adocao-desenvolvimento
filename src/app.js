@@ -13,6 +13,7 @@ const feedRouter = require('./routes/feedRouter');
 const petsRouter = require('./routes/petsRouter');
 const anuncioRouter = require('./routes/anuncioRouter');
 const animalDivulgadoRouter = require('./routes/animalDivulgadoRouter')
+const atualizarRouter = require('./routes/atualizarRouter');
 
 const app = express();
 
@@ -41,6 +42,7 @@ app.use('/feed', feedRouter);
 app.use('/pets', petsRouter);
 app.use('/anuncio', anuncioRouter);
 app.use('/animalDivulgado', animalDivulgadoRouter);
+app.use('/atualizar', atualizarRouter);
 
 
 // catch 404 and forward to error handler
