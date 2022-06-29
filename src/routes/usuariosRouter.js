@@ -12,4 +12,6 @@ router.get('/', usuariosController.usuario);
 
 router.post('/', upload.single('fotoPerfil'), usuariosValidator.store, usuariosController.novoUsuarios);
 
+router.put('/', usuariosController.update)
+
 module.exports = router;

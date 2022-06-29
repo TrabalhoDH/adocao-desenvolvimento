@@ -8,8 +8,6 @@
 
     <link rel="stylesheet" href="../css/perfilPage.css" />
     <link rel="stylesheet" href="../css/style.css" />
-    <script defer src="./javascript/perfil.js"></script>
-
     <title>Adoção Legal</title>
   </head>
 
@@ -69,7 +67,11 @@
 
           <section id="customProfile">
             <ul>
-              <li>opçõesDoPerfil1</li>
+              <li>
+                <form action="atualizar/usuario/<%= usuario.id  %>" method="get">
+                  <button type="submit">alterar dado</button>
+                </form>
+              </li>
               <li>opçõesDoPerfil2</li>
               <li><a href="pets">Doe seu pet!</a></li>
             </ul>
